@@ -39,7 +39,7 @@ body {
   height: 30px;
   display: inline-block;
   line-height: 30px;
-  font-size: 20px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -54,13 +54,29 @@ body {
   background: url("../assets/globe.png");
   -webkit-background-size: cover;
           background-size: cover;
-  margin-top: 2.5px;
-  margin-bottom: -3px;
+  margin-top: 5px;
+  margin-bottom: -5px;
   margin-right: 5px;
 }
 
+@media (min-width: 480px) {
+  .site-wrapper header.site-header ul.header_links li a {
+    font-size: 20px;
+  }
+  .site-wrapper header.site-header ul.header_links li a.language span {
+    margin-top: 2.5px;
+    margin-bottom: -3px;
+  }
+}
+
 .site-wrapper header.site-header ul.header_links li:last-child {
-  margin-right: 0;
+  margin-right: 30px;
+}
+
+@media (min-width: 1200px) {
+  .site-wrapper header.site-header ul.header_links li:last-child {
+    margin-right: 0;
+  }
 }
 
 .site-wrapper section.site-main-section {
@@ -93,12 +109,19 @@ main.main-Content {
   position: absolute;
   right: 0;
   top: 0;
-  width: 50px;
-  height: 52px;
+  width: 40px;
+  height: 42px;
 }
 
 #new-menu a#menu-icon img {
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 480px) {
+  #new-menu a#menu-icon {
+    width: 50px;
+    height: 52px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
