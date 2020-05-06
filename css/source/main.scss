@@ -1,3 +1,108 @@
+$grey: #C9C9C9;
+$greyButtons: #707070;
+
+$headerHeight: 30px;
+
+$logoWidth: 177px;
+$logoHeight: 81px;
+
+$menuWidth: 50px;
+$menuHeight: 52px;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
 body {
-  background-color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.site-wrapper {
+  position: initial;
+  header.site-header {
+    position: absolute;
+    background-color: $grey;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $headerHeight;
+    margin: 0;
+    ul.header_links {
+      list-style: none;
+      max-width: 1170px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+      padding-left: $headerHeight - 5;
+      padding-right: $headerHeight - 5;
+      li {
+        display: inline-block;
+        a {
+          padding: 0 20px;
+          background-color: $greyButtons;
+          color: white;
+          height: $headerHeight;
+          display: inline-block;
+          line-height: $headerHeight;
+          font-size: $headerHeight - 10;
+          text-decoration: none;
+          &:hover, &:active, &:focus {
+            background-color: darken($greyButtons, 10);
+          }
+          &.language {
+            span {
+              width: $headerHeight - 10;
+              height: $headerHeight - 10;
+              display: inline-block;
+              background: url('../assets/globe.png');
+              background-size: cover;
+              margin-top: 2.5px;
+              margin-bottom: -3px;
+              margin-right: 5px;
+            }
+          }
+        }
+        margin-right: 20px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  section.site-main-section {
+    margin-top: $logoHeight + ($headerHeight * 2.5);
+  }
+}
+
+aside#content-secondary {
+  display: none;
+}
+
+main.main-Content {
+  float: none;
+  width: 100%;
+  left: 0;
+}
+
+#new-logo-wrap {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto; 
+  padding: $headerHeight 15px;
+  img {
+    width: $logoWidth;
+    height: $logoHeight;
+  }
+}
+
+#new-menu {
+  a#menu-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $menuWidth;
+    height: $menuHeight;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

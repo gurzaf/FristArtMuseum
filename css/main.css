@@ -1,4 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
 body {
-  background-color: white;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.site-wrapper {
+  position: initial;
+}
+
+.site-wrapper header.site-header {
+  position: absolute;
+  background-color: #C9C9C9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+}
+
+.site-wrapper header.site-header ul.header_links {
+  list-style: none;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.site-wrapper header.site-header ul.header_links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.site-wrapper header.site-header ul.header_links li a {
+  padding: 0 20px;
+  background-color: #707070;
+  color: white;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.site-wrapper header.site-header ul.header_links li a:hover, .site-wrapper header.site-header ul.header_links li a:active, .site-wrapper header.site-header ul.header_links li a:focus {
+  background-color: #575757;
+}
+
+.site-wrapper header.site-header ul.header_links li a.language span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url("../assets/globe.png");
+  -webkit-background-size: cover;
+          background-size: cover;
+  margin-top: 2.5px;
+  margin-bottom: -3px;
+  margin-right: 5px;
+}
+
+.site-wrapper header.site-header ul.header_links li:last-child {
+  margin-right: 0;
+}
+
+.site-wrapper section.site-main-section {
+  margin-top: 156px;
+}
+
+aside#content-secondary {
+  display: none;
+}
+
+main.main-Content {
+  float: none;
+  width: 100%;
+  left: 0;
+}
+
+#new-logo-wrap {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px 15px;
+}
+
+#new-logo-wrap img {
+  width: 177px;
+  height: 81px;
+}
+
+#new-menu a#menu-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 52px;
+}
+
+#new-menu a#menu-icon img {
+  width: 100%;
+  height: 100%;
 }
 /*# sourceMappingURL=main.css.map */
