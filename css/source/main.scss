@@ -1,5 +1,8 @@
 $grey: #C9C9C9;
 $greyButtons: #707070;
+$borderColor: #CECECE;
+
+$orange: #F04623;
 
 $headerHeight: 30px;
 
@@ -44,6 +47,7 @@ body {
           line-height: $headerHeight;
           font-size: $headerHeight - 15;
           text-decoration: none;
+          transition: all 0.2s ease-out;
           &:hover, &:active, &:focus {
             background-color: darken($greyButtons, 10);
           }
@@ -84,14 +88,24 @@ body {
   }
 }
 
-aside#content-secondary {
-  display: none;
-}
-
 main.main-Content {
   float: none;
   width: 100%;
   left: 0;
+  .BBFormButtonCell.form-group.clearfix {
+    margin: 40px 0;
+    input.btn.btn-primary {
+      background-color: $orange;
+      border-radius: 0;
+      float: right;
+      border: 0;
+      font-size: 18px;
+      transition: all 0.2s ease-out;
+      &:hover, &:active, &:focus {
+        background-color: darken($orange, 10);
+      }
+    }
+  }
 }
 
 #new-logo-wrap {
@@ -122,3 +136,52 @@ main.main-Content {
     }
   }
 }
+
+.BBListingHeading h1 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+div.Programming_Event_DateTime {
+  border: 2px solid $borderColor;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .TicketDateTimeInnerContainer {
+    padding: 15px;
+    .col-xs-12.col-md-6.col-lg-6 {
+      text-align: center;
+      width: 30%;
+      &:nth-child(2) {
+        float: right;
+      }
+      .BBFieldCaption.TicketDateHeaderLabel {
+        font-size: 18px;
+      }
+      h2, h2 span {
+        margin-left: unset;
+        margin: 0;
+        font-size: 22px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.Programming_Event_PriceList {
+  border-width: 1px 1px 0px;
+  border-style: solid;
+  border-color: $borderColor;
+  > .show-grid {
+    > .row {
+      border-top: 0;
+      border-bottom: 1px solid $borderColor;
+      > div {
+        label, span {
+          line-height: 34px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+

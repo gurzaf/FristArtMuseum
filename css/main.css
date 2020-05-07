@@ -41,6 +41,9 @@ body {
   line-height: 30px;
   font-size: 15px;
   text-decoration: none;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .site-wrapper header.site-header ul.header_links li a:hover, .site-wrapper header.site-header ul.header_links li a:active, .site-wrapper header.site-header ul.header_links li a:focus {
@@ -83,14 +86,29 @@ body {
   margin-top: 156px;
 }
 
-aside#content-secondary {
-  display: none;
-}
-
 main.main-Content {
   float: none;
   width: 100%;
   left: 0;
+}
+
+main.main-Content .BBFormButtonCell.form-group.clearfix {
+  margin: 40px 0;
+}
+
+main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary {
+  background-color: #F04623;
+  border-radius: 0;
+  float: right;
+  border: 0;
+  font-size: 18px;
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:hover, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:active, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:focus {
+  background-color: #d2300e;
 }
 
 #new-logo-wrap {
@@ -123,5 +141,56 @@ main.main-Content {
     width: 50px;
     height: 52px;
   }
+}
+
+.BBListingHeading h1 {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+div.Programming_Event_DateTime {
+  border: 2px solid #CECECE;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer {
+  padding: 15px;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 {
+  text-align: center;
+  width: 30%;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6:nth-child(2) {
+  float: right;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel {
+  font-size: 18px;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 span {
+  margin-left: unset;
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.Programming_Event_PriceList {
+  border-width: 1px 1px 0px;
+  border-style: solid;
+  border-color: #CECECE;
+}
+
+.Programming_Event_PriceList > .show-grid > .row {
+  border-top: 0;
+  border-bottom: 1px solid #CECECE;
+}
+
+.Programming_Event_PriceList > .show-grid > .row > div label, .Programming_Event_PriceList > .show-grid > .row > div span {
+  line-height: 34px;
+  margin-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

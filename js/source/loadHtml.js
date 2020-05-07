@@ -1,5 +1,8 @@
-const loadFiles = () => {
-  $('.RS_headerWrapper_inner.MS_background_header.col-sm-12').load('header.html');
+const setupHeaderAndFooter = () => {
+  $('.MSFootTextDiv').html('');
+  $('.MS_LoginButtonOuterWrapperContainer').hide();
+  $('.MSFootTextDiv:first').load('header.html');
+  $('.MSFootTextDiv:last').load('footer.html');
 };
 
-loadFiles();
+setupHeaderAndFooter();
