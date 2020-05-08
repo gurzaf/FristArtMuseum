@@ -413,4 +413,8 @@ footer.site-footer .frits-footer .copyright {
     margin-top: 57px;
   }
 }
+
+div[id*="_CartGrid_cartPanel"] {
+  background-color: black;
+}
 /*# sourceMappingURL=main.css.map */
