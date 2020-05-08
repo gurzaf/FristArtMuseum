@@ -227,6 +227,20 @@ div.Programming_Event_DateTime {
       border-top: 0;
       border-bottom: 1px solid $borderColor;
       > div {
+        &.col-sm-12.col-md-6 {
+          width: 33.33333333%;
+          float: left;
+          // background-color: blue;
+          @media (min-width: 992px) {
+            width: 50%;
+          }
+        }
+        &.col-xs-6.col-md-3 {
+          width: 33.33333333%;
+          @media (min-width: 992px) {
+            width: 25%;
+          }
+        }
         label, span {
           line-height: 34px;
           margin-bottom: 0;

@@ -243,6 +243,27 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
   border-bottom: 1px solid #CECECE;
 }
 
+.Programming_Event_PriceList > .show-grid > .row > div.col-sm-12.col-md-6 {
+  width: 33.33333333%;
+  float: left;
+}
+
+@media (min-width: 992px) {
+  .Programming_Event_PriceList > .show-grid > .row > div.col-sm-12.col-md-6 {
+    width: 50%;
+  }
+}
+
+.Programming_Event_PriceList > .show-grid > .row > div.col-xs-6.col-md-3 {
+  width: 33.33333333%;
+}
+
+@media (min-width: 992px) {
+  .Programming_Event_PriceList > .show-grid > .row > div.col-xs-6.col-md-3 {
+    width: 25%;
+  }
+}
+
 .Programming_Event_PriceList > .show-grid > .row > div label, .Programming_Event_PriceList > .show-grid > .row > div span {
   line-height: 34px;
   margin-bottom: 0;
