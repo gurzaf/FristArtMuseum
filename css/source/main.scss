@@ -389,6 +389,31 @@ div[id*="_CartGrid_CartContainer"] {
   margin-top: -85px;
   .cart-type-group {
     border-color: transparent;
+    .PaymentPart_CartDescriptionCell {
+      padding-top: 20px;
+      padding-bottom: 0px;
+      h4 {
+        margin: 0 0 10px;
+        a {
+          font-size: 14px;
+          color: black;
+          font-weight: bold;
+          &:hover, &:focus, &:active {
+            text-decoration: none;
+          }
+        }
+
+      }
+      a.edit-item-link {
+        color: $orange;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: block;
+      }
+      br {
+        display: none;
+      }
+    }
   }
   h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
     margin-bottom: 20px;
@@ -396,10 +421,27 @@ div[id*="_CartGrid_CartContainer"] {
       padding-left: 0;
     }
   }
+  .price-group {
+    font-size: 14px;
+    .PaymentPart_CartCurrencyCell {
+      margin-left: 20px;
+    }
+    .payment-part-remove {
+      margin-right: 5px;
+      a {
+        color: black;
+        font-weight: bold;
+      }
+    }
+    .PaymentPart_CartItemTotal {
+      font-weight: normal;
+    }
+  }
 }
 
 div[id*="tdImageItem"] {
   width: 20%;
+  padding-top: 20px;
   @media (min-width: 990px) {
     width: 15%;
   }

@@ -451,6 +451,36 @@ div[id*="_CartGrid_CartContainer"] .cart-type-group {
   border-color: transparent;
 }
 
+div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell h4 {
+  margin: 0 0 10px;
+}
+
+div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell h4 a {
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell h4 a:hover, div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell h4 a:focus, div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell h4 a:active {
+  text-decoration: none;
+}
+
+div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell a.edit-item-link {
+  color: #F04623;
+  font-size: 14px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell br {
+  display: none;
+}
+
 div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
   margin-bottom: 20px;
 }
@@ -459,8 +489,30 @@ div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemT
   padding-left: 0;
 }
 
+div[id*="_CartGrid_CartContainer"] .price-group {
+  font-size: 14px;
+}
+
+div[id*="_CartGrid_CartContainer"] .price-group .PaymentPart_CartCurrencyCell {
+  margin-left: 20px;
+}
+
+div[id*="_CartGrid_CartContainer"] .price-group .payment-part-remove {
+  margin-right: 5px;
+}
+
+div[id*="_CartGrid_CartContainer"] .price-group .payment-part-remove a {
+  color: black;
+  font-weight: bold;
+}
+
+div[id*="_CartGrid_CartContainer"] .price-group .PaymentPart_CartItemTotal {
+  font-weight: normal;
+}
+
 div[id*="tdImageItem"] {
   width: 20%;
+  padding-top: 20px;
 }
 
 @media (min-width: 990px) {
