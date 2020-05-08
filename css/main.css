@@ -265,13 +265,13 @@ footer.site-footer .frits-footer a > img {
   height: auto;
 }
 
-@media (max-width: 320px) {
+@media (min-width: 710px) {
   footer.site-footer .frits-footer a > img {
     width: 137px;
   }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 710px) {
   footer.site-footer .frits-footer {
     border-bottom: 1px solid #777777;
     border-top: 1px solid #777777;
@@ -318,7 +318,7 @@ footer.site-footer .frits-footer .footer-buttons .btn {
   padding-right: 0;
   width: 100%;
   font-size: 16px;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 footer.site-footer .frits-footer .footer-buttons .btn:hover, footer.site-footer .frits-footer .footer-buttons .btn:active, footer.site-footer .frits-footer .footer-buttons .btn:focus {
@@ -328,11 +328,11 @@ footer.site-footer .frits-footer .footer-buttons .btn:hover, footer.site-footer 
   text-decoration: underline;
 }
 
-footer.site-footer .frits-footer .footer-buttons .btn:first-child {
-  margin-top: 25px;
+footer.site-footer .frits-footer .footer-buttons .btn:last-child {
+  margin-top: 15px;
 }
 
-@media (max-width: 320px) {
+@media (min-width: 710px) {
   footer.site-footer .frits-footer .footer-buttons {
     text-align: right;
   }
@@ -340,11 +340,13 @@ footer.site-footer .frits-footer .footer-buttons .btn:first-child {
     margin-right: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    width: auto;
     font-size: 18px;
     margin-top: 0;
   }
   footer.site-footer .frits-footer .footer-buttons .btn:last-child {
     margin-right: 0;
+    margin-top: 0;
   }
 }
 
@@ -363,7 +365,7 @@ footer.site-footer .frits-footer .footer-links li a:focus, footer.site-footer .f
   text-decoration: underline;
 }
 
-@media (max-width: 320px) {
+@media (min-width: 710px) {
   footer.site-footer .frits-footer .footer-links {
     margin-top: 35px;
   }
@@ -384,7 +386,7 @@ footer.site-footer .frits-footer .copyright {
   margin-top: 40px;
 }
 
-@media (max-width: 320px) {
+@media (min-width: 710px) {
   footer.site-footer .frits-footer .copyright {
     text-align: right;
     margin-top: 57px;
