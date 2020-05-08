@@ -4,6 +4,8 @@ $borderColor: #CECECE;
 
 $orange: #F04623;
 
+$footerColor: #212121;
+
 $headerHeight: 30px;
 
 $logoWidth: 177px;
@@ -12,13 +14,36 @@ $logoHeight: 81px;
 $menuWidth: 40px;
 $menuHeight: 42px;
 
+$footerBorder: #777777;
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+
+@mixin orangeButton {
+  background-color: $orange;
+  border-radius: 0;
+  font-size: 18px;
+  transition: all 0.1s ease-out;
+  border: 1px solid transparent;
+  &:hover, &:active, &:focus {
+    background-color: transparent;
+    color: $orange;
+    border-color: $orange;
+    text-decoration: underline;
+  }
+}
 
 body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+.MS_pageWrapper {
+  margin-bottom: 0;
+}
+
 .site-wrapper {
+  form {
+    margin-bottom: 0;
+  }
   position: initial;
   header.site-header {
     position: absolute;
@@ -47,9 +72,9 @@ body {
           line-height: $headerHeight;
           font-size: $headerHeight - 15;
           text-decoration: none;
-          transition: all 0.2s ease-out;
+          transition: all 0.1s ease-out;
           &:hover, &:active, &:focus {
-            background-color: darken($greyButtons, 10);
+            background-color: black;
           }
           &.language {
             span {
@@ -84,7 +109,10 @@ body {
     }
   }
   section.site-main-section {
-    margin-top: $logoHeight + ($headerHeight * 2.5);
+    margin-top: $logoHeight + ($headerHeight);
+    @media (min-width: 480px) {
+      margin-top: $logoHeight + ($headerHeight * 2.5);
+    }
   }
 }
 
@@ -92,18 +120,16 @@ main.main-Content {
   float: none;
   width: 100%;
   left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  .MS_contentWrapper_inner.overflow_margin_helper {
+    padding-bottom: 0;
+  }
   .BBFormButtonCell.form-group.clearfix {
     margin: 40px 0;
     input.btn.btn-primary {
-      background-color: $orange;
-      border-radius: 0;
       float: right;
-      border: 0;
-      font-size: 18px;
-      transition: all 0.2s ease-out;
-      &:hover, &:active, &:focus {
-        background-color: darken($orange, 10);
-      }
+      @include orangeButton;
     }
   }
 }
@@ -112,10 +138,16 @@ main.main-Content {
   max-width: 1170px;
   margin-left: auto;
   margin-right: auto; 
-  padding: $headerHeight 15px;
+  padding: $headerHeight/2 0;
   img {
-    width: $logoWidth;
-    height: $logoHeight;
+    width: $logoWidth - 20;
+    height: auto;
+  }
+  @media (min-width: 480px) {
+    padding: $headerHeight 15px;
+    img {
+      width: $logoWidth;
+    }
   }
 }
 
@@ -130,38 +162,57 @@ main.main-Content {
       width: 100%;
       height: 100%;
     }
-    @media (min-width: 480px) {
-      width: $menuWidth + 10;
-      height: $menuHeight + 10;
-    }
   }
 }
 
 .BBListingHeading h1 {
   font-weight: bold;
-  font-size: 28px;
+  font-size: 24px;
+  @media (min-width: 480px) {
+    font-size: 28px;
+  }
 }
 
 div.Programming_Event_DateTime {
   border: 2px solid $borderColor;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   .TicketDateTimeInnerContainer {
-    padding: 15px;
+    padding: 15px 10px;
     .col-xs-12.col-md-6.col-lg-6 {
       text-align: center;
-      width: 30%;
+      width: 50%;
+      padding-left: 5px;
+      padding-right: 5px;
       &:nth-child(2) {
         float: right;
       }
       .BBFieldCaption.TicketDateHeaderLabel {
-        font-size: 18px;
+        font-size: 12px;
       }
       h2, h2 span {
         margin-left: unset;
         margin: 0;
-        font-size: 22px;
+        font-size: 14px;
         font-weight: bold;
+      }
+    }
+  }
+  @media (min-width: 480px) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .TicketDateTimeInnerContainer {
+      padding: 15px;
+      .col-xs-12.col-md-6.col-lg-6 {
+        width: 30%;
+        padding-left: 15px;
+        padding-right: 15px;
+        .BBFieldCaption.TicketDateHeaderLabel {
+          font-size: 18px;
+        }
+        h2, h2 span {
+          font-size: 22px;
+        }
       }
     }
   }
@@ -185,3 +236,109 @@ div.Programming_Event_DateTime {
   }
 }
 
+footer.site-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: $footerColor;
+  .frits-footer {
+    padding-top: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+    a > img {
+      width: 120px;
+      height: auto;
+      @media (max-width: 320px) {
+        width: 137px;
+      }
+    }
+    @media (max-width: 320px) {
+      border-bottom: 1px solid $footerBorder;
+      border-top: 1px solid $footerBorder;
+      margin: 10px 0;
+      padding: 40px 0 30px;
+      position: relative;
+      &:before, &:after {
+        background-image: url('../assets/waves.png');
+        background-color: $footerColor;
+        content: '';
+        width: 126px;
+        height: 13px;
+        background-size: 110px 13px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: -6.5px;
+      }
+      &:after {
+        top: unset;
+        bottom: -6.5px;
+      }
+    }
+    .footer-buttons {
+      text-align: center;
+      .btn {
+        @include orangeButton;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        font-size: 16px;
+        margin-top: 15px;
+        &:first-child {
+          margin-top: 25px;
+        }
+      }
+      @media (max-width: 320px) {
+        text-align: right;
+        .btn {
+          margin-right: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 18px;
+          margin-top: 0;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+      li {
+        a {
+          color: white;
+          text-decoration: none;
+          &:focus, &:active, &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      @media (max-width: 320px) {
+        margin-top: 35px;
+        li {
+          display: inline;
+          margin-right: 10px;
+          border-left: 1px solid white;
+          padding-left: 10px;
+          &:first-child {
+            padding-left: 0;
+            border-left: 0;
+          }
+        }
+      }
+    }
+    .copyright {
+      text-align: center;
+      margin-top: 40px;
+      @media (max-width: 320px) {
+        text-align: right;
+        margin-top: 57px;
+      }
+    }
+  }
+}
