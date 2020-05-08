@@ -18,17 +18,35 @@ $footerBorder: #777777;
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
 
-@mixin orangeButton {
-  background-color: $orange;
+@mixin button {
   border-radius: 0;
   font-size: 18px;
   transition: all 0.1s ease-out;
+  &:hover, &:active, &:focus {
+    text-decoration: underline;
+  }
+}
+
+@mixin orangeButton {
+  @include button;
+  background-color: $orange;
   border: 1px solid transparent;
   &:hover, &:active, &:focus {
     background-color: transparent;
     color: $orange;
     border-color: $orange;
-    text-decoration: underline;
+  }
+}
+
+@mixin orangeButtonAlt {
+  @include button;
+  background-color: transparent;
+  border: 1px solid $orange;
+  color: $orange;
+  &:hover, &:active, &:focus {
+    background-color: $orange;
+    color: white;
+    border-color: $orange;
   }
 }
 
@@ -359,6 +377,30 @@ footer.site-footer {
   }
 }
 
-div[id*="_CartGrid_cartPanel"] {
-  background-color: black;
+div[id*="_CartGrid_topLinkBar"] {
+  a {
+    position: relative;
+    z-index: 1;
+    @include orangeButtonAlt;
+  }
+}
+
+div[id*="_CartGrid_CartContainer"] {
+  margin-top: -85px;
+  .cart-type-group {
+    border-color: transparent;
+  }
+  h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
+    margin-bottom: 20px;
+    span {
+      padding-left: 0;
+    }
+  }
+}
+
+div[id*="tdImageItem"] {
+  width: 20%;
+  @media (min-width: 990px) {
+    width: 15%;
+  }
 }

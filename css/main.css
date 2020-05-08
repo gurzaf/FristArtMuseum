@@ -118,20 +118,23 @@ main.main-Content .BBFormButtonCell.form-group.clearfix {
 
 main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary {
   float: right;
-  background-color: #F04623;
   border-radius: 0;
   font-size: 18px;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
+  background-color: #F04623;
   border: 1px solid transparent;
+}
+
+main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:hover, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:active, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:focus {
+  text-decoration: underline;
 }
 
 main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:hover, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:active, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:focus {
   background-color: transparent;
   color: #F04623;
   border-color: #F04623;
-  text-decoration: underline;
 }
 
 #new-logo-wrap {
@@ -328,12 +331,12 @@ footer.site-footer .frits-footer .footer-buttons {
 }
 
 footer.site-footer .frits-footer .footer-buttons .btn {
-  background-color: #F04623;
   border-radius: 0;
   font-size: 18px;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
+  background-color: #F04623;
   border: 1px solid transparent;
   padding-left: 0;
   padding-right: 0;
@@ -343,10 +346,13 @@ footer.site-footer .frits-footer .footer-buttons .btn {
 }
 
 footer.site-footer .frits-footer .footer-buttons .btn:hover, footer.site-footer .frits-footer .footer-buttons .btn:active, footer.site-footer .frits-footer .footer-buttons .btn:focus {
+  text-decoration: underline;
+}
+
+footer.site-footer .frits-footer .footer-buttons .btn:hover, footer.site-footer .frits-footer .footer-buttons .btn:active, footer.site-footer .frits-footer .footer-buttons .btn:focus {
   background-color: transparent;
   color: #F04623;
   border-color: #F04623;
-  text-decoration: underline;
 }
 
 footer.site-footer .frits-footer .footer-buttons .btn:last-child {
@@ -414,7 +420,52 @@ footer.site-footer .frits-footer .copyright {
   }
 }
 
-div[id*="_CartGrid_cartPanel"] {
-  background-color: black;
+div[id*="_CartGrid_topLinkBar"] a {
+  position: relative;
+  z-index: 1;
+  border-radius: 0;
+  font-size: 18px;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  background-color: transparent;
+  border: 1px solid #F04623;
+  color: #F04623;
+}
+
+div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:active, div[id*="_CartGrid_topLinkBar"] a:focus {
+  text-decoration: underline;
+}
+
+div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:active, div[id*="_CartGrid_topLinkBar"] a:focus {
+  background-color: #F04623;
+  color: white;
+  border-color: #F04623;
+}
+
+div[id*="_CartGrid_CartContainer"] {
+  margin-top: -85px;
+}
+
+div[id*="_CartGrid_CartContainer"] .cart-type-group {
+  border-color: transparent;
+}
+
+div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
+  margin-bottom: 20px;
+}
+
+div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
+  padding-left: 0;
+}
+
+div[id*="tdImageItem"] {
+  width: 20%;
+}
+
+@media (min-width: 990px) {
+  div[id*="tdImageItem"] {
+    width: 15%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
