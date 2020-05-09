@@ -446,3 +446,113 @@ div[id*="tdImageItem"] {
     width: 15%;
   }
 }
+
+#divCartSummary {
+  margin-top: 20px;
+  .col-xs-12.col-sm-3 {
+    width: 100%;
+  }
+  .col-xs-9.col-sm-7 {
+    width: 100%;
+  }
+  #dlDiscountCodeEntry {
+    .col-xs-9.col-sm-7 {
+      width: calc(100% - 140px);
+    }
+  }
+  label {
+    font-weight: normal;
+  }
+  input, select {
+    height: 40px;
+    border-radius: 0;
+  }
+  .col-xs-3.col-sm-2 {
+    padding: 0;
+    width: 120px;
+    input {
+      width: 100%;
+      @include orangeButtonAlt;
+    }
+  }
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item {
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  > div {
+    background-color: unset;
+    .PaymentPart_CartDescriptionCell.col-sm-12 {
+      padding-top: 0;
+      padding-bottom: 0;
+      h4 {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+    .payment-part-subtotal {
+      width: calc(100% - 170px);
+      input {
+        height: 40px;
+        border-radius: 0;
+        border-left: 0;
+      }
+      .input-group-addon {
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 0;
+      }
+    }
+    a.btn.btn-primary.pull-right.add-don-btn {
+      @include orangeButtonAlt;
+      width: 120px;
+      margin-top: 0;
+      margin-right: 20;
+    }
+  }
+}
+
+div[id*="_divUserSignUp"] {
+  display: none;
+}
+
+.PaymentPart_PersonalInfoContainer {
+  .col-sm-12.col-md-6.form-sidebyside {
+    .form-group {
+      margin-bottom: 5px;
+      label {
+        text-align: left;
+        font-weight: normal;
+        margin-bottom: 2px;
+      }
+      .col-sm-9 {
+        width: 100%;
+        input, select, textarea {
+          border-radius: 0;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+dl[id*="_dlCartSummary"] {
+  padding-right: 15px;
+  clear: both;
+  padding-top: 30px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  dd, dt {
+    float: right;
+  }
+  dt {
+    margin-right: 10px;
+  }
+}
+
+input[id*="_ButtonCheckout"] {
+  @include orangeButton;
+  margin-top: -20px;
+}

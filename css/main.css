@@ -520,4 +520,177 @@ div[id*="tdImageItem"] {
     width: 15%;
   }
 }
+
+#divCartSummary {
+  margin-top: 20px;
+}
+
+#divCartSummary .col-xs-12.col-sm-3 {
+  width: 100%;
+}
+
+#divCartSummary .col-xs-9.col-sm-7 {
+  width: 100%;
+}
+
+#divCartSummary #dlDiscountCodeEntry .col-xs-9.col-sm-7 {
+  width: calc(100% - 140px);
+}
+
+#divCartSummary label {
+  font-weight: normal;
+}
+
+#divCartSummary input, #divCartSummary select {
+  height: 40px;
+  border-radius: 0;
+}
+
+#divCartSummary .col-xs-3.col-sm-2 {
+  padding: 0;
+  width: 120px;
+}
+
+#divCartSummary .col-xs-3.col-sm-2 input {
+  width: 100%;
+  border-radius: 0;
+  font-size: 18px;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  background-color: transparent;
+  border: 1px solid #F04623;
+  color: #F04623;
+}
+
+#divCartSummary .col-xs-3.col-sm-2 input:hover, #divCartSummary .col-xs-3.col-sm-2 input:active, #divCartSummary .col-xs-3.col-sm-2 input:focus {
+  text-decoration: underline;
+}
+
+#divCartSummary .col-xs-3.col-sm-2 input:hover, #divCartSummary .col-xs-3.col-sm-2 input:active, #divCartSummary .col-xs-3.col-sm-2 input:focus {
+  background-color: #F04623;
+  color: white;
+  border-color: #F04623;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item {
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div {
+  background-color: unset;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div .PaymentPart_CartDescriptionCell.col-sm-12 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div .PaymentPart_CartDescriptionCell.col-sm-12 h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div .payment-part-subtotal {
+  width: calc(100% - 170px);
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div .payment-part-subtotal input {
+  height: 40px;
+  border-radius: 0;
+  border-left: 0;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div .payment-part-subtotal .input-group-addon {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 0;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn {
+  border-radius: 0;
+  font-size: 18px;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  background-color: transparent;
+  border: 1px solid #F04623;
+  color: #F04623;
+  width: 120px;
+  margin-top: 0;
+  margin-right: 20;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:hover, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:active, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:focus {
+  text-decoration: underline;
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:hover, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:active, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:focus {
+  background-color: #F04623;
+  color: white;
+  border-color: #F04623;
+}
+
+div[id*="_divUserSignUp"] {
+  display: none;
+}
+
+.PaymentPart_PersonalInfoContainer .col-sm-12.col-md-6.form-sidebyside .form-group {
+  margin-bottom: 5px;
+}
+
+.PaymentPart_PersonalInfoContainer .col-sm-12.col-md-6.form-sidebyside .form-group label {
+  text-align: left;
+  font-weight: normal;
+  margin-bottom: 2px;
+}
+
+.PaymentPart_PersonalInfoContainer .col-sm-12.col-md-6.form-sidebyside .form-group .col-sm-9 {
+  width: 100%;
+}
+
+.PaymentPart_PersonalInfoContainer .col-sm-12.col-md-6.form-sidebyside .form-group .col-sm-9 input, .PaymentPart_PersonalInfoContainer .col-sm-12.col-md-6.form-sidebyside .form-group .col-sm-9 select, .PaymentPart_PersonalInfoContainer .col-sm-12.col-md-6.form-sidebyside .form-group .col-sm-9 textarea {
+  border-radius: 0;
+  height: 40px;
+}
+
+dl[id*="_dlCartSummary"] {
+  padding-right: 15px;
+  clear: both;
+  padding-top: 30px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+dl[id*="_dlCartSummary"] dd, dl[id*="_dlCartSummary"] dt {
+  float: right;
+}
+
+dl[id*="_dlCartSummary"] dt {
+  margin-right: 10px;
+}
+
+input[id*="_ButtonCheckout"] {
+  border-radius: 0;
+  font-size: 18px;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  background-color: #F04623;
+  border: 1px solid transparent;
+  margin-top: -20px;
+}
+
+input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[id*="_ButtonCheckout"]:focus {
+  text-decoration: underline;
+}
+
+input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[id*="_ButtonCheckout"]:focus {
+  background-color: transparent;
+  color: #F04623;
+  border-color: #F04623;
+}
 /*# sourceMappingURL=main.css.map */
