@@ -16,6 +16,8 @@ $menuHeight: 42px;
 
 $footerBorder: #777777;
 
+$cellsBackground: #F9F9F9;
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
 
 @mixin button {
@@ -598,4 +600,62 @@ input[id*="_ButtonCheckout"] {
 
 div#divUseAsBilling {
   display: none;
+}
+
+div[id*="_PaymentPartFormContainer"] {
+  > div.col-sm-12 > div {
+    p {
+      max-width: 480px;
+      margin-top: 25px;
+      strong {
+        font-weight: normal;
+      }
+    }
+    p + div {
+      div[id*="_CartGrid_CartContainer"] {
+        margin-top: 0;
+        background-color: $cellsBackground;
+      }
+      h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+      div[id*="tdImageItem"] {
+        display: none;
+      }
+      .PaymentPart_CartRows.row.show-grid.show-grid-row {
+        padding: 0 !important;
+        background-color: $cellsBackground;
+        margin-bottom: 5px;
+        .PaymentPart_CartDescriptionCell {
+          padding: 0;
+          h4 + span {
+            font-weight: bold;
+            font-size: 16px;
+          }
+          span {
+            margin-bottom: 5px;
+            display: block;
+          }
+        }
+        .PaymentPart_CartCurrencyCell {
+          margin-left: 0;
+        }
+        [class*="col-"]{
+          padding-top: 0;
+        }
+      }
+      .cart-grand-total {
+        padding-right: 0;
+        padding-top: 15px;
+      }
+      .PaymentPart_CartSummaryCaptionContainer, .PaymentPart_CartSummaryFieldContainer {
+        margin: 0 0 0 5px !important;
+        font-size: 16px;
+        label, span {
+          font-weight: bold !important;
+        }
+      }
+    }
+  }
 }

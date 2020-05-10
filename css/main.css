@@ -765,4 +765,69 @@ input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[i
 div#divUseAsBilling {
   display: none;
 }
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p {
+  max-width: 480px;
+  margin-top: 25px;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p strong {
+  font-weight: normal;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div div[id*="_CartGrid_CartContainer"] {
+  margin-top: 0;
+  background-color: #F9F9F9;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div div[id*="tdImageItem"] {
+  display: none;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartRows.row.show-grid.show-grid-row {
+  padding: 0 !important;
+  background-color: #F9F9F9;
+  margin-bottom: 5px;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartRows.row.show-grid.show-grid-row .PaymentPart_CartDescriptionCell {
+  padding: 0;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartRows.row.show-grid.show-grid-row .PaymentPart_CartDescriptionCell h4 + span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartRows.row.show-grid.show-grid-row .PaymentPart_CartDescriptionCell span {
+  margin-bottom: 5px;
+  display: block;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartRows.row.show-grid.show-grid-row .PaymentPart_CartCurrencyCell {
+  margin-left: 0;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartRows.row.show-grid.show-grid-row [class*="col-"] {
+  padding-top: 0;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .cart-grand-total {
+  padding-right: 0;
+  padding-top: 15px;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryCaptionContainer, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryFieldContainer {
+  margin: 0 0 0 5px !important;
+  font-size: 16px;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryCaptionContainer label, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryCaptionContainer span, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryFieldContainer label, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryFieldContainer span {
+  font-weight: bold !important;
+}
 /*# sourceMappingURL=main.css.map */
