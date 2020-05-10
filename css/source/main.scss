@@ -380,20 +380,21 @@ footer.site-footer {
 div[id*="_CartGrid_topLinkBar"] {
   margin-top: -40px;
   @media (min-width: 767px) {
-    margin-top: 0;
+    margin-top: 0px;
   }
-}
-
-div[id*="_CartGrid_topLinkBar"] {
   a {
     position: relative;
     z-index: 1;
     @include orangeButtonAlt;
     margin-top: 40px;
     margin-bottom: -45px;
+    font-size: 16px;
+    @media (min-width: 389px) {
+      font-size: 18px;
+    }
     @media (min-width: 767px) {
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
   }
 }
@@ -402,12 +403,17 @@ div[id*="_CartGrid_CartContainer"] {
   margin-top: -85px;
   .PaymentPart_CartRows.row.show-grid.show-grid-row {
     padding-bottom: 15px;
+    border: 0;
     @media (min-width: 767px) {
       padding-bottom: 0;
     }
   }
   .cart-type-group {
     border-color: transparent;
+    margin-top: -30px;
+    @media (min-width: 767px) {
+      margin-top: 0;
+    }
     .PaymentPart_CartDescriptionCell {
       padding-top: 20px;
       padding-bottom: 5px;
@@ -510,6 +516,9 @@ div.cart-type-group.cart-type-Donations.single-cart-item {
   border: 0;
   padding: 0;
   margin-top: 0;
+  h2 {
+    padding-left: 15px;
+  }
   > div {
     background-color: unset;
     .PaymentPart_CartDescriptionCell.col-sm-12 {
@@ -585,4 +594,8 @@ input[id*="_ButtonCheckout"] {
   @include orangeButton;
   margin-top: -20px;
   min-width: 120px;
+}
+
+div#divUseAsBilling {
+  display: none;
 }

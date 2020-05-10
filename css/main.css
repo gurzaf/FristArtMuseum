@@ -426,7 +426,7 @@ div[id*="_CartGrid_topLinkBar"] {
 
 @media (min-width: 767px) {
   div[id*="_CartGrid_topLinkBar"] {
-    margin-top: 0;
+    margin-top: 0px;
   }
 }
 
@@ -443,6 +443,7 @@ div[id*="_CartGrid_topLinkBar"] a {
   color: #F04623;
   margin-top: 40px;
   margin-bottom: -45px;
+  font-size: 16px;
 }
 
 div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:active, div[id*="_CartGrid_topLinkBar"] a:focus {
@@ -455,10 +456,16 @@ div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:activ
   border-color: #F04623;
 }
 
+@media (min-width: 389px) {
+  div[id*="_CartGrid_topLinkBar"] a {
+    font-size: 18px;
+  }
+}
+
 @media (min-width: 767px) {
   div[id*="_CartGrid_topLinkBar"] a {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -468,6 +475,7 @@ div[id*="_CartGrid_CartContainer"] {
 
 div[id*="_CartGrid_CartContainer"] .PaymentPart_CartRows.row.show-grid.show-grid-row {
   padding-bottom: 15px;
+  border: 0;
 }
 
 @media (min-width: 767px) {
@@ -478,6 +486,13 @@ div[id*="_CartGrid_CartContainer"] .PaymentPart_CartRows.row.show-grid.show-grid
 
 div[id*="_CartGrid_CartContainer"] .cart-type-group {
   border-color: transparent;
+  margin-top: -30px;
+}
+
+@media (min-width: 767px) {
+  div[id*="_CartGrid_CartContainer"] .cart-type-group {
+    margin-top: 0;
+  }
 }
 
 div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell {
@@ -627,6 +642,10 @@ div.cart-type-group.cart-type-Donations.single-cart-item {
   margin-top: 0;
 }
 
+div.cart-type-group.cart-type-Donations.single-cart-item h2 {
+  padding-left: 15px;
+}
+
 div.cart-type-group.cart-type-Donations.single-cart-item > div {
   background-color: unset;
 }
@@ -741,5 +760,9 @@ input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[i
   background-color: transparent;
   color: #F04623;
   border-color: #F04623;
+}
+
+div#divUseAsBilling {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
