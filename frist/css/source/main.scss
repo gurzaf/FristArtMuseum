@@ -180,9 +180,10 @@ main.main-Content {
     width: $menuWidth;
     height: $menuHeight;
     z-index: 1001;
-    img {
-      width: 100%;
-      height: 100%;
+    background: url('../assets/menu.jpg');
+    background-size: $menuWidth $menuHeight * 2;
+    &.open {
+      background-position: bottom;
     }
   }
 }

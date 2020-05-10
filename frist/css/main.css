@@ -166,11 +166,13 @@ main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:ho
   width: 40px;
   height: 42px;
   z-index: 1001;
+  background: url("../assets/menu.jpg");
+  -webkit-background-size: 40px 84px;
+          background-size: 40px 84px;
 }
 
-#new-menu a#menu-icon img {
-  width: 100%;
-  height: 100%;
+#new-menu a#menu-icon.open {
+  background-position: bottom;
 }
 
 .BBListingHeading h1 {

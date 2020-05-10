@@ -18,6 +18,11 @@ const editPage = () => {
   // register menu event
   $('#menu-icon').click((evt) => {
     evt.preventDefault();
+    if ($('#menu-icon').hasClass('open')) {
+      $('#menu-icon').removeClass('open');
+    } else {
+      $('#menu-icon').addClass('open');
+    }
     $('#new-menu-links').slideToggle('fast');
   });
 };
