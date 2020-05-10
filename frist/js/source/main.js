@@ -15,6 +15,21 @@ const editPage = () => {
   $('div[id*="_divPersonalInfo"]').after($('#divCartSummary .form-group.lead.text-success'));
   // Changes billing title
   $('span[id*="_lblPersonalInfo"]').text(BILLING_TITLE);
+  // register menu event
+  $('#menu-icon').click((evt) => {
+    evt.preventDefault();
+    $('#new-menu-links').slideToggle('fast');
+  });
 };
 
-editPage();
+const init = () => {
+  $('.MSFootTextDiv').html('');
+  $('.MS_LoginButtonOuterWrapperContainer').hide();
+  $('.MSFootTextDiv:first').load('html/header.html', () => {
+    $('.MSFootTextDiv:last').load('html/footer.html', () => {
+      editPage();
+    });
+  });
+};
+
+init();

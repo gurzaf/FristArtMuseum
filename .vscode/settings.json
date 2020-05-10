@@ -1,7 +1,7 @@
 {
   // only this files are include to compilation and no need included partials files 
   "liveSassCompile.settings.includeItems": [      
-    "css/source/main.scss"
+    "frist/css/source/main.scss"
   ],
   // vendor prefixes to unsupported CSS properties 
   "liveSassCompile.settings.autoprefix": [
@@ -20,7 +20,7 @@
   ],
   // exclude files
   "liveSassCompile.settings.excludeList": [      
-    "css/test/main.scss"
+    "frist/css/test/main.scss"
   ],
   // generate map, default is true
   "liveSassCompile.settings.generateMap": true,
@@ -29,13 +29,13 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "/css"
+      "savePath": "/frist/css"
     },
     // dist compressed version
     {
       "extensionName": ".min.css",
       "format": "compressed",
-      "savePath": "/css"
+      "savePath": "/frist/css"
     }
   ],
   "liveServer.settings.port": 80,
