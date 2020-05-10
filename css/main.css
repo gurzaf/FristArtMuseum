@@ -420,6 +420,16 @@ footer.site-footer .frits-footer .copyright {
   }
 }
 
+div[id*="_CartGrid_topLinkBar"] {
+  margin-top: -40px;
+}
+
+@media (min-width: 767px) {
+  div[id*="_CartGrid_topLinkBar"] {
+    margin-top: 0;
+  }
+}
+
 div[id*="_CartGrid_topLinkBar"] a {
   position: relative;
   z-index: 1;
@@ -431,6 +441,8 @@ div[id*="_CartGrid_topLinkBar"] a {
   background-color: transparent;
   border: 1px solid #F04623;
   color: #F04623;
+  margin-top: 40px;
+  margin-bottom: -45px;
 }
 
 div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:active, div[id*="_CartGrid_topLinkBar"] a:focus {
@@ -443,8 +455,25 @@ div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:activ
   border-color: #F04623;
 }
 
+@media (min-width: 767px) {
+  div[id*="_CartGrid_topLinkBar"] a {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
 div[id*="_CartGrid_CartContainer"] {
   margin-top: -85px;
+}
+
+div[id*="_CartGrid_CartContainer"] .PaymentPart_CartRows.row.show-grid.show-grid-row {
+  padding-bottom: 15px;
+}
+
+@media (min-width: 767px) {
+  div[id*="_CartGrid_CartContainer"] .PaymentPart_CartRows.row.show-grid.show-grid-row {
+    padding-bottom: 0;
+  }
 }
 
 div[id*="_CartGrid_CartContainer"] .cart-type-group {
@@ -453,7 +482,13 @@ div[id*="_CartGrid_CartContainer"] .cart-type-group {
 
 div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell {
   padding-top: 20px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+@media (min-width: 767px) {
+  div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell {
+    padding-bottom: 0;
+  }
 }
 
 div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell h4 {
@@ -494,7 +529,13 @@ div[id*="_CartGrid_CartContainer"] .price-group {
 }
 
 div[id*="_CartGrid_CartContainer"] .price-group .PaymentPart_CartCurrencyCell {
-  margin-left: 20px;
+  margin-left: 15px;
+}
+
+@media (min-width: 767px) {
+  div[id*="_CartGrid_CartContainer"] .price-group .PaymentPart_CartCurrencyCell {
+    margin-left: 20px;
+  }
 }
 
 div[id*="_CartGrid_CartContainer"] .price-group .payment-part-remove {
@@ -513,6 +554,13 @@ div[id*="_CartGrid_CartContainer"] .price-group .PaymentPart_CartItemTotal {
 div[id*="tdImageItem"] {
   width: 20%;
   padding-top: 20px;
+  display: none;
+}
+
+@media (min-width: 767px) {
+  div[id*="tdImageItem"] {
+    display: block;
+  }
 }
 
 @media (min-width: 990px) {
@@ -682,6 +730,7 @@ input[id*="_ButtonCheckout"] {
   background-color: #F04623;
   border: 1px solid transparent;
   margin-top: -20px;
+  min-width: 120px;
 }
 
 input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[id*="_ButtonCheckout"]:focus {

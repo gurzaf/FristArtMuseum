@@ -378,20 +378,42 @@ footer.site-footer {
 }
 
 div[id*="_CartGrid_topLinkBar"] {
+  margin-top: -40px;
+  @media (min-width: 767px) {
+    margin-top: 0;
+  }
+}
+
+div[id*="_CartGrid_topLinkBar"] {
   a {
     position: relative;
     z-index: 1;
     @include orangeButtonAlt;
+    margin-top: 40px;
+    margin-bottom: -45px;
+    @media (min-width: 767px) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
 div[id*="_CartGrid_CartContainer"] {
   margin-top: -85px;
+  .PaymentPart_CartRows.row.show-grid.show-grid-row {
+    padding-bottom: 15px;
+    @media (min-width: 767px) {
+      padding-bottom: 0;
+    }
+  }
   .cart-type-group {
     border-color: transparent;
     .PaymentPart_CartDescriptionCell {
       padding-top: 20px;
-      padding-bottom: 0px;
+      padding-bottom: 5px;
+      @media (min-width: 767px) {
+        padding-bottom: 0;
+      }
       h4 {
         margin: 0 0 10px;
         a {
@@ -424,7 +446,10 @@ div[id*="_CartGrid_CartContainer"] {
   .price-group {
     font-size: 14px;
     .PaymentPart_CartCurrencyCell {
-      margin-left: 20px;
+      margin-left: 15px;
+      @media (min-width: 767px) {
+        margin-left: 20px;
+      }
     }
     .payment-part-remove {
       margin-right: 5px;
@@ -442,6 +467,10 @@ div[id*="_CartGrid_CartContainer"] {
 div[id*="tdImageItem"] {
   width: 20%;
   padding-top: 20px;
+  display: none;
+  @media (min-width: 767px) {
+    display: block;
+  }
   @media (min-width: 990px) {
     width: 15%;
   }
@@ -555,4 +584,5 @@ dl[id*="_dlCartSummary"] {
 input[id*="_ButtonCheckout"] {
   @include orangeButton;
   margin-top: -20px;
+  min-width: 120px;
 }
