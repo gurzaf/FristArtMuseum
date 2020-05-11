@@ -874,8 +874,8 @@ div#new-menu-links .hours-operation a {
   font-size: 16px;
 }
 
-.site-wrapper header.site-header {
-  position: fixed;
+.fixedmenu {
+  position: fixed !important;
   z-index: 1001;
 }
 /*# sourceMappingURL=main.css.map */

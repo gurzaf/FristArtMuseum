@@ -20,8 +20,10 @@ const editPage = () => {
     evt.preventDefault();
     if ($('#menu-icon').hasClass('open')) {
       $('#menu-icon').removeClass('open');
+      $('.site-wrapper header.site-header').removeClass('fixedmenu');
     } else {
       $('#menu-icon').addClass('open');
+      $('.site-wrapper header.site-header').addClass('fixedmenu');
     }
     $('#new-menu-links').slideToggle('fast');
   });

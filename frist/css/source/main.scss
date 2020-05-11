@@ -699,7 +699,7 @@ div#new-menu-links {
   }
 }
 
-.site-wrapper header.site-header {
-  position: fixed;
+.fixedmenu {
+  position: fixed !important;
   z-index: 1001;
 }
