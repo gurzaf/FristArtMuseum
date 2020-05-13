@@ -54,6 +54,11 @@ $cellsBackground: #F9F9F9;
 
 body {
   font-family: 'Nunito Sans', sans-serif;
+  background: $footerColor;
+  height: 100vh;
+  > .site-container, > form {
+    background: white;
+  }
 }
 
 .MS_pageWrapper {
@@ -204,11 +209,12 @@ div.Programming_Event_DateTime {
     padding: 15px 10px;
     .col-xs-12.col-md-6.col-lg-6 {
       text-align: center;
-      width: 50%;
       padding-left: 5px;
       padding-right: 5px;
+      width: 55%;
       &:nth-child(2) {
         float: right;
+        width: 45%;
       }
       .BBFieldCaption.TicketDateHeaderLabel {
         font-size: 12px;
@@ -227,11 +233,18 @@ div.Programming_Event_DateTime {
     .TicketDateTimeInnerContainer {
       padding: 15px;
       .col-xs-12.col-md-6.col-lg-6 {
-        width: 30%;
+        width: 35% !important;
         padding-left: 15px;
         padding-right: 15px;
         .BBFieldCaption.TicketDateHeaderLabel {
           font-size: 18px;
+          a {
+            color: black;
+            text-decoration: underline;
+            &:hover, &:active, &:focus {
+              text-decoration: none;
+            }
+          }
         }
         h2, h2 span {
           font-size: 22px;
@@ -291,7 +304,7 @@ footer.site-footer {
     @media (min-width: 710px) {
       border-bottom: 1px solid $footerBorder;
       border-top: 1px solid $footerBorder;
-      margin: 10px 0;
+      margin: 20px 0 30px;
       padding: 40px 0 30px;
       position: relative;
       &:before, &:after {
@@ -380,6 +393,11 @@ footer.site-footer {
       }
     }
   }
+}
+
+// hide updatecart button
+a[id*="_CartGrid_ButtonUpdateCart"] {
+  display: none;
 }
 
 div[id*="_CartGrid_topLinkBar"] {
@@ -668,7 +686,7 @@ div[id*="_PaymentPartFormContainer"] {
 div#new-menu-links {
   display: none;
   position: fixed;
-  background-color: rgba(0,0,0,0.9);
+  background-color: $footerColor;
   left: 0;
   right: 0;
   top: 30px;

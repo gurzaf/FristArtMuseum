@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap");
 body {
   font-family: 'Nunito Sans', sans-serif;
+  background: #212121;
+  height: 100vh;
+}
+
+body > .site-container, body > form {
+  background: white;
 }
 
 .MS_pageWrapper {
@@ -198,13 +204,14 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer {
 
 div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 {
   text-align: center;
-  width: 50%;
   padding-left: 5px;
   padding-right: 5px;
+  width: 55%;
 }
 
 div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6:nth-child(2) {
   float: right;
+  width: 45%;
 }
 
 div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel {
@@ -227,12 +234,19 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
     padding: 15px;
   }
   div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 {
-    width: 30%;
+    width: 35% !important;
     padding-left: 15px;
     padding-right: 15px;
   }
   div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel {
     font-size: 18px;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel a {
+    color: black;
+    text-decoration: underline;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel a:hover, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel a:active, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel a:focus {
+    text-decoration: none;
   }
   div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 span {
     font-size: 22px;
@@ -303,7 +317,7 @@ footer.site-footer .frits-footer a > img {
   footer.site-footer .frits-footer {
     border-bottom: 1px solid #777777;
     border-top: 1px solid #777777;
-    margin: 10px 0;
+    margin: 20px 0 30px;
     padding: 40px 0 30px;
     position: relative;
   }
@@ -422,6 +436,10 @@ footer.site-footer .frits-footer .copyright {
     text-align: right;
     margin-top: 57px;
   }
+}
+
+a[id*="_CartGrid_ButtonUpdateCart"] {
+  display: none;
 }
 
 div[id*="_CartGrid_topLinkBar"] {
@@ -838,7 +856,7 @@ div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_
 div#new-menu-links {
   display: none;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #212121;
   left: 0;
   right: 0;
   top: 30px;
