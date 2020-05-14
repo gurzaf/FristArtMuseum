@@ -11,6 +11,24 @@ const fristEdits = () => {
     $('h2.Programming_Event_TimeContainer + span a').text('See other times');
   };
 
+  // set favicon function
+  const setFavicon = () => {
+    document.querySelector("link[rel*='ICON']").remove();
+    const l32 = document.createElement('link');
+    l32.type = 'image/x-icon';
+    l32.rel = 'shortcut icon';
+    l32.sizes= '32x32'
+    l32.href = 'assets/favicon-32x32.png';
+    const head = document.getElementsByTagName('head')[0];
+    head.appendChild(l32);
+    const l16 = document.createElement('link');
+    l16.type = 'image/x-icon';
+    l16.rel = 'shortcut icon';
+    l16.sizes= '16x16'
+    l16.href = 'assets/favicon-16x16.png';
+    head.appendChild(l16);
+  };
+
   // Function to change date and time html
   const transformDateAndTime = () => {
     const dateElement = $('.Programming_Event_Date');
@@ -77,6 +95,9 @@ const fristEdits = () => {
 
   // transform time on checkout page
   transformCheckoutTime();
+
+  // set favicon
+  setFavicon();
 };
 
 const init = () => {
