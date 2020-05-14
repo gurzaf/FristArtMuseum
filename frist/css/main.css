@@ -932,35 +932,11 @@ div#new-menu-links .hours-operation a {
   z-index: 1001;
 }
 
-a.gflag {
-  vertical-align: middle;
-  font-size: 16px;
-  padding: 1px 0;
-  background-repeat: no-repeat;
-  background-image: url(//gtranslate.net/flags/16.png);
-}
-
-a.gflag img {
-  border: 0;
-}
-
-a.gflag:hover {
-  background-image: url(//gtranslate.net/flags/16a.png);
-}
-
-#goog-gt-tt {
-  display: none !important;
-}
-
-.goog-te-banner-frame {
+#goog-gt-tt, .goog-te-banner-frame, #google_translate_element2 {
   display: none !important;
 }
 
 .goog-te-menu-value:hover {
   text-decoration: none !important;
-}
-
-#google_translate_element2 {
-  display: none !important;
 }
 /*# sourceMappingURL=main.css.map */
