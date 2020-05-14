@@ -7,8 +7,8 @@ const fristEdits = () => {
 
   // Function add HTML for date and time action links
   const dateTimeActions = () => {
-    $('h2.Programming_Event_DateContainer').after('<span class="BBFieldCaption TicketDateHeaderLabel"><a href="javascript:return;">Select other dates</a></span>');
-    $('h2.Programming_Event_TimeContainer').after('<span class="BBFieldCaption TicketDateHeaderLabel"><a href="javascript:return;">See other times</a></span>');
+    $('h2.Programming_Event_DateContainer + span a').text('Select other dates');
+    $('h2.Programming_Event_TimeContainer + span a').text('See other times');
   };
 
   // Function to change date and time html

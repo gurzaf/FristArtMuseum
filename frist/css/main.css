@@ -3,6 +3,7 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   background: #212121;
   height: 100vh;
+  top: 0 !important;
 }
 
 body > .site-container, body > form {
@@ -64,6 +65,14 @@ body > .site-container, body > form {
   background-color: black;
 }
 
+.site-wrapper header.site-header ul.header_links li a.language {
+  padding-right: 0;
+}
+
+.site-wrapper header.site-header ul.header_links li a.language:focus {
+  background-color: #707070;
+}
+
 .site-wrapper header.site-header ul.header_links li a.language span {
   width: 20px;
   height: 20px;
@@ -76,6 +85,12 @@ body > .site-container, body > form {
   margin-right: 5px;
 }
 
+.site-wrapper header.site-header ul.header_links li a.language select {
+  background: transparent;
+  border: 0;
+  max-width: 90px;
+}
+
 @media (min-width: 480px) {
   .site-wrapper header.site-header ul.header_links li a {
     font-size: 20px;
@@ -83,6 +98,9 @@ body > .site-container, body > form {
   .site-wrapper header.site-header ul.header_links li a.language span {
     margin-top: 2.5px;
     margin-bottom: -3px;
+  }
+  .site-wrapper header.site-header ul.header_links li a.language select {
+    max-width: 150px;
   }
 }
 
@@ -225,6 +243,20 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
   font-weight: bold;
 }
 
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span {
+  float: none !important;
+  font-size: 12px;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a {
+  color: black;
+  text-decoration: underline;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a:hover, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a:active, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a:focus {
+  text-decoration: none;
+}
+
 @media (min-width: 480px) {
   div.Programming_Event_DateTime {
     margin-top: 40px;
@@ -250,6 +282,9 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
   }
   div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 span {
     font-size: 22px;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span {
+    font-size: 18px;
   }
 }
 
@@ -895,5 +930,37 @@ div#new-menu-links .hours-operation a {
 .fixedmenu {
   position: fixed !important;
   z-index: 1001;
+}
+
+a.gflag {
+  vertical-align: middle;
+  font-size: 16px;
+  padding: 1px 0;
+  background-repeat: no-repeat;
+  background-image: url(//gtranslate.net/flags/16.png);
+}
+
+a.gflag img {
+  border: 0;
+}
+
+a.gflag:hover {
+  background-image: url(//gtranslate.net/flags/16a.png);
+}
+
+#goog-gt-tt {
+  display: none !important;
+}
+
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+.goog-te-menu-value:hover {
+  text-decoration: none !important;
+}
+
+#google_translate_element2 {
+  display: none !important;
 }
 /*# sourceMappingURL=main.css.map */
