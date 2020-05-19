@@ -1,6 +1,8 @@
 const fristEdits = () => {
   const LINK_TITLE = 'Review or edit item';
   const BILLING_TITLE = 'Billing Information';
+  const EMPTY_CART_TEXT = 'Empty cart';
+  const DELIVERY_TEXT = 'How do you want us to deliver your tickets?';
 
   // Function to change AM and PM to a.m. and p.m.
   const changeAMPM = (val) => val.replace(/AM/g, 'a.m.').replace(/PM/g, 'p.m.');
@@ -98,6 +100,11 @@ const fristEdits = () => {
 
   // set favicon
   setFavicon();
+
+  // change Empty cart text
+  $('[id*="_CartGrid_lbRemoveAll"]').text(EMPTY_CART_TEXT);
+  $('[id*="_labelDeliveryMethodCaption"]').text(DELIVERY_TEXT);
+  console.info('Empty cart...');
 };
 
 const init = () => {
