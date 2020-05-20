@@ -11,6 +11,25 @@ const fristEdits = () => {
     // define alt attribute for cart images
     $('img.img-responsive.cartImg').attr('alt', ALT_CART_IMAGE);
 
+    // change section to div
+    const element = $('section')[0];
+    const res = $('<div/>', {
+      html: element.innerHTML,
+      class: element.className,
+    });
+    element.replaceWith(res[0]);
+
+    //Fix autocomplete
+    $('input[id*="_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]').attr('autocomplete', 'current-password');
+
+    //Remove empty headings
+    $('h3, h2, h1, h4, h5, h6').each((a, b) => {
+      const e = $(b);
+      if (e.text().trim() === '') {
+        e.remove();
+      }
+    });
+
     // put default alt to images without alt (basically hidden images)
     $('img').each((index, item) => {
       const element = $(item);
@@ -33,6 +52,7 @@ const fristEdits = () => {
           element.attr('aria-label', title);
           return;
         }
+        element.text(ARIA_DEFAULT);
         element.attr('aria-label', ARIA_DEFAULT);
       }
     });

@@ -114,12 +114,12 @@ body > .site-container, body > form {
   }
 }
 
-.site-wrapper section.site-main-section {
+.site-wrapper .site-main-section {
   margin-top: 111px;
 }
 
 @media (min-width: 480px) {
-  .site-wrapper section.site-main-section {
+  .site-wrapper .site-main-section {
     margin-top: 156px;
   }
 }
