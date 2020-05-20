@@ -3,6 +3,40 @@ const fristEdits = () => {
   const BILLING_TITLE = 'Billing Information';
   const EMPTY_CART_TEXT = 'Empty cart';
   const DELIVERY_TEXT = 'How do you want us to deliver your tickets?';
+  const ALT_CART_IMAGE = 'Cart item image';
+  const ARIA_DEFAULT = 'Invisible link';
+
+  // Function to fix WCAG issues
+  const WCAG = () => {
+    // define alt attribute for cart images
+    $('img.img-responsive.cartImg').attr('alt', ALT_CART_IMAGE);
+
+    // put default alt to images without alt (basically hidden images)
+    $('img').each((index, item) => {
+      const element = $(item);
+      if (!element.attr('alt')) {
+        element.attr('alt', ALT_CART_IMAGE);
+      }
+    });
+
+    $('a').each((index, item) => {
+      const element = $(item);
+      if (!element.attr('aria-label') && element.find('img').length === 0) {
+        const text = element.text().trim();
+        if (text !== '') {
+          element.attr('aria-label', text);
+          return;
+        }
+        let title = element.attr('title');
+        if (title) {
+          title = title.trim().replace(/:/g, '').trim();
+          element.attr('aria-label', title);
+          return;
+        }
+        element.attr('aria-label', ARIA_DEFAULT);
+      }
+    });
+  };
 
   // Function to change AM and PM to a.m. and p.m.
   const changeAMPM = (val) => val.replace(/AM/g, 'a.m.').replace(/PM/g, 'p.m.');
@@ -63,7 +97,7 @@ const fristEdits = () => {
     const titleElement = $(item).find('h4');
     const link = $(titleElement).find('a').attr('href');
     if (link) {
-      titleElement.after(`<a class="edit-item-link" href="${link}">${LINK_TITLE}</a>`);
+      titleElement.after(`<a aria-label="Edit item in cart" class="edit-item-link" href="${link}">${LINK_TITLE}</a>`);
     }
   });
 
@@ -104,7 +138,9 @@ const fristEdits = () => {
   // change Empty cart text
   $('[id*="_CartGrid_lbRemoveAll"]').text(EMPTY_CART_TEXT);
   $('[id*="_labelDeliveryMethodCaption"]').text(DELIVERY_TEXT);
-  console.info('Empty cart...');
+
+  // Fix WCAG issues
+  WCAG();
 };
 
 const init = () => {
