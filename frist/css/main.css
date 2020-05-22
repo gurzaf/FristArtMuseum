@@ -147,7 +147,7 @@ main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary {
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-  background-color: #F04623;
+  background-color: #E00000;
   border: 1px solid transparent;
 }
 
@@ -157,8 +157,8 @@ main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:ho
 
 main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:hover, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:active, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:focus {
   background-color: transparent;
-  color: #F04623;
-  border-color: #F04623;
+  color: #E00000;
+  border-color: #E00000;
 }
 
 #new-logo-wrap {
@@ -389,7 +389,7 @@ footer.site-footer .frits-footer .footer-buttons .btn {
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-  background-color: #F04623;
+  background-color: #E00000;
   border: 1px solid transparent;
   padding-left: 0;
   padding-right: 0;
@@ -404,8 +404,8 @@ footer.site-footer .frits-footer .footer-buttons .btn:hover, footer.site-footer 
 
 footer.site-footer .frits-footer .footer-buttons .btn:hover, footer.site-footer .frits-footer .footer-buttons .btn:active, footer.site-footer .frits-footer .footer-buttons .btn:focus {
   background-color: transparent;
-  color: #F04623;
-  border-color: #F04623;
+  color: #E00000;
+  border-color: #E00000;
 }
 
 footer.site-footer .frits-footer .footer-buttons .btn:last-child {
@@ -496,8 +496,8 @@ div[id*="_CartGrid_topLinkBar"] a {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: transparent;
-  border: 1px solid #F04623;
-  color: #F04623;
+  border: 1px solid #E00000;
+  color: #E00000;
   margin-top: 40px;
   margin-bottom: -45px;
   font-size: 16px;
@@ -508,9 +508,9 @@ div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:activ
 }
 
 div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:active, div[id*="_CartGrid_topLinkBar"] a:focus {
-  background-color: #F04623;
+  background-color: #E00000;
   color: white;
-  border-color: #F04623;
+  border-color: #E00000;
 }
 
 @media (min-width: 389px) {
@@ -578,7 +578,7 @@ div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescription
 }
 
 div[id*="_CartGrid_CartContainer"] .cart-type-group .PaymentPart_CartDescriptionCell a.edit-item-link {
-  color: #F04623;
+  color: #E00000;
   font-size: 14px;
   margin-bottom: 10px;
   display: block;
@@ -679,8 +679,8 @@ div[id*="tdImageItem"] {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: transparent;
-  border: 1px solid #F04623;
-  color: #F04623;
+  border: 1px solid #E00000;
+  color: #E00000;
 }
 
 #divCartSummary .col-xs-3.col-sm-2 input:hover, #divCartSummary .col-xs-3.col-sm-2 input:active, #divCartSummary .col-xs-3.col-sm-2 input:focus {
@@ -688,9 +688,9 @@ div[id*="tdImageItem"] {
 }
 
 #divCartSummary .col-xs-3.col-sm-2 input:hover, #divCartSummary .col-xs-3.col-sm-2 input:active, #divCartSummary .col-xs-3.col-sm-2 input:focus {
-  background-color: #F04623;
+  background-color: #E00000;
   color: white;
-  border-color: #F04623;
+  border-color: #E00000;
 }
 
 div.cart-type-group.cart-type-Donations.single-cart-item {
@@ -740,8 +740,8 @@ div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: transparent;
-  border: 1px solid #F04623;
-  color: #F04623;
+  border: 1px solid #E00000;
+  color: #E00000;
   width: 120px;
   margin-top: 0;
   margin-right: 20;
@@ -752,9 +752,9 @@ div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary
 }
 
 div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:hover, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:active, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:focus {
-  background-color: #F04623;
+  background-color: #E00000;
   color: white;
-  border-color: #F04623;
+  border-color: #E00000;
 }
 
 div[id*="_divUserSignUp"] {
@@ -803,7 +803,7 @@ input[id*="_ButtonCheckout"] {
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-  background-color: #F04623;
+  background-color: #E00000;
   border: 1px solid transparent;
   margin-top: -20px;
   min-width: 120px;
@@ -815,8 +815,8 @@ input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[i
 
 input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[id*="_ButtonCheckout"]:focus {
   background-color: transparent;
-  color: #F04623;
-  border-color: #F04623;
+  color: #E00000;
+  border-color: #E00000;
 }
 
 div#divUseAsBilling {
@@ -923,7 +923,7 @@ div#new-menu-links .hours-operation {
 }
 
 div#new-menu-links .hours-operation a {
-  color: #F04623;
+  color: #E00000;
   font-size: 16px;
 }
 
