@@ -1,0 +1,16 @@
+{
+  "name": "FristArtMuseum",
+  "version": "1.0.0",
+  "repository": "https://github.com/gurzaf/FristArtMuseum.git",
+  "author": "julian@soluciones404.com.co <Julian Galvez>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-preset-minify": "^0.5.1"
+  },
+  "scripts": {
+    "build": "babel js/source -d js"
+  }
+}
