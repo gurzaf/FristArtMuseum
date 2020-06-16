@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+$background: #212322;
+$yellowBackground: #FFC845;
+$orange: #FC4C02; 
+$borderColor: #D8D8D8;
+
+$headerHeight: 80px;
+$logoHeight: 60px;
+
+@mixin buttonHeader {
+  background-color: $yellowBackground;
+  color: $background;
+  font-weight: bold;
+  transition: all 0.1s ease-out;
+  &:hover, &:focus, &:active {
+    opacity: 0.8;
+  }
+}
+
+@mixin buttonBlack {
+  background-color: $background;
+  color: $orange;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 0;
+  border-radius: 0;
+  transition: all 0.1s ease-out;
+  &:hover, &:active, &:focus {
+    color: white;
+  }
+}
+
+@mixin orangeLink {
+  color: $orange;
+  transition: all 0.1s ease-out;
+  text-decoration: none;
+  &:hover, &:active, &:focus {
+    color: white;
+    text-decoration: underline;
+  }
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $background;
+  height: 100vh;
+  top: 0 !important;
+  > .site-container, > form {
+    background: white;
+  }
+}
+
+aside#content-secondary {
+  display: none;
+}
+
+.MS_pageWrapper {
+  margin-bottom: 0;
+}
+
+.site-wrapper {
+  form {
+    margin-bottom: 0;
+  }
+  position: initial;
+  header.site-header {
+    position: absolute;
+    background-color: $background;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $headerHeight;
+    margin: 0;
+    p {
+      margin: 0;
+      padding: 0;
+    }
+    .RS_headerWrapper_inner {
+      @media(min-width: 1200px) {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+      }
+    }
+    .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
+      display: table;
+      height: $headerHeight;
+      > div {
+        display: table-cell;
+        margin: 0;
+        vertical-align: middle;
+      }
+      div a {
+        @include buttonHeader;
+        margin-left: 5px;
+        padding: 7px 12px;
+      }
+    }
+    ul.header_links {
+      list-style: none;
+      max-width: 1170px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: right;
+      padding-left: $headerHeight - 5;
+      padding-right: $headerHeight - 5;
+      li {
+        a {
+          @include buttonHeader;
+        }
+      }
+      // li {
+      //   display: inline-block;
+      //   a {
+      //     padding: 0 20px;
+      //     background-color: $greyButtons;
+      //     color: white;
+      //     height: $headerHeight;
+      //     display: inline-block;
+      //     line-height: $headerHeight;
+      //     font-size: $headerHeight - 15;
+      //     text-decoration: none;
+      //     transition: all 0.1s ease-out;
+      //     &:hover, &:active, &:focus {
+      //       background-color: black;
+      //     }
+      //     &.language {
+      //       &:focus {
+      //         background-color: $greyButtons;
+      //       }
+      //       span {
+      //         width: $headerHeight - 10;
+      //         height: $headerHeight - 10;
+      //         display: inline-block;
+      //         background: url('../assets/globe.png');
+      //         background-size: cover;
+      //         margin-top: 5px;
+      //         margin-bottom: -5px;
+      //         margin-right: 5px;
+      //       }
+      //       select {
+      //         background: transparent;
+      //         border: 0;
+      //         max-width: 90px;
+      //       }
+      //       padding-right: 0;
+      //     }
+      //     @media(min-width: 480px) {
+      //       font-size: $headerHeight - 10;
+      //       &.language {
+      //         span {
+      //           margin-top: 2.5px;
+      //           margin-bottom: -3px;
+      //         }
+      //         select {
+      //           max-width: 150px;
+      //         }
+      //       }
+      //     }
+      //   }
+      //   margin-right: 20px;
+      //   &:last-child {
+      //     margin-right: 30px;
+      //     @media(min-width: 1200px) {
+      //       margin-right: 0;
+      //     }
+      //   }
+      // }
+    }
+  }
+  .site-main-section {
+    margin-top: $headerHeight;
+    margin-bottom: 40px;
+    background-color: white;
+    @media (min-width: 992px) {
+      margin-top: $headerHeight + 40;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+.admissionBg {
+  @media (min-width: 992px) {
+    background-image: url('../assets/Hawaiian_Admissions_Background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+main.main-Content {
+  float: none;
+  width: 100%;
+  left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  .MS_contentWrapper_inner.overflow_margin_helper {
+    padding-bottom: 0;
+  }
+  .BBFormButtonCell.form-group.clearfix {
+    margin: 40px 0;
+    input.btn.btn-primary {
+      float: right;
+      @include buttonBlack;
+    }
+  }
+}
+
+h1 {
+  font-size: 3.1rem;
+  font-weight: 700;
+}
+
+div.Programming_Event_DateTime {
+  border: 2px solid $borderColor;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  .TicketDateTimeInnerContainer {
+    padding: 15px 10px;
+    .col-xs-12.col-md-6.col-lg-6 {
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+      width: 55%;
+      &:nth-child(2) {
+        float: right;
+        width: 45%;
+      }
+      .BBFieldCaption.TicketDateHeaderLabel {
+        font-size: 12px;
+      }
+      h2, h2 span {
+        margin-left: unset;
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      h2 + span {
+        float: none !important;
+        font-size: 12px;
+        a {
+          color: black;
+          text-decoration: underline;
+          &:hover, &:active, &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 480px) {
+    // margin-top: 40px;
+    // margin-bottom: 40px;
+    .TicketDateTimeInnerContainer {
+      padding: 15px;
+      .col-xs-12.col-md-6.col-lg-6 {
+        width: 35% !important;
+        padding-left: 15px;
+        padding-right: 15px;
+        .BBFieldCaption.TicketDateHeaderLabel {
+          font-size: 18px;
+          a {
+            color: black;
+            text-decoration: underline;
+            &:hover, &:active, &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+        h2, h2 span {
+          font-size: 22px;
+        }
+        h2 + span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.Programming_Event_Description {
+  p, span, strong {
+    font-family: 'Poppins', sans-serif !important;
+  }
+}
+
+.Programming_Event_PriceList {
+  margin-top: 40px;
+  border-width: 1px 1px 0px;
+  border-style: solid;
+  border-color: $borderColor;
+  > .show-grid {
+    > .row {
+      border-top: 0;
+      border-bottom: 1px solid $borderColor;
+      > div {
+        &.col-sm-12.col-md-6 {
+          width: 33.33333333%;
+          float: left;
+          // background-color: blue;
+          @media (min-width: 992px) {
+            width: 50%;
+          }
+        }
+        &.col-xs-6.col-md-3 {
+          width: 33.33333333%;
+          @media (min-width: 992px) {
+            width: 25%;
+          }
+        }
+        label, span {
+          line-height: 34px;
+          margin-bottom: 0;
+          &.listPrice.BBFieldCaption.Programming_TicketPriceName {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Footer
+footer.site-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: $background;
+  a {
+    @include orangeLink;
+  }
+  .bishop-footer {
+    padding-top: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
+    a > img.footer-logo {
+      width: 100%;
+      max-width: 290px;
+      height: auto;
+      @media (min-width: 710px) {
+        max-width: 280px;
+      }
+    }
+    p {
+      margin-top: 10px;
+      margin-bottom: 0px;
+      @media (min-width: 710px) {
+        margin-bottom: 5px;
+      }
+    }
+    .footer-social {
+      text-align: center;
+      margin-top: 22px;
+      a.social-link {
+        @include buttonHeader;
+        margin-left: 5px;
+        display: inline-block;
+        &:first-child {
+          margin-left: 0;
+        }
+        img {
+          width: 20px;
+          height: 20px;
+          margin: 5px;
+        }
+      }
+      @media (min-width: 710px) {
+        text-align: right;
+      }
+    }
+    .footer-links {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+      li {
+        margin-bottom: 5px;
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover, &:focus, &:active {
+            color: $orange;
+            // text-decoration: underline;
+          }
+        }
+      }
+      @media (min-width: 710px) {
+        margin-top: 5px;
+        li {
+          display: inline;
+          margin-right: 10px;
+          border-left: 1px solid white;
+          padding-left: 10px;
+          &:first-child {
+            padding-left: 0;
+            border-left: 0;
+          }
+        }
+      }
+    }
+    .copyright {
+      text-align: center;
+      @media (min-width: 710px) {
+        text-align: right;
+      }
+    }
+  }
+}

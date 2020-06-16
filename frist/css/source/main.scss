@@ -18,7 +18,7 @@ $footerBorder: #777777;
 
 $cellsBackground: #F9F9F9;
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 @mixin button {
   border-radius: 0;
@@ -53,7 +53,7 @@ $cellsBackground: #F9F9F9;
 }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: $footerColor;
   height: 100vh;
   top: 0 !important;
