@@ -1,7 +1,8 @@
 {
   // only this files are include to compilation and no need included partials files 
   "liveSassCompile.settings.includeItems": [      
-    "frist/css/source/main.scss"
+    "frist/css/source/main.scss",
+    "bishop/css/src/main.scss",
   ],
   // vendor prefixes to unsupported CSS properties 
   "liveSassCompile.settings.autoprefix": [
@@ -29,7 +30,7 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "/frist/css"
+      "savePath": "~/../"
     },
     // dist compressed version
     {

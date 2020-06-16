@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #212322;
+  height: 100vh;
+  top: 0 !important;
+}
+
+body > .site-container, body > form {
+  background: white;
+}
+
+aside#content-secondary {
+  display: none;
+}
+
+.MS_pageWrapper {
+  margin-bottom: 0;
+}
+
+.site-wrapper {
+  position: initial;
+}
+
+.site-wrapper form {
+  margin-bottom: 0;
+}
+
+.site-wrapper header.site-header {
+  position: absolute;
+  background-color: #212322;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  margin: 0;
+}
+
+.site-wrapper header.site-header p {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1200px) {
+  .site-wrapper header.site-header .RS_headerWrapper_inner {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+}
+
+.site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
+  display: table;
+  height: 80px;
+}
+
+.site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
+  display: table-cell;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a {
+  background-color: #FFC845;
+  color: #212322;
+  font-weight: bold;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  margin-left: 5px;
+  padding: 7px 12px;
+}
+
+.site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a:hover, .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a:focus, .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a:active {
+  opacity: 0.8;
+}
+
+.site-wrapper header.site-header ul.header_links {
+  list-style: none;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.site-wrapper header.site-header ul.header_links li a {
+  background-color: #FFC845;
+  color: #212322;
+  font-weight: bold;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.site-wrapper header.site-header ul.header_links li a:hover, .site-wrapper header.site-header ul.header_links li a:focus, .site-wrapper header.site-header ul.header_links li a:active {
+  opacity: 0.8;
+}
+
+.site-wrapper .site-main-section {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  background-color: white;
+}
+
+@media (min-width: 992px) {
+  .site-wrapper .site-main-section {
+    margin-top: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .admissionBg {
+    background-image: url("../assets/Hawaiian_Admissions_Background.jpg");
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+main.main-Content {
+  float: none;
+  width: 100%;
+  left: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+main.main-Content .MS_contentWrapper_inner.overflow_margin_helper {
+  padding-bottom: 0;
+}
+
+main.main-Content .BBFormButtonCell.form-group.clearfix {
+  margin: 40px 0;
+}
+
+main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary {
+  float: right;
+  background-color: #212322;
+  color: #FC4C02;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:hover, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:active, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:focus {
+  color: white;
+}
+
+h1 {
+  font-size: 3.1rem;
+  font-weight: 700;
+}
+
+div.Programming_Event_DateTime {
+  border: 2px solid #D8D8D8;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer {
+  padding: 15px 10px;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 55%;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6:nth-child(2) {
+  float: right;
+  width: 45%;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel {
+  font-size: 12px;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 span {
+  margin-left: unset;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span {
+  float: none !important;
+  font-size: 12px;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a {
+  color: black;
+  text-decoration: underline;
+}
+
+div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a:hover, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a:active, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a:focus {
+  text-decoration: none;
+}
+
+@media (min-width: 480px) {
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer {
+    padding: 15px;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 {
+    width: 35% !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel {
+    font-size: 18px;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel a {
+    color: black;
+    text-decoration: underline;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel a:hover, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel a:active, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 .BBFieldCaption.TicketDateHeaderLabel a:focus {
+    text-decoration: none;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 span {
+    font-size: 22px;
+  }
+  div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span {
+    font-size: 18px;
+  }
+}
+
+.Programming_Event_Description p, .Programming_Event_Description span, .Programming_Event_Description strong {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.Programming_Event_PriceList {
+  margin-top: 40px;
+  border-width: 1px 1px 0px;
+  border-style: solid;
+  border-color: #D8D8D8;
+}
+
+.Programming_Event_PriceList > .show-grid > .row {
+  border-top: 0;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+.Programming_Event_PriceList > .show-grid > .row > div.col-sm-12.col-md-6 {
+  width: 33.33333333%;
+  float: left;
+}
+
+@media (min-width: 992px) {
+  .Programming_Event_PriceList > .show-grid > .row > div.col-sm-12.col-md-6 {
+    width: 50%;
+  }
+}
+
+.Programming_Event_PriceList > .show-grid > .row > div.col-xs-6.col-md-3 {
+  width: 33.33333333%;
+}
+
+@media (min-width: 992px) {
+  .Programming_Event_PriceList > .show-grid > .row > div.col-xs-6.col-md-3 {
+    width: 25%;
+  }
+}
+
+.Programming_Event_PriceList > .show-grid > .row > div label, .Programming_Event_PriceList > .show-grid > .row > div span {
+  line-height: 34px;
+  margin-bottom: 0;
+}
+
+.Programming_Event_PriceList > .show-grid > .row > div label.listPrice.BBFieldCaption.Programming_TicketPriceName, .Programming_Event_PriceList > .show-grid > .row > div span.listPrice.BBFieldCaption.Programming_TicketPriceName {
+  font-weight: normal;
+}
+
+footer.site-footer {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-color: #212322;
+}
+
+footer.site-footer a {
+  color: #FC4C02;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  text-decoration: none;
+}
+
+footer.site-footer a:hover, footer.site-footer a:active, footer.site-footer a:focus {
+  color: white;
+  text-decoration: underline;
+}
+
+footer.site-footer .bishop-footer {
+  padding-top: 20px;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+footer.site-footer .bishop-footer a > img.footer-logo {
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+}
+
+@media (min-width: 710px) {
+  footer.site-footer .bishop-footer a > img.footer-logo {
+    max-width: 280px;
+  }
+}
+
+footer.site-footer .bishop-footer p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+@media (min-width: 710px) {
+  footer.site-footer .bishop-footer p {
+    margin-bottom: 5px;
+  }
+}
+
+footer.site-footer .bishop-footer .footer-social {
+  text-align: center;
+  margin-top: 22px;
+}
+
+footer.site-footer .bishop-footer .footer-social a.social-link {
+  background-color: #FFC845;
+  color: #212322;
+  font-weight: bold;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+footer.site-footer .bishop-footer .footer-social a.social-link:hover, footer.site-footer .bishop-footer .footer-social a.social-link:focus, footer.site-footer .bishop-footer .footer-social a.social-link:active {
+  opacity: 0.8;
+}
+
+footer.site-footer .bishop-footer .footer-social a.social-link:first-child {
+  margin-left: 0;
+}
+
+footer.site-footer .bishop-footer .footer-social a.social-link img {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+}
+
+@media (min-width: 710px) {
+  footer.site-footer .bishop-footer .footer-social {
+    text-align: right;
+  }
+}
+
+footer.site-footer .bishop-footer .footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+footer.site-footer .bishop-footer .footer-links li {
+  margin-bottom: 5px;
+}
+
+footer.site-footer .bishop-footer .footer-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer.site-footer .bishop-footer .footer-links li a:hover, footer.site-footer .bishop-footer .footer-links li a:focus, footer.site-footer .bishop-footer .footer-links li a:active {
+  color: #FC4C02;
+}
+
+@media (min-width: 710px) {
+  footer.site-footer .bishop-footer .footer-links {
+    margin-top: 5px;
+  }
+  footer.site-footer .bishop-footer .footer-links li {
+    display: inline;
+    margin-right: 10px;
+    border-left: 1px solid white;
+    padding-left: 10px;
+  }
+  footer.site-footer .bishop-footer .footer-links li:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+footer.site-footer .bishop-footer .copyright {
+  text-align: center;
+}
+
+@media (min-width: 710px) {
+  footer.site-footer .bishop-footer .copyright {
+    text-align: right;
+  }
+}
+/*# sourceMappingURL=main.css.map */
