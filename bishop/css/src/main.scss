@@ -871,3 +871,26 @@ h3 > span.Registration_RegistrantCredentialsHeader {
     } 
   }
 }
+
+#google_translate_element2, div.skiptranslate {display:none!important;}
+
+#translate-menu {
+  float: right;
+  display: table;
+  height: $headerHeight;
+  margin-right: 7.5px;
+  a {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 18px;
+    padding: 0 7.5px;
+    color: white;
+    transition: all 0.1s ease-out;
+    &:active, &:focus, &:hover {
+      color: white;
+    }
+    &.active {
+      
+    }
+  }
+}
