@@ -1,3 +1,4 @@
 *.DS_Store*
 frist/node_modules
 frist/yarn.lock
+.DS_Store
