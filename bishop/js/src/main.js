@@ -5,6 +5,7 @@
   const DELIVERY_TEXT = 'How do you want us to deliver your tickets?';
   const ALT_CART_IMAGE = 'Cart item image';
   const ARIA_DEFAULT = 'Invisible link';
+  const DONATION_TEXT = 'Make a donation';
   
   // Function to fix WCAG issues
   const WCAG = () => {
@@ -60,7 +61,9 @@
   
   const replaceText = () => {
     $('.MS_LoginLink a').text('Login');
-    $('input[id*="buttonAddEventToCart"]').val('Continue');
+    $('input[id*="buttonAddEventToCart"]').val('CONTINUE');
+    $('div.cart-type-group.cart-type-Donations.single-cart-item .PaymentPart_CartDescriptionCell')
+      .html(`<span>${DONATION_TEXT}</span>`);
     transformDateAndTime();
     dateTimeActions();
     transformCheckoutTime();
@@ -130,12 +133,23 @@
     // Change position of cart summary section
     $('div[id*="_divUserSignUp"]').after($('#divCartSummary .form-group.lead.text-success'));
 
-    // Change position of donations section
-    // $('div[id*="_divSummaryOuter"]').after($('div[id*="_additionalDonationSection"]'));
-    $('div[id*="_additionalDonationSection"]').after($('div[id*="_divDiscountCodeEntry"]'));
+    // Change position of dicount section
+    $('#divCartSummary .form-group:first-child').before($('div[id*="_divDiscountCodeEntry"]'));
     
     // Change billing section title
     $('span[id*="_lblPersonalInfo"]').text(BILLING_TITLE);
+
+    // Add image on checkout page
+    $('div[id*="_PaymentPartFormContainer"] > div:nth-child(2)').before(`
+      <div class="col-xs-12">
+        <img id="checkout-bishop-image" class="img-responsive cartImg" src="assets/bishop-thumbnail.png" alt="Bishop Logo">
+      </div>
+    `);
+
+    $('div[id*="_registrantBioInfoSection"] .form-group label').each((index, item) => {
+      const t = $(item).text();
+      $(item).text(t.replace(':', ''));
+    });
   };
   
   const fixLayout = () => {
