@@ -1,11 +1,55 @@
 (() => {
   const LINK_TITLE = 'Review or edit item';
   const BILLING_TITLE = 'Billing Information';
-  const EMPTY_CART_TEXT = 'Empty cart';
-  const DELIVERY_TEXT = 'How do you want us to deliver your tickets?';
+  // const EMPTY_CART_TEXT = 'Empty cart';
+  // const DELIVERY_TEXT = 'How do you want us to deliver your tickets?';
   const ALT_CART_IMAGE = 'Cart item image';
   const ARIA_DEFAULT = 'Invisible link';
   const DONATION_TEXT = 'Make a donation';
+  const LOGIN_TITLE = 'Sign in';
+  // const MEMBER_SIGNIN = 'Member Sign-In';
+  // const MEMBER_DISCOUNT = 'Please sign in to receive your member discount.';
+  const LOGIN_DESCRIPTION = '<p class="new-login-description">If you don’t know what your membership e-mail is, please call our Membership Department at 615-353-6984 or 615-354-6389 or Email our Membership Department.</p>';
+  const REGISTER_NEW_ACCOUNT = 'Register for new account';
+  // const SIGNIN_AND_CHECKOUT = 'Sign in & Check Out';
+
+  const editCurrentLoginPopup = () => {
+    // Login button reference
+    const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+
+    // $('.ui-dialog').css('width',  'auto');
+   
+    buttonReference.on('click', () => {
+      setTimeout(() => {
+        $('.ui-widget-overlay').on('click', (evt) => {
+          evt.preventDefault();
+          $('[id*="UserModalSignIn_UserModalPartDialog1"]').dialog('close');
+        });
+      })
+    });
+   
+    // getting a login dialog reference
+    const dialog = $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]');
+    // getting a reference of title html
+    const title = $(dialog).find('.ui-dialog-title.modal-title');
+    $(title).html(LOGIN_TITLE);
+    // prepending a text section in dialog
+    const body = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_DivSignInContainer"]');
+    $(body).prepend(LOGIN_DESCRIPTION);
+   
+    // move register link
+    const linkRegister = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog"]');
+    $(linkRegister).text(REGISTER_NEW_ACCOUNT);
+    const usernameField = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
+    linkRegister.insertAfter(usernameField);
+   
+    // move recover password link
+    const linkPassword = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword"]');
+    const passwordField = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
+    linkPassword.insertAfter(passwordField);
+    // hide close button
+    $(dialog).find('.ui-dialog-buttonset button:first-child').css('display', 'none');
+  };
   
   // Function to fix WCAG issues
   const WCAG = () => {
@@ -140,11 +184,11 @@
     $('span[id*="_lblPersonalInfo"]').text(BILLING_TITLE);
 
     // Add image on checkout page
-    $('div[id*="_PaymentPartFormContainer"] > div:nth-child(2)').before(`
-      <div class="col-xs-12">
-        <img id="checkout-bishop-image" class="img-responsive cartImg" src="assets/bishop-thumbnail.png" alt="Bishop Logo">
-      </div>
-    `);
+    // $('div[id*="_upPayment"] > div > div:nth-child(2)').before(`
+    //   <div class="col-xs-12">
+    //     <img id="checkout-bishop-image" class="img-responsive cartImg" src="assets/bishop-thumbnail.png" alt="Bishop Logo">
+    //   </div>
+    // `);
 
     $('div[id*="_registrantBioInfoSection"] .form-group label').each((index, item) => {
       const t = $(item).text();
@@ -157,6 +201,7 @@
       generalAdmissionBg();
       replaceText();
       organiceItems();
+      editCurrentLoginPopup();
     });
   };
   fixLayout();

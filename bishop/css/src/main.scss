@@ -5,6 +5,7 @@ $yellowBackground: #FFC845;
 $orange: #FC4C02; 
 $borderColor: #D8D8D8;
 $cellsBackground: #F9F9F9;
+$dialogTitleBackground: #F0F0F0;
 
 $headerHeight: 80px;
 $logoHeight: 60px;
@@ -790,4 +791,83 @@ div[id*="_UserRegistration"] {
 
 h3 > span.Registration_RegistrantCredentialsHeader {
   font-weight: bold;
+}
+
+
+// ================================= DIALOGS ======================
+
+// Show popup overlay
+.ui-widget-overlay.ui-front {
+  display: block !important;
+  background: #000 !important;
+  opacity: .8 !important;
+}
+ 
+// new tags
+ 
+.new-login-description {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ui-dialog.modal-Dialog {
+  width: 100% !important;
+  max-width: 500px;
+  margin-left: 15px;
+  margin-right: 15px;
+  @media screen and (min-width: 480px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ui-dialog-titlebar {
+    margin: -.2em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: .8em .3em .3em;
+    background-color: $dialogTitleBackground;
+    .ui-dialog-title {
+      // font-family: $fontTitle;
+      font-size: 2.5rem;
+      text-align: center;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      font-weight: normal;
+      color: $background;
+    }
+    .ui-dialog-titlebar-close {
+      background-image: url('../assets/close.svg') !important;
+      background-size: cover !important;
+      right: 1em;
+      top: 1.8em;
+      height: 19px;
+      width: 19px;
+    }
+  }
+  .ui-dialog-content {
+    .form-group {
+      label {
+        font-weight: normal;
+      }
+      input[type="password"], input[type="email"] {
+        height: 40px;
+        border-radius: 0;
+      }
+      a {
+        text-align: right;
+        display: block;
+      }
+    }
+  }
+  .ui-dialog-buttonpane {
+    border: 0;
+    margin-top: -10px;
+    padding-top: 0;
+    button {
+      @include buttonBlack;
+      margin-top: 0;
+    } 
+  }
 }
