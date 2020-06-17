@@ -212,6 +212,27 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       const t = $(item).text();
       $(item).text(t.replace(':', ''));
     });
+
+    //load menu
+    $('div[id*="_pnlFooterText"]').after(`
+      <div id="new-menu">
+        <a id="menu-icon" aria-label="Toggle Menu" href="#">
+        </a>
+      </div>
+    `);
+
+    // register menu event
+    $('#menu-icon').click((evt) => {
+      evt.preventDefault();
+      if ($('#menu-icon').hasClass('open')) {
+        $('#menu-icon').removeClass('open');
+        $('.site-wrapper header.site-header').css('position', 'absolute');
+      } else {
+        $('#menu-icon').addClass('open');
+        $('.site-wrapper header.site-header').css('position', 'fixed');
+      }
+      $('.MS_LoginButtonOuterWrapperContainer').slideToggle('fast');
+    });
   };
 
   const checkLanguage = () => {
