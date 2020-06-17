@@ -4,6 +4,8 @@ $background: #212322;
 $yellowBackground: #FFC845;
 $orange: #FC4C02; 
 $borderColor: #D8D8D8;
+$cellsBackground: #F9F9F9;
+$dialogTitleBackground: #F0F0F0;
 
 $headerHeight: 80px;
 $logoHeight: 60px;
@@ -21,7 +23,7 @@ $logoHeight: 60px;
 @mixin buttonBlack {
   background-color: $background;
   color: $orange;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   font-weight: 700;
   font-size: 1.7rem;
   border: 0;
@@ -29,6 +31,7 @@ $logoHeight: 60px;
   transition: all 0.1s ease-out;
   &:hover, &:active, &:focus {
     color: white;
+    background-color: $background;
   }
 }
 
@@ -405,6 +408,491 @@ footer.site-footer {
       @media (min-width: 710px) {
         text-align: right;
       }
+    }
+  }
+}
+
+// <======================================== Shopping cart =============================>
+div[id*="_CartGrid_topLinkBar"] {
+  margin-top: -40px;
+  @media (min-width: 767px) {
+    margin-top: 0px;
+  }
+  a {
+    position: relative;
+    z-index: 1;
+    @include buttonBlack;
+    margin-top: 80px;
+    margin-bottom: -50px;
+    font-size: 16px;
+    &:last-child {
+      margin-left: 0;
+    }
+    @media (min-width: 389px) {
+      font-size: 18px;
+    }
+    width: calc(50% - 7.5px);
+    @media (min-width: 480px) {
+      margin-top: 40px;
+      margin-bottom: -45px;
+      width: auto;
+    }
+    @media (min-width: 767px) {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+div[id*="_CartGrid_CartContainer"] {
+  margin-top: -85px;
+  .PaymentPart_CartRows.row.show-grid.show-grid-row {
+    padding-bottom: 15px;
+    border: 0;
+    @media (min-width: 767px) {
+      padding-bottom: 0;
+    }
+  }
+  .cart-type-group {
+    border-color: transparent;
+    margin-top: -30px;
+    @media (min-width: 767px) {
+      margin-top: 0;
+    }
+    .PaymentPart_CartDescriptionCell {
+      padding-top: 20px;
+      padding-bottom: 5px;
+      @media (min-width: 767px) {
+        padding-bottom: 0;
+      }
+      h4 {
+        margin: 0 0 10px;
+        a {
+          font-size: 14px;
+          color: black;
+          font-weight: bold;
+          &:hover, &:focus, &:active {
+            text-decoration: none;
+          }
+        }
+
+      }
+      a.edit-item-link {
+        color: $orange;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: block;
+      }
+      br {
+        display: none;
+      }
+    }
+  }
+  h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
+    margin-bottom: 20px;
+    font-weight: bold;
+    span {
+      padding-left: 0;
+      margin-top: -50px;
+      margin-bottom: 50px;
+      @media (min-width: 480px) {
+        margin: 0;
+      }
+    }
+  }
+  .price-group {
+    font-size: 14px;
+    .PaymentPart_CartCurrencyCell {
+      margin-left: 15px;
+      @media (min-width: 767px) {
+        margin-left: 20px;
+      }
+    }
+    .payment-part-remove {
+      margin-right: 5px;
+      a {
+        color: black;
+        font-weight: bold;
+      }
+    }
+    .PaymentPart_CartItemTotal {
+      font-weight: normal;
+    }
+  }
+}
+
+div[id*="_divPersonalInfo"] .BBListingHeading h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+div[id*="_divUserSignUp"] {
+  p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .BBListingHeading h3 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+} 
+
+div[id*="tdImageItem"] {
+  width: 20%;
+  padding-top: 20px;
+  display: none;
+  @media (min-width: 767px) {
+    display: block;
+  }
+  @media (min-width: 990px) {
+    width: 15%;
+  }
+}
+
+.PaymentPart_CartRows img {
+  width: 75px;
+}
+
+#divCartSummary {
+  margin-top: 20px;
+  .col-xs-12.col-sm-3 {
+    width: 100%;
+  }
+  .col-xs-9.col-sm-7 {
+    width: 100%;
+  }
+  #dlDiscountCodeEntry {
+    .col-xs-9.col-sm-7 {
+      width: calc(100% - 140px);
+    }
+  }
+  label {
+    font-weight: normal;
+  }
+  input, select {
+    height: 40px;
+    border-radius: 0;
+  }
+  .col-xs-3.col-sm-2 {
+    padding: 0;
+    width: 120px;
+    input {
+      width: 100%;
+      @include buttonBlack;
+    }
+  }
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item {
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  h2 {
+    display: none;
+  }
+  > div {
+    background-color: unset;
+    .PaymentPart_CartDescriptionCell.col-sm-12 {
+      padding-top: 0;
+      padding-bottom: 0;
+      h4 {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+    .payment-part-subtotal {
+      width: calc(100% - 170px);
+      input {
+        height: 40px;
+        border-radius: 0;
+        border-left: 0;
+      }
+      .input-group-addon {
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 0;
+      }
+    }
+    a.btn.btn-primary.pull-right.add-don-btn {
+      @include buttonBlack;
+      width: 120px;
+      margin-top: 0;
+      margin-right: 20;
+    }
+  }
+}
+
+// div[id*="_divUserSignUp"] {
+//   display: none;
+// }
+
+.PaymentPart_PersonalInfoContainer {
+  .col-sm-12.col-md-6.form-sidebyside {
+    .form-group {
+      margin-bottom: 5px;
+      label {
+        text-align: left;
+        font-weight: normal;
+        margin-bottom: 2px;
+      }
+      .col-sm-9 {
+        width: 100%;
+        input, select, textarea {
+          border-radius: 0;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+dl[id*="_dlCartSummary"] {
+  padding-right: 15px;
+  clear: both;
+  padding-top: 30px;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  dd, dt {
+    float: right;
+  }
+  dt {
+    margin-right: 10px;
+  }
+}
+
+input[id*="_ButtonCheckout"] {
+  @include buttonBlack;
+  margin-top: -20px;
+  min-width: 120px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+div#divUseAsBilling {
+  margin-top: 30px;
+}
+
+div[id*="_PaymentPartFormContainer"] {
+
+  #checkout-bishop-image {
+    display: none;
+    margin-bottom: 15px;
+    @media (min-width: 480px) {
+      display: block;
+      width: 70px;
+      height: 70px;
+    }
+    @media (min-width: 767px) {
+      margin-bottom: 0;
+    }
+  }
+
+  > div.col-sm-12 > div {
+    p {
+      max-width: 480px;
+      margin-top: 25px;
+      // strong {
+      //   font-weight: normal;
+      // }
+    }
+    p + div {
+      div[id*="_CartGrid_CartContainer"] {
+        margin-top: 0;
+        background-color: $cellsBackground;
+      }
+      h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+      div[id*="tdImageItem"] {
+        display: none;
+      }
+      .PaymentPart_CartRows.row.show-grid.show-grid-row {
+        padding: 0 !important;
+        background-color: $cellsBackground;
+        margin-bottom: 5px;
+        .PaymentPart_CartDescriptionCell {
+          padding: 0;
+          h4 + span {
+            font-weight: bold;
+            font-size: 16px;
+          }
+          span {
+            margin-bottom: 5px;
+            display: block;
+          }
+        }
+        .PaymentPart_CartCurrencyCell {
+          margin-left: 0;
+        }
+        [class*="col-"]{
+          padding-top: 0;
+        }
+      }
+      .cart-grand-total {
+        padding-right: 0;
+        padding-top: 15px;
+      }
+      .PaymentPart_CartSummaryCaptionContainer, .PaymentPart_CartSummaryFieldContainer {
+        margin: 0 0 0 5px !important;
+        font-size: 16px;
+        label, span {
+          font-weight: bold !important;
+        }
+      }
+    }
+  }
+}
+
+
+// ========================== REGISTRATION SECTION ==================== //
+
+span.Registration_UserMessage {
+  display: block;
+  margin: 20px 0;
+}
+
+div[id*="_UserRegistration"] {
+  > div > div:first-child > h3 {
+    display: none;
+  }
+  .form-horizontal {
+    label {
+      font-weight: normal;
+      width: 100%;
+      text-align: left;
+    }
+    .col-sm-9 {
+      width: 100%;
+    }
+    input, select, textarea {
+      height: 40px;
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+  > .col-sm-12 {
+    .form-horizontal {
+      width: 100%;
+      @media (min-width: 992px) {
+        width: 50%;
+      }
+    }
+    > .form-group.clearfix  {
+      text-align: right;
+    }
+  }
+  input[id*="_btnRegister"] {
+    @include buttonBlack;
+    text-transform: uppercase;
+  }
+}
+
+h3 > span.Registration_RegistrantCredentialsHeader {
+  font-weight: bold;
+}
+
+
+// ================================= DIALOGS ======================
+
+// Show popup overlay
+.ui-widget-overlay.ui-front {
+  display: block !important;
+  background: #000 !important;
+  opacity: .8 !important;
+}
+ 
+// new tags
+ 
+.new-login-description {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ui-dialog.modal-Dialog {
+  width: 100% !important;
+  max-width: 500px;
+  margin-left: 15px;
+  margin-right: 15px;
+  @media screen and (min-width: 480px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ui-dialog-titlebar {
+    margin: -.2em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: .8em .3em .3em;
+    background-color: $dialogTitleBackground;
+    .ui-dialog-title {
+      // font-family: $fontTitle;
+      font-size: 2.5rem;
+      text-align: center;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      font-weight: normal;
+      color: $background;
+    }
+    .ui-dialog-titlebar-close {
+      background-image: url('../assets/close.svg') !important;
+      background-size: cover !important;
+      right: 1em;
+      top: 1.8em;
+      height: 19px;
+      width: 19px;
+    }
+  }
+  .ui-dialog-content {
+    .form-group {
+      label {
+        font-weight: normal;
+      }
+      input[type="password"], input[type="email"] {
+        height: 40px;
+        border-radius: 0;
+      }
+      a {
+        text-align: right;
+        display: block;
+      }
+    }
+  }
+  .ui-dialog-buttonpane {
+    border: 0;
+    margin-top: -10px;
+    padding-top: 0;
+    button {
+      @include buttonBlack;
+      margin-top: 0;
+    } 
+  }
+}
+
+#google_translate_element2, div.skiptranslate {display:none!important;}
+
+#translate-menu {
+  float: right;
+  display: table;
+  height: $headerHeight;
+  margin-right: 7.5px;
+  a {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 18px;
+    padding: 0 15px;
+    color: white;
+    transition: all 0.1s ease-out;
+    &:active, &:focus, &:hover {
+      color: white;
+    }
+    &.active {
+      background-image: url('../assets/arrow.svg');
+      background-position: center left;
+      background-repeat: no-repeat;
     }
   }
 }

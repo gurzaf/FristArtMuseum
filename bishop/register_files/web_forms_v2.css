@@ -1,0 +1,669 @@
+input[type='radio'] + label,
+input[type='checkbox'] + label {
+    margin-left: 5px;
+}
+
+    input[type='radio'] + label + input[type='radio'],
+    input[type='radio'] + label + input[type='checkbox'],
+    input[type='checkbox'] + label + input[type='radio'],
+    input[type='checkbox'] + label + input[type='checkbox'] {
+        margin-left: 15px;
+    }
+
+.BBFormButtonCell,
+.EventRegistrationExpress_RegistrantsButtonContainer {
+    margin-top: 30px;
+}
+
+body .checkbox input[type=checkbox],
+body .checkbox-inline input[type=checkbox],
+body .radio input[type=radio],
+body .radio-inline input[type=radio] {
+    margin-left: 0;
+}
+
+.required-label:after {
+    position: relative;
+    content: "*";
+    color: red;
+}
+
+body .btn {
+}
+
+.Programming_AlternateTimesList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 767px) {
+    .Programming_Combination_DateTime {
+        width: 55%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .Programming_Combination_DateTime {
+        width: 90%;
+    }
+}
+
+.date-time-button-other {
+    display: block;
+    text-align: left;
+}
+
+.Programming_Event_AlternateTimesProgram,
+.Programming_Event_AlternateTimesProgramGroup {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    display: block;
+    position: relative;
+    right: -75px;
+    z-index: 99;
+    width: 90px;
+    float: right;
+}
+
+    .Programming_Event_AlternateTimesProgram .Programming_Event_AlternateTimeCombo a,
+    .Programming_Event_AlternateTimesProgramGroup .Programming_Event_AlternateTimeCombo a {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        margin: 4px;
+        text-align: right;
+        text-decoration: none;
+        padding-left: 5px;
+        padding-right: 10px;
+    }
+
+.Programming_Event_AlternateTimesProgramGroup {
+    top: 23px;
+}
+
+.Programming_Event_Date,
+.Programming_Event_TimeInnerContainer_Custom,
+.Programming_Event_TimeInnerContainer {
+    margin-left: 40px;
+    display: block;
+}
+
+.Programming_Event_TimeContainer,
+.Programming_Event_DateContainer {
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+}
+
+body .datepicker table tr td, body .datepicker.dropdown-menu th, body .datepicker.dropdown-menu td {
+    font-size: 14px;
+}
+
+    body .datepicker table tr td.disabled, body .datepicker table tr td.disabled:hover {
+        background: #f9f9f9;
+        color: #ddd;
+        cursor: default;
+    }
+
+.line-subtotal,
+.payment-part-total {
+    font-weight: bold;
+    text-align: right;
+}
+
+.total-amount {
+    text-align: right;
+}
+
+.MS_contentWrapper_inner > .alert,
+.MS_contentWrapper_inner > [id*='_UpdatePanel'] > .row > [class*='col-'] > .alert {
+    margin-top: 15px;
+}
+
+.PaymentPart_CartRows img {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .PaymentPart_CartRows img {
+        display: block;
+    }
+}
+
+.cart-type-group {
+    border: 1px solid #ddd;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+    .cart-type-group > .show-grid [class*='col-'] {
+        line-height: 1.42857143;
+        vertical-align: top;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .cart-type-group > .show-grid-row {
+        border-top: 1px solid #ddd;
+        margin: 0 -15px;
+    }
+
+    .cart-type-group > div.show-grid:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .cart-type-group > div.show-grid:nth-of-type(even) {
+        background-color: #FFF;
+    }
+
+@media (min-width: 768px) {
+    [id*='tdImageItem'] {
+        width: 25%;
+    }
+
+        [id*='tdImageItem'] + .PaymentPart_CartDescriptionCell {
+            width: 75%;
+        }
+
+        [id*='tdImageItem'],
+        [id*='tdImageItem'] + .PaymentPart_CartDescriptionCell {
+            position: relative;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            float: left;
+        }
+}
+
+.price-group > div {
+    float: left;
+}
+
+.price-group .PaymentPart_CartCurrencyCell {
+    margin-left: 15px;
+}
+
+    .price-group .PaymentPart_CartCurrencyCell span:after {
+        content: " at";
+    }
+
+.single-cart-item .price-group .PaymentPart_CartCurrencyCell, .cart-type-Donations .price-group .PaymentPart_CartCurrencyCell {
+}
+
+.single-cart-item .price-group .payment-part-subtotal {
+}
+
+.cart-type-Donations .price-group .payment-part-subtotal {
+    display: block;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .cart-type-Donations .price-group .payment-part-subtotal {
+        width: 50%;
+    }
+}
+
+.price-group .payment-part-subtotal {
+    margin-left: 5px;
+}
+
+.single-cart-item .price-group .payment-part-subtotal {
+}
+
+.price-group .display-price,
+.price-group .display-total {
+    display: none;
+}
+
+.cart-type- .price-group .PaymentPart_CartCurrencyCell,
+.cart-type- .price-group .payment-part-subtotal {
+    display: none;
+}
+
+.price-group .payment-part-total {
+    float: right;
+    margin-right: 15px;
+}
+
+.price-group .payment-part-remove {
+    float: right;
+    margin-right: 15px;
+}
+
+[id*='CartGrid_cartPanel'] {
+    padding-top: 15px;
+}
+
+    [id*='CartGrid_cartPanel'] .btn {
+        margin-left: 15px;
+    }
+
+#divCartSummary .cart-grand-total .PaymentPart_CartSummaryCaptionContainer,
+#divCartSummary .cart-grand-total .PaymentPart_CartSummaryFieldContainer {
+    display: inline-block;
+    float: right;
+    margin-left: 15px;
+}
+
+a.Programming_RegistrantLink,
+.Programming_Event_RegistrantRegistrationInformationCopySectionToAll,
+.Programming_Event_RegistrantRegistrationInformationCopySectionFromAbove {
+    font-size: 10px;
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    text-align: right;
+    margin-top: 36px;
+    text-decoration: none;
+}
+
+a.Programming_Event_RegistrantRegistrationInformationCopySectionToAll {
+    margin-top: 0;
+}
+
+body .form-group {
+    margin-bottom: 30px;
+}
+
+.not-registrant-ordinal .form-sidebyside {
+    width: 100%;
+}
+
+.programming_event_pricelist > .show-grid:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.programming_event_pricelist > .show-grid:nth-of-type(even) {
+    background-color: #FFF;
+}
+
+.programming_event_pricelist > .show-grid > .row {
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+
+.programming_event_pricelist > .show-grid [class*='col-'] {
+    line-height: 1.42857143;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+    .programming_event_pricelist > .show-grid [class*='col-'] [class*='col-'] > span {
+        display: block;
+    }
+
+[id*='MembershipExpress'] .MembershipExpress_LevelSelectorContainer {
+    border: 1px solid #ddd;
+    clear: none;
+    float: left;
+    height: auto;
+    margin: 0 0 15px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    [id*='MembershipExpress'] .MembershipExpress_LevelSelectorContainer {
+        width: 49%;
+        margin: 0 10px 15px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    [id*='MembershipExpress'] .MembershipExpress_LevelSelectorContainer:nth-of-type(even) {
+        margin: 0 0 15px;
+    }
+}
+
+.MembershipExpress_TermContainer span input[type="radio"], .MembershipExpress_TypeContainer span input[type="radio"] {
+    margin: 10px 0px 0px 10px;
+    opacity: 0;
+    padding: 10px 0px 0px 10px;
+    position: absolute;
+    z-index: -1;
+}
+
+
+[id*='MembershipExpress'] .MembershipExpress_TypeContainer {
+    border-top: 1px solid #ddd;
+    padding: 5px 10px;
+}
+
+[id*='MembershipExpress'] .MembershipExpress_TermName,
+[id*='MembershipExpress'] .MembershipExpress_TypeName {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    [id*='MembershipExpress'] .MembershipExpress_TermName,
+    [id*='MembershipExpress'] .MembershipExpress_TypeName {
+        width: auto;
+    }
+}
+
+[id*='MembershipExpress'] .MembershipExpress_SelectedTermLabel,
+[id*='MembershipExpress'] .MembershipExpress_SelectedTypeLabel {
+    background: #5cb85c;
+    border: 1px solid #5cb85c;
+    text-decoration: none;
+    color: #fff;
+}
+
+    [id*='MembershipExpress'] .MembershipExpress_SelectedTermLabel .MembershipExpress_TermRadioLevel,
+    [id*='MembershipExpress'] .MembershipExpress_SelectedTermLabel .MembershipExpress_TermRadiolTerm,
+    [id*='MembershipExpress'] .MembershipExpress_SelectedTermLabel .MembershipExpress_TermRadioAmount,
+    [id*='MembershipExpress'] .MembershipExpress_SelectedTypeLabel .MembershipExpress_TermRadioLevel,
+    [id*='MembershipExpress'] .MembershipExpress_SelectedTypeLabel .MembershipExpress_TermRadiolTerm,
+    [id*='MembershipExpress'] .MembershipExpress_SelectedTypeLabel .MembershipExpress_TermRadioAmount {
+        color: #fff;
+    }
+
+[id*='MembershipExpress'] .MembershipExpress_LevelHeader {
+    display: block;
+    font-weight: 700;
+}
+
+[id*='MembershipExpress'] .MembershipExpress_LevelDescriptionText {
+    display: block;
+    text-align: left;
+}
+
+[id*='MembershipExpress'] .MembershipExpress_TermRadiolTerm,
+[id*='MembershipExpress'] .MembershipExpress_TermRadioAmount {
+    color: #5cb85c;
+    display: block;
+    font-size: 20px;
+}
+
+.MembershipExpress_AutomaticallyRenew{
+    display: block; 
+    width: 55%;
+    clear : both;
+}
+#divDetailsAutomaticallyRenew label{
+	font-weight: 300;
+    padding-left: 3%;
+}
+
+.with-radio.listDonationDisplay > .show-grid:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.with-radio.listDonationDisplay > .show-grid:nth-of-type(even) {
+    background-color: #FFF;
+}
+
+.with-radio.listDonationDisplay > .show-grid > .row {
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+
+.with-radio.listDonationDisplay > .show-grid [class*='col-'] {
+    line-height: 1.42857143;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.with-radio.listDonationDisplay > .show-grid [class*='col-'] {
+    line-height: 1.42857143;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.listDonationDisplay.no-radio > .otherLabel .DonationFieldControlCell {
+    width: 100%;
+}
+
+.listDonationDisplay.no-radio > .otherLabel > .col-sm-3 {
+    display: none;
+}
+
+.listDonationDisplay.no-radio > .otherLabel .DonationFieldControlCell {
+    width: 100%;
+}
+
+.with-radio .otherLabel .radio {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+@media (min-width: 768px) {
+    .with-radio .otherLabel .radio {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.with-radio .otherLabel .form-group {
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .with-radio .otherLabel .form-group {
+        margin-top: 3px;
+        margin-bottom: 0;
+    }
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-toggle {
+    z-index: 1000;
+    border-color: #000;
+    display: none;
+}
+
+.site-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.site-content {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+.site-header {
+    position: relative;
+    background: transparent;
+}
+
+    .site-header .signin {
+        display: inline-block;
+        position: relative;
+        float: right;
+        font-size: 13px;
+        color: #fff;
+        margin: 0 15px;
+        padding: 10px;
+        background: #333;
+    }
+
+        .site-header .signin a {
+            color: #fff;
+            margin: 0 5px;
+        }
+
+    .site-header .header-icons-container {
+        padding-top: 25px;
+    }
+
+.site-main-section {
+    position: relative;
+    overflow: hidden;
+}
+
+    .site-main-section .sidebar {
+        height: auto;
+    }
+
+        .site-main-section .sidebar .MSFootTextDiv {
+            padding: 10px;
+        }
+
+    .site-main-section .content-wrapper {
+        width: 100%;
+    }
+
+.site-footer {
+    background: transparent;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+}
+
+.page-boxed {
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.MS_pageWrapper,
+.MS_pageWrapper,
+.MS_headerWrapper,
+.MS_contentWrapper,
+.RS_pageWrapper {
+    margin: 0 auto;
+}
+
+.MS_pageWrapper {
+    margin-bottom: 50px;
+}
+
+.MS_contentWrapper {
+    padding: 20px;
+}
+
+.MS_background_primaryContent {
+    padding-bottom: 80px;
+    padding-top: 20px;
+}
+
+.MS_columnWrapper {
+    width: 100%;
+}
+
+.MS_column {
+    vertical-align: top;
+}
+
+.MS_Clear {
+    position: relative;
+    clear: both;
+}
+
+.MS_contentWrapper_innerBorder {
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+#content-secondary,
+#content-tertiary {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.MS_LoginButtonOuterContainer {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
+        float: right;
+    }
+}
+
+.MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer a {
+    color: #fff;
+}
+
+.MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer .BBModalEditLink {
+    border-right: none;
+}
+
+.MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+    .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div:last-of-type,
+    .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div .MS_SignOutButtonPositionLocator {
+        border-right: none;
+    }
+
+        .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div:last-of-type a,
+        .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div .MS_SignOutButtonPositionLocator a {
+            padding-right: 0;
+        }
+
+    .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div a {
+        cursor: pointer;
+        padding: 0 12px;
+    }
+
+        .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div a:hover {
+            text-decoration: underline;
+        }
+
+.content_overflow_helper {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px;
+}
+
+.overflow_margin_helper {
+    padding-bottom: 80px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    a.programming_registrantlink {
+        margin-top: 60px;
+    }
+}
+
+.PaymentPart_ValidationSummary {
+    margin-top: 15px;
+}
+
+.wrap_text_fix {
+    white-space: normal !important;
+}
+
+.height_fix {
+    height: inherit !important;
+}
+
+.MS_background_footer {
+    padding: 20px;
+}
+
+.LoginLink {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+.DivRegisterDialog {
+    padding-top: 10px;
+}
+
+.line-sub-margin{
+    margin-top:10px;
+}
+
+.add-don-btn{
+    margin-top:5px;
+    margin-right:15px;
+}
