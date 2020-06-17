@@ -920,4 +920,65 @@ div[id*="_UserRegistration"] input[id*="_btnRegister"]:hover, div[id*="_UserRegi
 h3 > span.Registration_RegistrantCredentialsHeader {
   font-weight: bold;
 }
+
+.ui-widget-overlay.ui-front {
+  display: block !important;
+  background: #000 !important;
+  opacity: .8 !important;
+}
+
+.new-login-description {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.ui-dialog.modal-Dialog {
+  width: 100% !important;
+  max-width: 600px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .ui-dialog.modal-Dialog {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.ui-dialog.modal-Dialog .ui-dialog-titlebar {
+  margin: -.2em;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: .8em .3em .3em;
+  background-color: #F0F0F0;
+}
+
+.ui-dialog.modal-Dialog .ui-dialog-titlebar .ui-dialog-title {
+  font-size: 2.5rem;
+  text-align: center;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-weight: normal;
+  color: #212322;
+}
+
+.ui-dialog.modal-Dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  background-image: url("https://s3-us-west-1.amazonaws.com/www.socialgoodsoftware.com/cold-storage/cheekwood/close.svg") !important;
+  -webkit-background-size: cover !important;
+          background-size: cover !important;
+  right: 1em;
+  top: 1.8em;
+  height: 19px;
+  width: 19px;
+}
+
+.ui-dialog.modal-Dialog .ui-dialog-buttonpane button {
+  padding: .5em 2em;
+  text-transform: inherit;
+  font-size: 2rem;
+}
 /*# sourceMappingURL=main.css.map */
