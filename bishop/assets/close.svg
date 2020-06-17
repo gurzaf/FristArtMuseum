@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>close</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="close" transform="translate(1.000000, 1.000000)" stroke="#212322" stroke-width="4">
+            <line x1="-2.87323913" y1="10.9295773" x2="24.8732398" y2="10.9295773" id="Line" transform="translate(11.000000, 10.929577) rotate(45.000000) translate(-11.000000, -10.929577) "></line>
+            <line x1="-2.87323977" y1="10.9295773" x2="24.8732391" y2="10.9295773" id="Line" transform="translate(11.000000, 10.929577) scale(-1, 1) rotate(45.000000) translate(-11.000000, -10.929577) "></line>
+        </g>
+    </g>
+</svg>
