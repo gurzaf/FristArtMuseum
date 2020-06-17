@@ -1013,4 +1013,36 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   color: white;
   background-color: #212322;
 }
+
+#google_translate_element2, div.skiptranslate {
+  display: none !important;
+}
+
+#translate-menu {
+  float: right;
+  display: table;
+  height: 80px;
+  margin-right: 7.5px;
+}
+
+#translate-menu a {
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 18px;
+  padding: 0 15px;
+  color: white;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+#translate-menu a:active, #translate-menu a:focus, #translate-menu a:hover {
+  color: white;
+}
+
+#translate-menu a.active {
+  background-image: url("../assets/arrow.svg");
+  background-position: center left;
+  background-repeat: no-repeat;
+}
 /*# sourceMappingURL=main.css.map */
