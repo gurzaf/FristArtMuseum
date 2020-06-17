@@ -9,6 +9,7 @@ $dialogTitleBackground: #F0F0F0;
 
 $headerHeight: 80px;
 $logoHeight: 60px;
+$menuWidth: 30px;
 
 @mixin buttonHeader {
   background-color: $yellowBackground;
@@ -77,6 +78,7 @@ aside#content-secondary {
     width: 100%;
     height: $headerHeight;
     margin: 0;
+    z-index: 100;
     p {
       margin: 0;
       padding: 0;
@@ -92,15 +94,34 @@ aside#content-secondary {
     .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
       display: table;
       height: $headerHeight;
+      width: 100%;
+      padding: 0 10px;
       > div {
         display: table-cell;
-        margin: 0;
+        width: 50%;
+        padding: 5px;
         vertical-align: middle;
       }
       div a {
         @include buttonHeader;
-        margin-left: 5px;
-        padding: 7px 12px;
+        padding: 10px;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+      }
+      @media (min-width: 761px) {
+        width: auto;
+        > div {
+          width: auto;
+        }
+        div a {
+          // width: auto;
+          display: inline;
+          padding: 7px 12px;
+          margin-left: 5px;
+          font-size: 14px;
+        }
       }
     }
     ul.header_links {
@@ -875,6 +896,9 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 #google_translate_element2, div.skiptranslate {display:none!important;}
 
 #translate-menu {
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
   float: right;
   display: table;
   height: $headerHeight;
@@ -884,15 +908,55 @@ h3 > span.Registration_RegistrantCredentialsHeader {
     vertical-align: middle;
     font-size: 18px;
     padding: 0 15px;
-    color: white;
+    color: $background;
     transition: all 0.1s ease-out;
-    &:active, &:focus, &:hover {
-      color: white;
-    }
+    // &:active, &:focus, &:hover {
+    //   color: white;
+    // }
     &.active {
       background-image: url('../assets/arrow.svg');
       background-position: center left;
       background-repeat: no-repeat;
     }
+  }
+  @media (min-width: 761px) {
+    position: unset;
+    a {
+      color: white;
+    }
+  }
+}
+
+// ============================= MENU =================
+
+#new-menu {
+  a#menu-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $menuWidth;
+    height: $menuWidth;
+    z-index: 1001;
+    background: url('../assets/menu.svg');
+    background-size: $menuWidth $menuWidth * 2;
+    &.open {
+      background-position: bottom;
+    }
+  }
+}
+
+.MS_LoginButtonOuterWrapperContainer {
+  position: fixed;
+  background: white;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: block;
+  height: calc(100vh - 80px);
+  @media (min-width: 761px) {
+    position: unset;
+    background: unset;
+    display: unset;
   }
 }

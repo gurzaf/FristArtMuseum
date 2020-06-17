@@ -34,6 +34,7 @@ aside#content-secondary {
   width: 100%;
   height: 80px;
   margin: 0;
+  z-index: 100;
 }
 
 .site-wrapper header.site-header p {
@@ -53,11 +54,14 @@ aside#content-secondary {
 .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
   display: table;
   height: 80px;
+  width: 100%;
+  padding: 0 10px;
 }
 
 .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
   display: table-cell;
-  margin: 0;
+  width: 50%;
+  padding: 5px;
   vertical-align: middle;
 }
 
@@ -68,12 +72,30 @@ aside#content-secondary {
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-  margin-left: 5px;
-  padding: 7px 12px;
+  padding: 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 18px;
 }
 
 .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a:hover, .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a:focus, .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a:active {
   opacity: 0.8;
+}
+
+@media (min-width: 761px) {
+  .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
+    width: auto;
+  }
+  .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
+    width: auto;
+  }
+  .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a {
+    display: inline;
+    padding: 7px 12px;
+    margin-left: 5px;
+    font-size: 14px;
+  }
 }
 
 .site-wrapper header.site-header ul.header_links {
@@ -1019,6 +1041,9 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 }
 
 #translate-menu {
+  position: absolute;
+  bottom: 30px;
+  right: 15px;
   float: right;
   display: table;
   height: 80px;
@@ -1030,19 +1055,59 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   vertical-align: middle;
   font-size: 18px;
   padding: 0 15px;
-  color: white;
+  color: #212322;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-}
-
-#translate-menu a:active, #translate-menu a:focus, #translate-menu a:hover {
-  color: white;
 }
 
 #translate-menu a.active {
   background-image: url("../assets/arrow.svg");
   background-position: center left;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 761px) {
+  #translate-menu {
+    position: unset;
+  }
+  #translate-menu a {
+    color: white;
+  }
+}
+
+#new-menu a#menu-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 1001;
+  background: url("../assets/menu.svg");
+  -webkit-background-size: 30px 60px;
+          background-size: 30px 60px;
+}
+
+#new-menu a#menu-icon.open {
+  background-position: bottom;
+}
+
+.MS_LoginButtonOuterWrapperContainer {
+  position: fixed;
+  background: white;
+  top: 80px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: block;
+  height: calc(100vh - 80px);
+}
+
+@media (min-width: 761px) {
+  .MS_LoginButtonOuterWrapperContainer {
+    position: unset;
+    background: unset;
+    display: unset;
+  }
 }
 /*# sourceMappingURL=main.css.map */
