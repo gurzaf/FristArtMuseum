@@ -226,12 +226,12 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       evt.preventDefault();
       if ($('#menu-icon').hasClass('open')) {
         $('#menu-icon').removeClass('open');
-        $('.site-wrapper header.site-header').removeClass('fixedmenu');
+        $('.site-wrapper header.site-header').css('position', 'absolute');
       } else {
         $('#menu-icon').addClass('open');
-        $('.site-wrapper header.site-header').addClass('fixedmenu');
+        $('.site-wrapper header.site-header').css('position', 'fixed');
       }
-      $('#new-menu-links').slideToggle('fast');
+      $('.MS_LoginButtonOuterWrapperContainer').slideToggle('fast');
     });
   };
 

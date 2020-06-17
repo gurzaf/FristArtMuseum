@@ -34,7 +34,13 @@ aside#content-secondary {
   width: 100%;
   height: 80px;
   margin: 0;
-  z-index: 100;
+  z-index: 90;
+}
+
+@media (min-width: 767px) {
+  .site-wrapper header.site-header {
+    position: absolute !important;
+  }
 }
 
 .site-wrapper header.site-header p {
@@ -83,7 +89,7 @@ aside#content-secondary {
   opacity: 0.8;
 }
 
-@media (min-width: 761px) {
+@media (min-width: 767px) {
   .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
     width: auto;
   }
@@ -1067,7 +1073,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   background-repeat: no-repeat;
 }
 
-@media (min-width: 761px) {
+@media (min-width: 767px) {
   #translate-menu {
     position: unset;
   }
@@ -1078,36 +1084,42 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 
 #new-menu a#menu-icon {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 30px;
-  height: 30px;
-  z-index: 1001;
+  right: 15px;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  z-index: 90;
   background: url("../assets/menu.svg");
-  -webkit-background-size: 30px 60px;
-          background-size: 30px 60px;
+  -webkit-background-size: 60px 120px;
+          background-size: 60px 120px;
 }
 
 #new-menu a#menu-icon.open {
   background-position: bottom;
 }
 
+@media (min-width: 767px) {
+  #new-menu {
+    display: none;
+  }
+}
+
 .MS_LoginButtonOuterWrapperContainer {
+  display: none;
   position: fixed;
   background: white;
   top: 80px;
   left: 0;
   right: 0;
-  z-index: 100;
-  display: block;
+  z-index: 90;
   height: calc(100vh - 80px);
 }
 
-@media (min-width: 761px) {
+@media (min-width: 767px) {
   .MS_LoginButtonOuterWrapperContainer {
     position: unset;
     background: unset;
-    display: unset;
+    display: unset !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

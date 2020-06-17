@@ -9,7 +9,6 @@ $dialogTitleBackground: #F0F0F0;
 
 $headerHeight: 80px;
 $logoHeight: 60px;
-$menuWidth: 30px;
 
 @mixin buttonHeader {
   background-color: $yellowBackground;
@@ -78,7 +77,10 @@ aside#content-secondary {
     width: 100%;
     height: $headerHeight;
     margin: 0;
-    z-index: 100;
+    z-index: 90;
+    @media (min-width: 767px) {
+      position: absolute !important;
+    }
     p {
       margin: 0;
       padding: 0;
@@ -110,7 +112,7 @@ aside#content-secondary {
         text-align: center;
         font-size: 18px;
       }
-      @media (min-width: 761px) {
+      @media (min-width: 767px) {
         width: auto;
         > div {
           width: auto;
@@ -919,7 +921,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
       background-repeat: no-repeat;
     }
   }
-  @media (min-width: 761px) {
+  @media (min-width: 767px) {
     position: unset;
     a {
       color: white;
@@ -932,31 +934,37 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 #new-menu {
   a#menu-icon {
     position: absolute;
-    right: 0;
-    top: 0;
-    width: $menuWidth;
-    height: $menuWidth;
-    z-index: 1001;
+    right: 15px;
+    top: 10px;
+    width: $logoHeight;
+    height: $logoHeight;
+    z-index: 90;
     background: url('../assets/menu.svg');
-    background-size: $menuWidth $menuWidth * 2;
+    background-size: $logoHeight $logoHeight * 2;
     &.open {
       background-position: bottom;
     }
   }
+  @media (min-width: 767px) {
+    display: none;
+  }
 }
 
 .MS_LoginButtonOuterWrapperContainer {
+  display: none;
   position: fixed;
   background: white;
   top: 80px;
   left: 0;
   right: 0;
-  z-index: 100;
-  display: block;
+  z-index: 90;
   height: calc(100vh - 80px);
-  @media (min-width: 761px) {
+  @media (min-width: 767px) {
     position: unset;
     background: unset;
-    display: unset;
+    display: unset !important;
   }
+  // &.open {
+  //   display: block;
+  // }
 }
