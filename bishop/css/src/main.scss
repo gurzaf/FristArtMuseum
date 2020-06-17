@@ -883,14 +883,16 @@ h3 > span.Registration_RegistrantCredentialsHeader {
     display: table-cell;
     vertical-align: middle;
     font-size: 18px;
-    padding: 0 7.5px;
+    padding: 0 15px;
     color: white;
     transition: all 0.1s ease-out;
     &:active, &:focus, &:hover {
       color: white;
     }
     &.active {
-      
+      background-image: url('../assets/arrow.svg');
+      background-position: center left;
+      background-repeat: no-repeat;
     }
   }
 }

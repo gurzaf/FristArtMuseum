@@ -1029,7 +1029,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   display: table-cell;
   vertical-align: middle;
   font-size: 18px;
-  padding: 0 7.5px;
+  padding: 0 15px;
   color: white;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
@@ -1038,5 +1038,11 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 
 #translate-menu a:active, #translate-menu a:focus, #translate-menu a:hover {
   color: white;
+}
+
+#translate-menu a.active {
+  background-image: url("../assets/arrow.svg");
+  background-position: center left;
+  background-repeat: no-repeat;
 }
 /*# sourceMappingURL=main.css.map */

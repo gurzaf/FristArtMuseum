@@ -213,15 +213,27 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       $(item).text(t.replace(':', ''));
     });
   };
+
+  const checkLanguage = () => {
+    const current = readCookie('googtrans');
+    let selector = '#translate-menu a';
+    $(selector).removeClass('active');
+    if (current === '/en/ja') {
+      selector = `${selector}:last-child`;
+    } else {
+      selector = `${selector}:first-child`;
+    }
+    $(selector).addClass('active');
+  };
   
   const translateOptions = () => {
 
     $('.MS_LoginButtonOuterWrapperContainer .MS_LoginButtonInnerContainer').after(`
       <div id="translate-menu">
-        <a href="#" onclick="doGTranslate('en|en');return false;" title="English" class="skiptranslate">
+        <a href="#" onclick="doGTranslate('en|en');" title="English" class="skiptranslate active">
           English
         </a>
-        <a href="#" onclick="doGTranslate('en|ja');return false;" title="日本語" class="skiptranslate">
+        <a href="#" onclick="doGTranslate('en|ja');" title="日本語" class="skiptranslate">
           日本語
         </a>
       </div>
@@ -236,6 +248,13 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     };
 
     dynamicallyLoadScript('https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2');
+
+    checkLanguage();
+
+    $('#translate-menu a').click((e) => {
+      checkLanguage();
+      e.preventDefault();
+    });
 
   };
 
