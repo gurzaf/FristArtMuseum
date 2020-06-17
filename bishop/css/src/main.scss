@@ -4,6 +4,7 @@ $background: #212322;
 $yellowBackground: #FFC845;
 $orange: #FC4C02; 
 $borderColor: #D8D8D8;
+$cellsBackground: #F9F9F9;
 
 $headerHeight: 80px;
 $logoHeight: 60px;
@@ -404,6 +405,288 @@ footer.site-footer {
       text-align: center;
       @media (min-width: 710px) {
         text-align: right;
+      }
+    }
+  }
+}
+
+// <======================================== Shopping cart =============================>
+div[id*="_CartGrid_topLinkBar"] {
+  margin-top: -40px;
+  @media (min-width: 767px) {
+    margin-top: 0px;
+  }
+  a {
+    position: relative;
+    z-index: 1;
+    @include buttonBlack;
+    margin-top: 40px;
+    margin-bottom: -45px;
+    font-size: 16px;
+    @media (min-width: 389px) {
+      font-size: 18px;
+    }
+    @media (min-width: 767px) {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+div[id*="_CartGrid_CartContainer"] {
+  margin-top: -85px;
+  .PaymentPart_CartRows.row.show-grid.show-grid-row {
+    padding-bottom: 15px;
+    border: 0;
+    @media (min-width: 767px) {
+      padding-bottom: 0;
+    }
+  }
+  .cart-type-group {
+    border-color: transparent;
+    margin-top: -30px;
+    @media (min-width: 767px) {
+      margin-top: 0;
+    }
+    .PaymentPart_CartDescriptionCell {
+      padding-top: 20px;
+      padding-bottom: 5px;
+      @media (min-width: 767px) {
+        padding-bottom: 0;
+      }
+      h4 {
+        margin: 0 0 10px;
+        a {
+          font-size: 14px;
+          color: black;
+          font-weight: bold;
+          &:hover, &:focus, &:active {
+            text-decoration: none;
+          }
+        }
+
+      }
+      a.edit-item-link {
+        color: $orange;
+        font-size: 14px;
+        margin-bottom: 10px;
+        display: block;
+      }
+      br {
+        display: none;
+      }
+    }
+  }
+  h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
+    margin-bottom: 20px;
+    span {
+      padding-left: 0;
+    }
+  }
+  .price-group {
+    font-size: 14px;
+    .PaymentPart_CartCurrencyCell {
+      margin-left: 15px;
+      @media (min-width: 767px) {
+        margin-left: 20px;
+      }
+    }
+    .payment-part-remove {
+      margin-right: 5px;
+      a {
+        color: black;
+        font-weight: bold;
+      }
+    }
+    .PaymentPart_CartItemTotal {
+      font-weight: normal;
+    }
+  }
+}
+
+div[id*="tdImageItem"] {
+  width: 20%;
+  padding-top: 20px;
+  display: none;
+  @media (min-width: 767px) {
+    display: block;
+  }
+  @media (min-width: 990px) {
+    width: 15%;
+  }
+}
+
+#divCartSummary {
+  margin-top: 20px;
+  .col-xs-12.col-sm-3 {
+    width: 100%;
+  }
+  .col-xs-9.col-sm-7 {
+    width: 100%;
+  }
+  #dlDiscountCodeEntry {
+    .col-xs-9.col-sm-7 {
+      width: calc(100% - 140px);
+    }
+  }
+  label {
+    font-weight: normal;
+  }
+  input, select {
+    height: 40px;
+    border-radius: 0;
+  }
+  .col-xs-3.col-sm-2 {
+    padding: 0;
+    width: 120px;
+    input {
+      width: 100%;
+      @include buttonBlack;
+    }
+  }
+}
+
+div.cart-type-group.cart-type-Donations.single-cart-item {
+  border: 0;
+  padding: 0;
+  margin-top: 0;
+  h2 {
+    padding-left: 15px;
+  }
+  > div {
+    background-color: unset;
+    .PaymentPart_CartDescriptionCell.col-sm-12 {
+      padding-top: 0;
+      padding-bottom: 0;
+      h4 {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+    .payment-part-subtotal {
+      width: calc(100% - 170px);
+      input {
+        height: 40px;
+        border-radius: 0;
+        border-left: 0;
+      }
+      .input-group-addon {
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 0;
+      }
+    }
+    a.btn.btn-primary.pull-right.add-don-btn {
+      @include buttonBlack;
+      width: 120px;
+      margin-top: 0;
+      margin-right: 20;
+    }
+  }
+}
+
+// div[id*="_divUserSignUp"] {
+//   display: none;
+// }
+
+.PaymentPart_PersonalInfoContainer {
+  .col-sm-12.col-md-6.form-sidebyside {
+    .form-group {
+      margin-bottom: 5px;
+      label {
+        text-align: left;
+        font-weight: normal;
+        margin-bottom: 2px;
+      }
+      .col-sm-9 {
+        width: 100%;
+        input, select, textarea {
+          border-radius: 0;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+dl[id*="_dlCartSummary"] {
+  padding-right: 15px;
+  clear: both;
+  padding-top: 30px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  dd, dt {
+    float: right;
+  }
+  dt {
+    margin-right: 10px;
+  }
+}
+
+input[id*="_ButtonCheckout"] {
+  @include buttonHeader;
+  margin-top: -20px;
+  min-width: 120px;
+}
+
+// div#divUseAsBilling {
+//   display: none;
+// }
+
+div[id*="_PaymentPartFormContainer"] {
+  > div.col-sm-12 > div {
+    p {
+      max-width: 480px;
+      margin-top: 25px;
+      strong {
+        font-weight: normal;
+      }
+    }
+    p + div {
+      div[id*="_CartGrid_CartContainer"] {
+        margin-top: 0;
+        background-color: $cellsBackground;
+      }
+      h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
+        font-weight: bold;
+        margin-bottom: 0;
+      }
+      div[id*="tdImageItem"] {
+        display: none;
+      }
+      .PaymentPart_CartRows.row.show-grid.show-grid-row {
+        padding: 0 !important;
+        background-color: $cellsBackground;
+        margin-bottom: 5px;
+        .PaymentPart_CartDescriptionCell {
+          padding: 0;
+          h4 + span {
+            font-weight: bold;
+            font-size: 16px;
+          }
+          span {
+            margin-bottom: 5px;
+            display: block;
+          }
+        }
+        .PaymentPart_CartCurrencyCell {
+          margin-left: 0;
+        }
+        [class*="col-"]{
+          padding-top: 0;
+        }
+      }
+      .cart-grand-total {
+        padding-right: 0;
+        padding-top: 15px;
+      }
+      .PaymentPart_CartSummaryCaptionContainer, .PaymentPart_CartSummaryFieldContainer {
+        margin: 0 0 0 5px !important;
+        font-size: 16px;
+        label, span {
+          font-weight: bold !important;
+        }
       }
     }
   }
