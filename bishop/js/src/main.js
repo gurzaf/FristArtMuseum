@@ -1,5 +1,4 @@
 function googleTranslateElementInit2() {
-  console.log('Callback');
   new google.translate.TranslateElement({pageLanguage: 'en',autoDisplay: false}, 'google_translate_element2');
 }
 
@@ -16,7 +15,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   const LOGIN_TITLE = 'Sign in';
   // const MEMBER_SIGNIN = 'Member Sign-In';
   // const MEMBER_DISCOUNT = 'Please sign in to receive your member discount.';
-  const LOGIN_DESCRIPTION = '<p class="new-login-description">If you don’t know what your membership e-mail is, please call our Membership Department at 615-353-6984 or 615-354-6389 or Email our Membership Department.</p>';
+  const LOGIN_DESCRIPTION = '<p class="new-login-description">If you don’t know what your membership e-mail is, please call our Membership Department at <a href="tel:+18088473511">808.847.3511</a> or email us at <a href="mailto:membeship@bishopmuseum.org">membeship@bishopmuseum.org</a>.</p>';
   const REGISTER_NEW_ACCOUNT = 'Register for new account';
   // const SIGNIN_AND_CHECKOUT = 'Sign in & Check Out';
 
