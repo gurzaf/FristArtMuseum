@@ -50,7 +50,7 @@ aside#content-secondary {
 
 @media (min-width: 1200px) {
   .site-wrapper header.site-header .RS_headerWrapper_inner {
-    max-width: 1280px;
+    max-width: 1240px;
     margin-left: auto;
     margin-right: auto;
     float: none;
@@ -1198,12 +1198,15 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 }
 
 .newLogin.ui-dialog {
+  font-family: 'Poppins', sans-serif;
   width: inherit !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 700px;
   margin-left: 15px;
   margin-right: 15px;
+  border: 0;
+  border-radius: 0;
 }
 
 @media screen and (min-width: 830px) {
@@ -1218,6 +1221,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   height: 0;
   min-height: 0;
   margin: 0;
+  border: 0;
 }
 
 .newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
@@ -1225,10 +1229,12 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 }
 
 .newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
-  background-image: url("https://s3-us-west-1.amazonaws.com/www.socialgoodsoftware.com/cold-storage/cheekwood/cross.svg") !important;
+  background-image: url("../assets/close.svg") !important;
   z-index: 1;
-  top: 1em;
-  right: .5em;
+  top: 2rem;
+  right: 1rem;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 .newLogin.ui-dialog #popuplogin {
@@ -1251,10 +1257,23 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 }
 
 .newLogin.ui-dialog #popuplogin #popuploginregister a {
-  font-size: 1.6rem;
+  text-decoration: underline;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginregister a:hover, .newLogin.ui-dialog #popuplogin #popuploginregister a:focus, .newLogin.ui-dialog #popuplogin #popuploginregister a:active {
+  text-decoration: none;
 }
 
 .newLogin.ui-dialog #popuplogin #join-button {
+  background-color: #212322;
+  color: #FC4C02;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
   display: block;
   float: none;
   margin-left: auto;
@@ -1265,15 +1284,23 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   min-width: 220px;
 }
 
+.newLogin.ui-dialog #popuplogin #join-button:hover, .newLogin.ui-dialog #popuplogin #join-button:active, .newLogin.ui-dialog #popuplogin #join-button:focus {
+  color: white;
+  background-color: #212322;
+}
+
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer {
   padding: 1em;
 }
 
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer h3 {
-  font-size: 3rem;
-  color: #4f4f4f;
-  padding: 1rem;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #212322;
 }
 
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer p {
@@ -1287,10 +1314,16 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer .form-horizontal input.LoginFormTextbox {
   height: 45px;
+  border-radius: 0;
+  border-color: #212322;
 }
 
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer a.LoginLink {
   float: right;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer a.LoginLink:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer a.LoginLink:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer a.LoginLink:focus {
+  text-decoration: none;
 }
 
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer .checkbox {
@@ -1303,9 +1336,53 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   margin-top: 2px;
 }
 
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform {
+  margin: 1rem 0;
+  padding: 0;
+}
+
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button {
-  margin: 2em auto 0;
+  background-color: #212322;
+  color: #FC4C02;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  margin: 0 auto;
   display: block;
   float: none;
+  padding: 10px 15px;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:focus {
+  color: white;
+  background-color: #212322;
+}
+
+@media screen and (min-width: 768px) {
+  #popuploginformcontainer,
+  #popuploginregister {
+    display: table-cell !important;
+    float: none !important;
+  }
+  #popupsubmitform {
+    margin: 3rem 0 2rem;
+  }
+  #popupsubmitform button {
+    width: 100%;
+  }
+  .newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    background-image: url("../assets/cross-gray.svg") !important;
+  }
+  .newLogin.ui-dialog #popuplogin #popuploginformcontainer h3 {
+    font-size: 3rem;
+    color: #4f4f4f;
+    padding: 1rem;
+    margin-top: 20px;
+    font-weight: normal;
+  }
 }
 /*# sourceMappingURL=main.css.map */

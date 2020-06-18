@@ -21,9 +21,9 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   const LOGIN_DESCRIPTION = '<p class="new-login-description">If you don’t know what your membership e-mail is, please call our Membership Department at <a href="tel:+18088473511">808.847.3511</a> or email us at <a href="mailto:membeship@bishopmuseum.org">membeship@bishopmuseum.org</a>.</p>';
   const REGISTER_NEW_ACCOUNT = 'Register for new account';
   const SIGNIN_AND_CHECKOUT = 'Sign in & Check Out';
-  const FORGOTPASSWORDURL = 'https://3892.blackbaudhosting.com/3892/page.aspx?pid=263&tab=500';
-  const REGISTERURL = 'https://3892.blackbaudhosting.com/3892/page.aspx?pid=201';
-  const MEMBERSHIP_URL = 'https://cheekwood.org/support/membership';
+  const FORGOTPASSWORDURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=220&tab=500';
+  const REGISTERURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=218';
+  const MEMBERSHIP_URL = 'https://www.bishopmuseum.org/membership/';
 
   const readCookie = (name) => {
     const nameEQ = name + "=";
