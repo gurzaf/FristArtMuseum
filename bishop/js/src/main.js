@@ -402,6 +402,30 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     });
   };
 
+  // set favicon function
+  const setFavicon = () => {
+    document.querySelector("link[rel*='ICON']").remove();
+    const l32 = document.createElement('link');
+    l32.type = 'image/x-icon';
+    l32.rel = 'shortcut icon';
+    l32.sizes= '32x32'
+    l32.href = 'assets/favicon-32x32.png';
+    const head = document.getElementsByTagName('head')[0];
+    head.appendChild(l32);
+    const l16 = document.createElement('link');
+    l16.type = 'image/x-icon';
+    l16.rel = 'shortcut icon';
+    l16.sizes= '180x180'
+    l16.href = 'assets/favicon-180x180.png';
+    head.appendChild(l16);
+    const l192 = document.createElement('link');
+    l192.type = 'image/x-icon';
+    l192.rel = 'shortcut icon';
+    l192.sizes= '192x192'
+    l192.href = 'assets/favicon-192x192.png';
+    head.appendChild(l192);
+  };
+
   const fixLayout = () => {
     $('.MSFootTextDiv:last').load('html/footer.html', () => {
       generalAdmissionBg();
@@ -410,6 +434,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       editCurrentLoginPopup();
       translateOptions();
       createPopUp();
+      setFavicon();
     });
   };
   fixLayout();
