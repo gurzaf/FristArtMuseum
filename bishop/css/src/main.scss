@@ -6,6 +6,7 @@ $orange: #FC4C02;
 $borderColor: #D8D8D8;
 $cellsBackground: #F9F9F9;
 $dialogTitleBackground: #F0F0F0;
+$loginFontColor: #4f4f4f;
 
 $headerHeight: 80px;
 $logoHeight: 60px;
@@ -1025,5 +1026,103 @@ h3 > span.Registration_RegistrantCredentialsHeader {
       
     //   display: block;
     // }
+  }
+}
+
+// ================== NEW LOGIN DIALOG ================
+
+.newLogin.ui-dialog {
+  width: inherit !important;
+  box-sizing: border-box;
+  max-width: 700px;
+  margin-left: 15px;
+  margin-right: 15px;
+  @media screen and (min-width: 830px) {
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .ui-dialog-titlebar {
+    padding: 0;
+    height: 0;
+    min-height: 0;
+    margin: 0;
+    .ui-dialog-title {
+      display: none;
+    }
+    .ui-dialog-titlebar-close {
+      background-image: url("https://s3-us-west-1.amazonaws.com/www.socialgoodsoftware.com/cold-storage/cheekwood/cross.svg") !important;
+      z-index: 1;
+      top: 1em;
+      right: .5em;
+    }
+  }
+  #popuplogin {
+    padding: 0;
+    color: $loginFontColor;
+    margin: -.2em;
+    font-size: 1.3rem;
+    // font-family: $fontTitle;
+    > .row {
+      margin: 0;
+    }
+    #popuploginregister {
+      background: $dialogTitleBackground;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+      vertical-align: middle;
+      a {
+        font-size: 1.6rem;
+      }
+    }
+    #join-button {
+      display: block;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      padding: .5em 1.2em;
+      text-transform: inherit;
+      font-size: 1.9rem;
+      min-width: 220px;
+    }
+    #popuploginformcontainer {
+      padding: 1em;
+      h3 {
+        font-size: 3rem;
+        color: $loginFontColor;
+        padding: 1rem;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      .form-horizontal {
+        .control-label {
+          text-align: left;
+          font-weight: normal;
+        }
+        input.LoginFormTextbox {
+          height: 45px;
+        }
+      }
+      a.LoginLink {
+        float: right;
+      }
+      .checkbox {
+        padding-left: 15px;
+        padding-top: 0;
+        input {
+          margin-left: -15px;
+          margin-top: 2px;
+        }
+      }
+      #popupsubmitform {
+        button {
+          margin: 2em auto 0;
+          display: block;
+          float: none;
+        }
+      }
+    }
   }
 }
