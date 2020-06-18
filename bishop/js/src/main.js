@@ -213,7 +213,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     });
 
     //load menu
-    $('div[id*="_pnlFooterText"]').after(`
+    $('header div[id*="_pnlFooterText"]').after(`
       <div id="new-menu">
         <a id="menu-icon" aria-label="Toggle Menu" href="#">
         </a>

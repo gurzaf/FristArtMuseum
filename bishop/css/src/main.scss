@@ -968,3 +968,62 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   //   display: block;
   // }
 }
+
+// ======================= RECOVER PASSWORD =================
+
+.MS_contentWrapper_inner.overflow_margin_helper {
+  h3 {
+    font-weight: bold;
+    font-size: 30px;
+    & + p {
+      margin-top: 30px;
+      br {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  table[id*="_tbl"] {
+    width: 100%;
+    max-width: 600px;
+    table {
+      width: 100%;
+      max-width: 600px;
+    }
+    table.BBFormTable.LoginFormTable {
+      display: block;
+      tbody, tr, td {
+        display: block;
+        width: 100%;
+      }
+    }
+    td[id*="_tdForgotPWDUserNameTitle"] {
+      display: none !important;
+    }
+    label {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+    input[type="text"] {
+      height: 50px;
+      width: 100%;
+      border: 1px solid $borderColor;
+      font-size: 14px;
+      line-height: 50px;
+      padding: 0 15px;
+    }
+    input[type="button"] {
+      @include buttonBlack;
+      text-align: right;
+      margin-left: auto;
+      display: block;
+      font-size: 24px;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+    // td.BBFieldCaption.LoginFieldCaption {
+      
+    //   display: block;
+    // }
+  }
+}

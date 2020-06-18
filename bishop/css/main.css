@@ -1122,4 +1122,78 @@ h3 > span.Registration_RegistrantCredentialsHeader {
     display: unset !important;
   }
 }
+
+.MS_contentWrapper_inner.overflow_margin_helper h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper h3 + p {
+  margin-top: 30px;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper h3 + p br {
+  margin-bottom: 15px;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] {
+  width: 100%;
+  max-width: 600px;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table {
+  width: 100%;
+  max-width: 600px;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable {
+  display: block;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable tbody, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable tr, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable td {
+  display: block;
+  width: 100%;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] td[id*="_tdForgotPWDUserNameTitle"] {
+  display: none !important;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] label {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="text"] {
+  height: 50px;
+  width: 100%;
+  border: 1px solid #D8D8D8;
+  font-size: 14px;
+  line-height: 50px;
+  padding: 0 15px;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"] {
+  background-color: #212322;
+  color: #FC4C02;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  text-align: right;
+  margin-left: auto;
+  display: block;
+  font-size: 24px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"]:hover, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"]:active, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"]:focus {
+  color: white;
+  background-color: #212322;
+}
 /*# sourceMappingURL=main.css.map */
