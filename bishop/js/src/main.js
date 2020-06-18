@@ -13,11 +13,17 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   const ARIA_DEFAULT = 'Invisible link';
   const DONATION_TEXT = 'Make a donation';
   const LOGIN_TITLE = 'Sign in';
-  // const MEMBER_SIGNIN = 'Member Sign-In';
-  // const MEMBER_DISCOUNT = 'Please sign in to receive your member discount.';
+  const MEMBER_SIGNIN = 'Member Sign-In';
+  const JOIN_DISCOUNT = 'Become a member today and get a discount on your order.';
+  const JOIN = 'Become a Member';
+  const GUEST = 'Check Out as Guest';
+  const MEMBER_DISCOUNT = 'Please sign in to receive your member discount.';
   const LOGIN_DESCRIPTION = '<p class="new-login-description">If you don’t know what your membership e-mail is, please call our Membership Department at <a href="tel:+18088473511">808.847.3511</a> or email us at <a href="mailto:membeship@bishopmuseum.org">membeship@bishopmuseum.org</a>.</p>';
   const REGISTER_NEW_ACCOUNT = 'Register for new account';
-  // const SIGNIN_AND_CHECKOUT = 'Sign in & Check Out';
+  const SIGNIN_AND_CHECKOUT = 'Sign in & Check Out';
+  const FORGOTPASSWORDURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=220&tab=500';
+  const REGISTERURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=218';
+  const MEMBERSHIP_URL = 'https://www.bishopmuseum.org/membership/';
 
   const readCookie = (name) => {
     const nameEQ = name + "=";
@@ -275,7 +281,125 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       checkLanguage();
       e.preventDefault();
     });
+  };
 
+  const passTextValue = (from, to) => {
+    $(from).on('keyup', () => {
+      $(to).val($(from).val());
+    });
+    $(from).on('keydown', (e) => {
+      if (e.keyCode == 13) {
+        newLoginSubmit(e);
+        return false;
+      }
+    })
+  }
+  
+  const passClick = (from, to) => {
+    $(from).on('change', () => {
+      $(to).click();
+    });
+  };
+  
+  const newLoginSubmit = (evt) => {
+    evt.preventDefault();
+    // $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]')
+    //   .find('.ui-dialog-buttonset button:last-child')
+    //   .click();
+    const sign = Object.keys(window).filter(key => key.indexOf('UserModalSignIn') !== -1);
+    if (sign.length === 1) {
+      window[sign[0]].doEditSave();
+    }
+  }
+
+  const createPopUp = () => {
+    // $('[id*="UserModalSignedIn_UserModalPartEditLink"]').text(
+    //   $('[id*="UserModalSignedIn_UserModalPartEditLink"]').text().replace('|', '').trim()
+    // );
+    // console.log($('[id*="UserModalSignedIn_UserModalPartEditLink"]').text());
+    if ($('[id*="UserModalSignIn_UserModalPartEditLink"]').text().trim() !== 'Login'
+      || ($('[id*="MembershipExpress"]').length === 0 && $('[id*="divPriceList"]').length === 0)
+      || $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').css('display') === 'block') {
+      return;
+    }
+    console.log('Creating new popup');
+    const basicHtml = `
+      <div style="display: none;">
+        <div id="popuplogin" class="container ui-corner-all">
+          <div class="row row-eq-height">
+            <div id="popuploginformcontainer" class="col-xs-12 col-sm-8">
+              <h3>${MEMBER_SIGNIN}</h3>
+              <p>${MEMBER_DISCOUNT}</p>
+              <div id="popuploginform">
+                <div class="form-horizontal">
+                  <div class="form-group">
+                    <label for="new-username" id="new-username-label" class="col-sm-12 control-label" style="padding-right:0">Email:</label>
+                    <div class="col-sm-12">
+                      <input name="new-username" type="text" id="new-username" class="BBFormTextbox LoginFormTextbox form-control">
+                      <a href="${REGISTERURL}" id="PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog" class="LoginLink" href="javascript:__doPostBack('PC1953$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')">Register for new account</a>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="new-password" id="new-password-label" class="col-sm-12 control-label" style="padding-right:0">Password:</label>
+                    <div class="col-sm-12">
+                      <input name="new-password" type="password" id="new-password" class="BBFormTextbox LoginFormTextbox form-control">
+                      <a href="${FORGOTPASSWORDURL}" id="PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword" class="LoginLink" href="#">Forgot your password?</a>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-12">
+                      <div class="checkbox">
+                        <input id="new-checkbox" type="checkbox" name="new-checkbox">Remember me</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="popupsubmitform" class="ui-dialog-buttonpane">
+                <button id="new-submit">
+                  ${SIGNIN_AND_CHECKOUT}
+                </button>
+              </div>
+            </div>
+            <div id="popuploginregister" class="col-xs-12 col-sm-4 ui-dialog-buttonpane">
+              <div class="join-container">
+                <p class="join-discount">${JOIN_DISCOUNT}</p>
+                <button id="join-button" onClick="window.location = '${MEMBERSHIP_URL}'">
+                  ${JOIN}
+                </button>
+                <a id="checkoutguest" href="#">${GUEST}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+    $('[aria-describedby*="UserModalSignIn_UserModalPartDialog1"]').appendTo('form');
+    console.log('Append dialog to form');
+    $(basicHtml).appendTo('form');
+    console.log('Attaching new dialog');
+    $('#new-submit').on('click', newLoginSubmit);
+    console.log('New submit click event');
+    passTextValue('#new-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
+    passTextValue('#new-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
+    passClick('#new-checkbox', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
+    console.log('Passing events');
+    window.scrollTo(0, 0);
+    console.log('Trying to create a new dialog');
+    $('#popuplogin').dialog({
+      title: null,
+      position: { my: "top", at: "center", of: ".site-header.row" },
+      draggable: false,
+      modal: true,
+      resizable: false,
+      dialogClass: 'newLogin',
+      open: (event, ui) => { 
+        $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
+          evt.preventDefault();
+          $('#popuplogin').dialog('close');
+        });
+      },
+    });
   };
 
   const fixLayout = () => {
@@ -285,6 +409,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       organiceItems();
       editCurrentLoginPopup();
       translateOptions();
+      createPopUp();
     });
   };
   fixLayout();

@@ -6,6 +6,7 @@ $orange: #FC4C02;
 $borderColor: #D8D8D8;
 $cellsBackground: #F9F9F9;
 $dialogTitleBackground: #F0F0F0;
+$loginFontColor: #4f4f4f;
 
 $headerHeight: 80px;
 $logoHeight: 60px;
@@ -87,7 +88,7 @@ aside#content-secondary {
     }
     .RS_headerWrapper_inner {
       @media(min-width: 1200px) {
-        max-width: 1280px;
+        max-width: 1240px;
         margin-left: auto;
         margin-right: auto;
         float: none;
@@ -1025,5 +1026,152 @@ h3 > span.Registration_RegistrantCredentialsHeader {
       
     //   display: block;
     // }
+  }
+}
+
+// ================== NEW LOGIN DIALOG ================
+
+.newLogin.ui-dialog {
+  font-family: 'Poppins', sans-serif;
+  width: inherit !important;
+  box-sizing: border-box;
+  max-width: 700px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 0;
+  border-radius: 0;
+  @media screen and (min-width: 830px) {
+    margin-left: auto;
+    margin-right: auto; 
+  }
+  .ui-dialog-titlebar {
+    padding: 0;
+    height: 0;
+    min-height: 0;
+    margin: 0;
+    border: 0;
+    .ui-dialog-title {
+      display: none;
+    }
+    .ui-dialog-titlebar-close {
+      background-image: url('../assets/close.svg') !important;
+      z-index: 1;
+      top: 2rem;
+      right: 1rem;
+      background-size: cover;
+    }
+  }
+  #popuplogin {
+    padding: 0;
+    color: $loginFontColor;
+    margin: -.2em;
+    font-size: 1.3rem;
+    // font-family: $fontTitle;
+    > .row {
+      margin: 0;
+    }
+    #popuploginregister {
+      background: $dialogTitleBackground;
+      margin: 0;
+      padding: 2em;
+      text-align: center;
+      vertical-align: middle;
+      a {
+        // font-size: 1.6rem;
+        text-decoration: underline;
+        &:hover, &:focus, &:active {
+          text-decoration: none;
+        }
+      }
+    }
+    #join-button {
+      @include buttonBlack;
+      display: block;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+      padding: .5em 1.2em;
+      text-transform: inherit;
+      font-size: 1.9rem;
+      min-width: 220px;
+    }
+    #popuploginformcontainer {
+      padding: 1em;
+      h3 {
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 0;
+        padding-top: 0;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $background;
+      }
+      p {
+        text-align: center;
+      }
+      .form-horizontal {
+        .control-label {
+          text-align: left;
+          font-weight: normal;
+        }
+        input.LoginFormTextbox {
+          height: 45px;
+          border-radius: 0;
+          border-color: $background;
+        }
+      }
+      a.LoginLink {
+        float: right;
+        &:hover, &:active, &:focus {
+          text-decoration: none;
+        }
+      }
+      .checkbox {
+        padding-left: 15px;
+        padding-top: 0;
+        input {
+          margin-left: -15px;
+          margin-top: 2px;
+        }
+      }
+      #popupsubmitform {
+        margin: 1rem 0;
+        padding: 0;
+        button {
+          @include buttonBlack;
+          margin: 0 auto;
+          display: block;
+          float: none;
+          padding: 10px 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  #popuploginformcontainer,
+  #popuploginregister {
+      display: table-cell !important;
+      float: none !important;
+  }
+  #popupsubmitform{
+    margin: 3rem 0 2rem;
+    button {
+      width: 100%;
+    }
+  }
+
+  .newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    background-image: url('../assets/cross-gray.svg') !important;
+  }
+
+  .newLogin.ui-dialog #popuplogin #popuploginformcontainer h3 {
+    font-size: 3rem;
+    color: $loginFontColor;
+    padding: 1rem;
+    margin-top: 20px;
+    font-weight: normal;
   }
 }
