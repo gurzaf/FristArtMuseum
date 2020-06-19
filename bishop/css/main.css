@@ -57,6 +57,22 @@ aside#content-secondary {
   }
 }
 
+.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p {
+  height: 80px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p > img {
+  width: 230px;
+}
+
+@media (min-width: 480px) {
+  .site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p > img {
+    width: 300px;
+  }
+}
+
 .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
   display: table;
   height: 80px;
@@ -265,6 +281,10 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
 
 .Programming_Event_Description p, .Programming_Event_Description span, .Programming_Event_Description strong {
   font-family: 'Poppins', sans-serif !important;
+}
+
+.Programming_Event_Description p, .Programming_Event_Description ul {
+  line-height: 30px;
 }
 
 .Programming_Event_PriceList {
@@ -795,7 +815,6 @@ input[id*="_ButtonCheckout"] {
   transition: all 0.1s ease-out;
   margin-top: -20px;
   min-width: 120px;
-  text-transform: uppercase;
   font-size: 18px;
 }
 
@@ -805,7 +824,7 @@ input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[i
 }
 
 div#divUseAsBilling {
-  margin-top: 30px;
+  display: none;
 }
 
 div[id*="_PaymentPartFormContainer"] #checkout-bishop-image {
@@ -830,6 +849,7 @@ div[id*="_PaymentPartFormContainer"] #checkout-bishop-image {
 div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p {
   max-width: 480px;
   margin-top: 25px;
+  line-height: 30px;
 }
 
 div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div div[id*="_CartGrid_CartContainer"] {
@@ -840,6 +860,11 @@ div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div div[id*="_Car
 div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading {
   font-weight: bold;
   margin-bottom: 0;
+}
+
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
+  margin-top: -10px;
+  margin-bottom: 10px;
 }
 
 div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div div[id*="tdImageItem"] {
@@ -886,6 +911,15 @@ div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_
 
 div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryCaptionContainer label, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryCaptionContainer span, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryFieldContainer label, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryFieldContainer span {
   font-weight: bold !important;
+}
+
+div[id*="_PaymentPartFormContainer"] span.PaymentPart_CartItemDetails > div:nth-child(2) {
+  background: #212322;
+  color: #FC4C02;
+  font-weight: bold;
+  display: table;
+  margin-top: 10px;
+  padding: 2px 5px;
 }
 
 span.Registration_UserMessage {
@@ -1052,7 +1086,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   right: 15px;
   float: right;
   display: table;
-  height: 80px;
+  width: 190px;
   margin-right: 7.5px;
 }
 
@@ -1076,6 +1110,8 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 @media (min-width: 767px) {
   #translate-menu {
     position: unset;
+    height: 80px;
+    width: auto;
   }
   #translate-menu a {
     color: white;
@@ -1100,6 +1136,29 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 
 @media (min-width: 767px) {
   #new-menu {
+    display: none;
+  }
+}
+
+div#new-menu-links ul.main-menu {
+  list-style: none;
+  padding: 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+@media (min-width: 480px) {
+  div#new-menu-links ul.main-menu {
+    font-size: 35px;
+  }
+}
+
+div#new-menu-links ul.main-menu li a {
+  color: #212322;
+}
+
+@media (min-width: 767px) {
+  div#new-menu-links {
     display: none;
   }
 }
@@ -1186,7 +1245,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   text-align: right;
   margin-left: auto;
   display: block;
-  font-size: 24px;
+  font-size: 16px;
   padding: 10px 20px;
   text-transform: uppercase;
   margin-top: 40px;
