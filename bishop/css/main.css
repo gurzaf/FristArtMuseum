@@ -1141,16 +1141,22 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 }
 
 div#new-menu-links ul.main-menu {
+  margin-top: 10px;
   list-style: none;
   padding: 0;
   font-size: 25px;
   font-weight: bold;
+  text-align: center;
 }
 
 @media (min-width: 480px) {
   div#new-menu-links ul.main-menu {
     font-size: 35px;
   }
+}
+
+div#new-menu-links ul.main-menu li {
+  padding-bottom: 15px;
 }
 
 div#new-menu-links ul.main-menu li a {
