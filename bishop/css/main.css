@@ -915,7 +915,8 @@ div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_
 
 div[id*="_PaymentPartFormContainer"] span.PaymentPart_CartItemDetails > div:nth-child(2) {
   background: #212322;
-  color: white;
+  color: #FC4C02;
+  font-weight: bold;
   display: table;
   margin-top: 10px;
   padding: 2px 5px;
