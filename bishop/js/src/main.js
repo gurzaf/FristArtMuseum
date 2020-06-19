@@ -24,6 +24,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   const FORGOTPASSWORDURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=220&tab=500';
   const REGISTERURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=218';
   const MEMBERSHIP_URL = 'https://www.bishopmuseum.org/membership/';
+  const LOGO_ALT = 'Bishop Museum Logo';
 
   const readCookie = (name) => {
     const nameEQ = name + "=";
@@ -76,6 +77,10 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   
   // Function to fix WCAG issues
   const WCAG = () => {
+    // define alt attribute for main logo
+    $('header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p > img')
+      .attr('alt', LOGO_ALT);
+
     // define alt attribute for cart images
     $('img.img-responsive.cartImg').attr('alt', ALT_CART_IMAGE);
     
@@ -205,6 +210,8 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     
     // Change billing section title
     $('span[id*="_lblPersonalInfo"]').text(BILLING_TITLE);
+    // Billing address checked
+    $('input[id*="_chkUseAsBilling"]').prop('checked', true);
 
     // Add image on checkout page
     // $('div[id*="_upPayment"] > div > div:nth-child(2)').before(`
@@ -253,8 +260,23 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   };
   
   const translationOptions = () => {
-
+    // It also includes main menu
     $('.MS_LoginButtonOuterWrapperContainer .MS_LoginButtonInnerContainer').after(`
+      <div id="new-menu-links">
+          <div class="container">
+            <div class="row">
+              <div class="col col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <ul class="main-menu">
+                  <li><a aria-label="Go to visit" href="https://www.bishopmuseum.org/visit/">Visit</a></li>
+                  <li><a aria-label="Go to Exhibits & Programs" href="https://www.bishopmuseum.org/exhibits-and-programs/">Exhibits & Programs</a></li>
+                  <li><a aria-label="Go to Explore" href="https://www.bishopmuseum.org/explore/">Explore</a></li>
+                  <li><a aria-label="Go to Education" href="https://www.bishopmuseum.org/education/">Education</a></li>
+                  <li><a aria-label="Go to Join & Give" href="https://www.bishopmuseum.org/membership/">Join & Give</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
       <div id="translate-menu">
         <a href="#" onclick="doGTranslate('en|en');" title="English" class="skiptranslate active">
           English
