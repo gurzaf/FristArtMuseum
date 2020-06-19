@@ -585,8 +585,14 @@ div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemT
 
 div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
   padding-left: 0;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 480px) {
+  div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
+    margin: 0;
+  }
 }
 
 div[id*="_CartGrid_CartContainer"] .price-group {
@@ -856,6 +862,11 @@ div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div h2.PaymentPar
   margin-bottom: 0;
 }
 
+div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
 div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div div[id*="tdImageItem"] {
   display: none;
 }
@@ -900,6 +911,14 @@ div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_
 
 div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryCaptionContainer label, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryCaptionContainer span, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryFieldContainer label, div[id*="_PaymentPartFormContainer"] > div.col-sm-12 > div p + div .PaymentPart_CartSummaryFieldContainer span {
   font-weight: bold !important;
+}
+
+div[id*="_PaymentPartFormContainer"] span.PaymentPart_CartItemDetails > div:nth-child(2) {
+  background: #212322;
+  color: white;
+  display: table;
+  margin-top: 10px;
+  padding: 2px 5px;
 }
 
 span.Registration_UserMessage {
