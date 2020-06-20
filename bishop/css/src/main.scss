@@ -93,48 +93,65 @@ aside#content-secondary {
         margin-right: auto;
         float: none;
       }
-      div[id*="_pnlFooterText"] > p {
-        height: 80px;
-        display: table-cell;
-        vertical-align: middle;
-        > img {
-          width: 230px;
-          @media (min-width: 480px) {
-            width: 300px;
+      div[id*="_pnlFooterText"]{
+        position: absolute;
+        top: 0;
+        @media (min-width: 767px) {
+          position: static;
+        }
+        > a {
+          height: 80px;
+          display: table-cell;
+          vertical-align: middle;
+          > img {
+            width: 230px;
+            @media (min-width: 480px) {
+              width: 300px;
+            }
           }
         }
       }
     }
-    .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
-      display: table;
-      height: $headerHeight;
-      width: 100%;
-      padding: 0 10px;
-      > div {
-        display: table-cell;
-        width: 50%;
-        padding: 5px;
-        vertical-align: middle;
-      }
-      div a {
-        @include buttonHeader;
-        padding: 10px;
-        width: 100%;
-        display: block;
-        text-align: center;
-        font-size: 18px;
-      }
+    .MS_LoginButtonOuterContainer {
+      display: none;
       @media (min-width: 767px) {
-        width: auto;
+        display: block !important;
+      }
+      .MS_LoginButtonInnerContainer {
+        display: table;
+        height: $headerHeight;
+        width: 100%;
+        padding: 0 10px;
+        position: relative;
+        top: 80px;
+        z-index: 91;
         > div {
-          width: auto;
+          display: table-cell;
+          width: 50%;
+          padding: 5px;
+          vertical-align: middle;
         }
         div a {
-          // width: auto;
-          display: inline;
-          padding: 7px 12px;
-          margin-left: 5px;
-          font-size: 14px;
+          @include buttonHeader;
+          padding: 10px;
+          width: 100%;
+          display: block;
+          text-align: center;
+          font-size: 18px;
+        }
+        @media (min-width: 767px) {
+          width: auto;
+          position: unset;
+          > div {
+            width: auto;
+          }
+          div a {
+            // width: auto;
+            display: inline;
+            padding: 7px 12px;
+            margin-left: 5px;
+            font-size: 14px;
+          }
         }
       }
     }
@@ -324,7 +341,7 @@ div.Programming_Event_DateTime {
   p, span, strong {
     font-family: 'Poppins', sans-serif !important;
   }
-  p, ul {
+  p, ul, span {
     // margin-bottom: 2em !important;
     line-height: 30px;
   }
@@ -807,6 +824,7 @@ div[id*="_PaymentPartFormContainer"] {
 span.Registration_UserMessage {
   display: block;
   margin: 20px 0;
+  line-height: 30px;
 }
 
 div[id*="_UserRegistration"] {
@@ -945,9 +963,9 @@ h3 > span.Registration_RegistrantCredentialsHeader {
     padding: 0 15px;
     color: $background;
     transition: all 0.1s ease-out;
-    // &:active, &:focus, &:hover {
-    //   color: white;
-    // }
+    &:active, &:focus, &:hover {
+      text-decoration: underline;
+    }
     &.active {
       background-image: url('../assets/arrow.svg');
       background-position: center left;
@@ -955,7 +973,9 @@ h3 > span.Registration_RegistrantCredentialsHeader {
     }
   }
   @media (min-width: 767px) {
-    position: unset;
+    bottom: unset;
+    top: 0;
+    right: 210px;
     height: $headerHeight;
     width: auto;
     a {
@@ -987,7 +1007,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 
 div#new-menu-links {
   ul.main-menu {
-    margin-top: 10px;
+    margin-top: 80px;
     list-style: none;
     padding: 0;
     font-size: 25px;
@@ -1008,7 +1028,7 @@ div#new-menu-links {
   }
 }
 
-.MS_LoginButtonOuterWrapperContainer {
+#mobile-menu-container {
   display: none;
   position: fixed;
   background: white;

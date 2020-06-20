@@ -239,11 +239,14 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       if ($('#menu-icon').hasClass('open')) {
         $('#menu-icon').removeClass('open');
         $('.site-wrapper header.site-header').css('position', 'absolute');
+        $('.site-wrapper header.site-header .MS_LoginButtonOuterContainer').css('display', 'none');
+        $('#mobile-menu-container').slideToggle('fast');
       } else {
         $('#menu-icon').addClass('open');
         $('.site-wrapper header.site-header').css('position', 'fixed');
+        $('#mobile-menu-container').slideToggle('fast');
+        $('.site-wrapper header.site-header .MS_LoginButtonOuterContainer').css('display', 'table');
       }
-      $('.MS_LoginButtonOuterWrapperContainer').slideToggle('fast');
     });
   };
 
@@ -261,33 +264,33 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   
   const translationOptions = () => {
     // It also includes main menu
-    $('.MS_LoginButtonOuterWrapperContainer .MS_LoginButtonInnerContainer').after(`
-      <div id="new-menu-links">
-          <div class="container">
-            <div class="row">
-              <div class="col col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
-                <ul class="main-menu">
-                  <li><a aria-label="Go to visit" href="https://www.bishopmuseum.org/visit/">Visit</a></li>
-                  <li><a aria-label="Go to Exhibits & Programs" href="https://www.bishopmuseum.org/exhibits-and-programs/">Exhibits & Programs</a></li>
-                  <li><a aria-label="Go to Explore" href="https://www.bishopmuseum.org/explore/">Explore</a></li>
-                  <li><a aria-label="Go to Education" href="https://www.bishopmuseum.org/education/">Education</a></li>
-                  <li><a aria-label="Go to Join & Give" href="https://www.bishopmuseum.org/membership/">Join & Give</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-      </div>
-      <div id="translate-menu">
-        <a href="#" onclick="doGTranslate('en|en');" title="English" class="skiptranslate active">
-          English
-        </a>
-        <a href="#" onclick="doGTranslate('en|ja');" title="日本語" class="skiptranslate">
-          日本語
-        </a>
-      </div>
-    `);
+    // $('.MS_LoginButtonOuterWrapperContainer .MS_LoginButtonInnerContainer').after(`
+    //   <div id="new-menu-links">
+    //       <div class="container">
+    //         <div class="row">
+    //           <div class="col col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+    //             <ul class="main-menu">
+    //               <li><a aria-label="Go to visit" href="https://www.bishopmuseum.org/visit/">Visit</a></li>
+    //               <li><a aria-label="Go to Exhibits & Programs" href="https://www.bishopmuseum.org/exhibits-and-programs/">Exhibits & Programs</a></li>
+    //               <li><a aria-label="Go to Explore" href="https://www.bishopmuseum.org/explore/">Explore</a></li>
+    //               <li><a aria-label="Go to Education" href="https://www.bishopmuseum.org/education/">Education</a></li>
+    //               <li><a aria-label="Go to Join & Give" href="https://www.bishopmuseum.org/membership/">Join & Give</a></li>
+    //             </ul>
+    //           </div>
+    //         </div>
+    //       </div>
+    //   </div>
+    //   <div id="translate-menu">
+    //     <a href="#" onclick="doGTranslate('en|en');" title="English" class="skiptranslate active">
+    //       English
+    //     </a>
+    //     <a href="#" onclick="doGTranslate('en|ja');" title="日本語" class="skiptranslate">
+    //       日本語
+    //     </a>
+    //   </div>
+    // `);
 
-    $('form#form1').before('<div id="google_translate_element2"></div>');
+    // $('form#form1').before('<div id="google_translate_element2"></div>');
 
     const dynamicallyLoadScript = (url) => {
       var script = document.createElement('script');  // create a script DOM node
@@ -449,15 +452,18 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   };
 
   const fixLayout = () => {
-    $('.MSFootTextDiv:last').load('html/footer.html', () => {
-      generalAdmissionBg();
-      replaceText();
-      organiceItems();
-      editCurrentLoginPopup();
-      translationOptions();
-      createPopUp();
-      setFavicon();
+    $('.MSFootTextDiv:first').load('html/header.html', () => {
+      $('.MSFootTextDiv:last').load('html/footer.html', () => {
+        generalAdmissionBg();
+        replaceText();
+        organiceItems();
+        editCurrentLoginPopup();
+        translationOptions();
+        createPopUp();
+        setFavicon();
+      });
     });
   };
+
   fixLayout();
 })();
