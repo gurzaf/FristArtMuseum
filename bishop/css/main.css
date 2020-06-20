@@ -57,19 +57,40 @@ aside#content-secondary {
   }
 }
 
-.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p {
+.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] {
+  position: absolute;
+  top: 0;
+}
+
+@media (min-width: 767px) {
+  .site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] {
+    position: static;
+  }
+}
+
+.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > a {
   height: 80px;
   display: table-cell;
   vertical-align: middle;
 }
 
-.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p > img {
+.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > a > img {
   width: 230px;
 }
 
 @media (min-width: 480px) {
-  .site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p > img {
+  .site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > a > img {
     width: 300px;
+  }
+}
+
+.site-wrapper header.site-header .MS_LoginButtonOuterContainer {
+  display: none;
+}
+
+@media (min-width: 767px) {
+  .site-wrapper header.site-header .MS_LoginButtonOuterContainer {
+    display: block !important;
   }
 }
 
@@ -78,6 +99,9 @@ aside#content-secondary {
   height: 80px;
   width: 100%;
   padding: 0 10px;
+  position: relative;
+  top: 80px;
+  z-index: 91;
 }
 
 .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
@@ -108,6 +132,7 @@ aside#content-secondary {
 @media (min-width: 767px) {
   .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
     width: auto;
+    position: unset;
   }
   .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
     width: auto;
@@ -283,7 +308,7 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
   font-family: 'Poppins', sans-serif !important;
 }
 
-.Programming_Event_Description p, .Programming_Event_Description ul {
+.Programming_Event_Description p, .Programming_Event_Description ul, .Programming_Event_Description span {
   line-height: 30px;
 }
 
@@ -925,6 +950,7 @@ div[id*="_PaymentPartFormContainer"] span.PaymentPart_CartItemDetails > div:nth-
 span.Registration_UserMessage {
   display: block;
   margin: 20px 0;
+  line-height: 30px;
 }
 
 div[id*="_UserRegistration"] > div > div:first-child > h3 {
@@ -1101,6 +1127,10 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   transition: all 0.1s ease-out;
 }
 
+#translate-menu a:active, #translate-menu a:focus, #translate-menu a:hover {
+  text-decoration: underline;
+}
+
 #translate-menu a.active {
   background-image: url("../assets/arrow.svg");
   background-position: center left;
@@ -1109,7 +1139,9 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 
 @media (min-width: 767px) {
   #translate-menu {
-    position: unset;
+    bottom: unset;
+    top: 0;
+    right: 210px;
     height: 80px;
     width: auto;
   }
@@ -1141,7 +1173,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 }
 
 div#new-menu-links ul.main-menu {
-  margin-top: 10px;
+  margin-top: 80px;
   list-style: none;
   padding: 0;
   font-size: 25px;
@@ -1169,7 +1201,7 @@ div#new-menu-links ul.main-menu li a {
   }
 }
 
-.MS_LoginButtonOuterWrapperContainer {
+#mobile-menu-container {
   display: none;
   position: fixed;
   background: white;
@@ -1181,7 +1213,7 @@ div#new-menu-links ul.main-menu li a {
 }
 
 @media (min-width: 767px) {
-  .MS_LoginButtonOuterWrapperContainer {
+  #mobile-menu-container {
     position: unset;
     background: unset;
     display: unset !important;
