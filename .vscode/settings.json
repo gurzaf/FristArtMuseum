@@ -3,6 +3,7 @@
   "liveSassCompile.settings.includeItems": [      
     "frist/css/source/main.scss",
     "bishop/css/src/main.scss",
+    "wow/css/src/main.scss",
   ],
   // vendor prefixes to unsupported CSS properties 
   "liveSassCompile.settings.autoprefix": [
@@ -19,10 +20,6 @@
     "Android >= 4",
     "Opera >= 12"
   ],
-  // exclude files
-  "liveSassCompile.settings.excludeList": [      
-    "frist/css/test/main.scss"
-  ],
   // generate map, default is true
   "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.formats": [      
@@ -36,7 +33,7 @@
     {
       "extensionName": ".min.css",
       "format": "compressed",
-      "savePath": "/frist/css"
+      "savePath": "~/../"
     }
   ],
   "liveServer.settings.port": 80,
