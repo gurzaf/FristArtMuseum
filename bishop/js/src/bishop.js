@@ -81,6 +81,21 @@
   
   const editCurrentLoginPopup = () => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+
+    $('#signindialog').dialog({
+      title: LOGIN_TITLE,
+      position: { my: "top", at: "center", of: ".site-header.row" },
+      draggable: false,
+      modal: true,
+      resizable: false,
+      dialogClass: 'signindialog',
+      open: (event, ui) => { 
+        $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
+          evt.preventDefault();
+          $('#signindialog').dialog('close');
+        });
+      },
+    });
     
     var auth = $('[id*="LinkbuttonSignOut"]').length;
     if (auth === 0) {
@@ -104,20 +119,6 @@
     
     buttonReference.off();
     buttonReference.on('click', () => {
-      $('#signindialog').dialog({
-        title: LOGIN_TITLE,
-        position: { my: "top", at: "center", of: ".site-header.row" },
-        draggable: false,
-        modal: true,
-        resizable: false,
-        dialogClass: 'signindialog',
-        open: (event, ui) => { 
-          $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
-            evt.preventDefault();
-            $('#signindialog').dialog('close');
-          });
-        },
-      });
       $('#signindialog').dialog('open');
     });
     
@@ -470,10 +471,8 @@
     head.appendChild(l192);
   };
   
-  const autoFill = () => {
-    // Fix input fields being automatically populated by autofill
-    setTimeout(function () {
-      var list = $('#divPriceList .show-grid');
+  const autoFill = (cb) => {
+    var list = $('#divPriceList .show-grid');
       $.each(list, function (index, item) {
         var input = $(item).find('input:text')[0];
         if (typeof input !== 'undefined') {
@@ -488,20 +487,22 @@
           }
         }
       });
+      cb();
       // Hide errors onload
       // $('.text-danger').hide();
-    }, 500);
-  }
+    };
   
   loadCSS();
   generalAdmissionBg();
   replaceText();
   organiceItems();
   // translationOptions();
-  setTimeout(createPopUp, 2000);
   // createPopUp();
-  // editCurrentLoginPopup();
-  setTimeout(editCurrentLoginPopup, 3000);
+  editCurrentLoginPopup();
   setFavicon();
-  autoFill();
+  setTimeout(() => {
+    autoFill(() => {
+      setTimeout(createPopUp, 1000);
+    });
+  }, 500);
 })();

@@ -60,6 +60,24 @@
 
   var editCurrentLoginPopup = function editCurrentLoginPopup() {
     var buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+    $('#signindialog').dialog({
+      title: LOGIN_TITLE,
+      position: {
+        my: "top",
+        at: "center",
+        of: ".site-header.row"
+      },
+      draggable: false,
+      modal: true,
+      resizable: false,
+      dialogClass: 'signindialog',
+      open: function open(event, ui) {
+        $('.ui-widget-overlay, #checkoutguest').on('click', function (evt) {
+          evt.preventDefault();
+          $('#signindialog').dialog('close');
+        });
+      }
+    });
     var auth = $('[id*="LinkbuttonSignOut"]').length;
 
     if (auth === 0) {
@@ -77,24 +95,6 @@
 
     buttonReference.off();
     buttonReference.on('click', function () {
-      $('#signindialog').dialog({
-        title: LOGIN_TITLE,
-        position: {
-          my: "top",
-          at: "center",
-          of: ".site-header.row"
-        },
-        draggable: false,
-        modal: true,
-        resizable: false,
-        dialogClass: 'signindialog',
-        open: function open(event, ui) {
-          $('.ui-widget-overlay, #checkoutguest').on('click', function (evt) {
-            evt.preventDefault();
-            $('#signindialog').dialog('close');
-          });
-        }
-      });
       $('#signindialog').dialog('open');
     });
     $('#signinbutton').on('click', newLoginSubmit);
@@ -303,35 +303,37 @@
     head.appendChild(l192);
   };
 
-  var autoFill = function autoFill() {
-    setTimeout(function () {
-      var list = $('#divPriceList .show-grid');
-      $.each(list, function (index, item) {
-        var input = $(item).find('input:text')[0];
+  var autoFill = function autoFill(cb) {
+    var list = $('#divPriceList .show-grid');
+    $.each(list, function (index, item) {
+      var input = $(item).find('input:text')[0];
 
-        if (typeof input !== 'undefined') {
-          var value = $(input).val();
+      if (typeof input !== 'undefined') {
+        var value = $(input).val();
 
-          if (value && value.length > 0 && value.length < 4) {
-            value = parseInt(value);
+        if (value && value.length > 0 && value.length < 4) {
+          value = parseInt(value);
 
-            if (isNaN(value)) {
-              $(input).val('');
-            }
-          } else {
+          if (isNaN(value)) {
             $(input).val('');
           }
+        } else {
+          $(input).val('');
         }
-      });
-    }, 500);
+      }
+    });
+    cb();
   };
 
   loadCSS();
   generalAdmissionBg();
   replaceText();
   organiceItems();
-  setTimeout(createPopUp, 2000);
-  setTimeout(editCurrentLoginPopup, 3000);
+  editCurrentLoginPopup();
   setFavicon();
-  autoFill();
+  setTimeout(function () {
+    autoFill(function () {
+      setTimeout(createPopUp, 1000);
+    });
+  }, 500);
 })();

@@ -306,6 +306,16 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
   }
 }
 
+div.Programming_Event_DateTime #divAlternateTimes {
+  top: 80px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .Programming_Event_Description p, .Programming_Event_Description span, .Programming_Event_Description strong {
   font-family: 'Poppins', sans-serif !important;
 }
