@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+$cdn: 'https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/';
+
 $background: #212322;
 $yellowBackground: #FFC845;
 $orange: #FC4C02; 
@@ -191,7 +193,7 @@ aside#content-secondary {
       //         width: $headerHeight - 10;
       //         height: $headerHeight - 10;
       //         display: inline-block;
-      //         background: url('../assets/globe.png');
+      //         background: url('#{$cdn}globe.png');
       //         background-size: cover;
       //         margin-top: 5px;
       //         margin-bottom: -5px;
@@ -241,7 +243,7 @@ aside#content-secondary {
 
 .admissionBg {
   @media (min-width: 992px) {
-    background-image: url('../assets/Hawaiian_Admissions_Background.jpg');
+    background-image: url('#{$cdn}Hawaiian_Admissions_Background.jpg');
     background-size: cover;
     background-attachment: fixed;
   }
@@ -912,7 +914,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
       color: $background;
     }
     .ui-dialog-titlebar-close {
-      background-image: url('../assets/close.svg') !important;
+      background-image: url('#{$cdn}close.svg') !important;
       background-size: cover !important;
       right: 1em;
       top: 1.8em;
@@ -967,7 +969,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 //       text-decoration: underline;
 //     }
 //     &.active {
-//       background-image: url('../assets/arrow.svg');
+//       background-image: url('#{$cdn}arrow.svg');
 //       background-position: center left;
 //       background-repeat: no-repeat;
 //     }
@@ -994,7 +996,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
     width: $logoHeight;
     height: $logoHeight;
     z-index: 90;
-    background: url('../assets/menu.svg');
+    background: url('#{$cdn}menu.svg');
     background-size: $logoHeight $logoHeight * 2;
     &.open {
       background-position: bottom;
@@ -1131,7 +1133,7 @@ div#new-menu-links {
       display: none;
     }
     .ui-dialog-titlebar-close {
-      background-image: url('../assets/close.svg') !important;
+      background-image: url('#{$cdn}close.svg') !important;
       z-index: 1;
       top: 2rem;
       right: 1rem;
@@ -1241,7 +1243,7 @@ div#new-menu-links {
   }
 
   .newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
-    background-image: url('../assets/cross-gray.svg') !important;
+    background-image: url('#{$cdn}cross-gray.svg') !important;
   }
 
   .newLogin.ui-dialog #popuplogin #popuploginformcontainer h3 {

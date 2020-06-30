@@ -184,7 +184,7 @@ aside#content-secondary {
 
 @media (min-width: 992px) {
   .admissionBg {
-    background-image: url("../assets/Hawaiian_Admissions_Background.jpg");
+    background-image: url("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/Hawaiian_Admissions_Background.jpg");
     -webkit-background-size: cover;
             background-size: cover;
     background-attachment: fixed;
@@ -1055,7 +1055,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 }
 
 .ui-dialog.modal-Dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
-  background-image: url("../assets/close.svg") !important;
+  background-image: url("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/close.svg") !important;
   -webkit-background-size: cover !important;
           background-size: cover !important;
   right: 1em;
@@ -1109,7 +1109,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   width: 60px;
   height: 60px;
   z-index: 90;
-  background: url("../assets/menu.svg");
+  background: url("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/menu.svg");
   -webkit-background-size: 60px 120px;
           background-size: 60px 120px;
 }
@@ -1278,7 +1278,7 @@ div#new-menu-links ul.main-menu li a {
 }
 
 .newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
-  background-image: url("../assets/close.svg") !important;
+  background-image: url("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/close.svg") !important;
   z-index: 1;
   top: 2rem;
   right: 1rem;
@@ -1424,7 +1424,7 @@ div#new-menu-links ul.main-menu li a {
     width: 100%;
   }
   .newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
-    background-image: url("../assets/cross-gray.svg") !important;
+    background-image: url("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/cross-gray.svg") !important;
   }
   .newLogin.ui-dialog #popuplogin #popuploginformcontainer h3 {
     font-size: 3rem;
