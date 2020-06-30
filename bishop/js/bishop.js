@@ -178,7 +178,6 @@
 
   var dateTimeActions = function dateTimeActions() {
     $('h2.Programming_Event_DateContainer + span a').text('Select other dates');
-    $('h2.Programming_Event_TimeContainer + span a').text('See other times');
   };
 
   var transformDateAndTime = function transformDateAndTime() {
