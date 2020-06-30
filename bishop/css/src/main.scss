@@ -880,6 +880,10 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 
 // ================================= DIALOGS ======================
 
+div[id*="UserModalSignIn_UserModalPartDialog1"] {
+  display: none;
+}
+
 // Show popup overlay
 .ui-widget-overlay.ui-front {
   display: block !important;

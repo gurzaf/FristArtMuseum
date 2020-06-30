@@ -1021,6 +1021,10 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   font-weight: bold;
 }
 
+div[id*="UserModalSignIn_UserModalPartDialog1"] {
+  display: none;
+}
+
 .ui-widget-overlay.ui-front {
   display: block !important;
   background: #000 !important;
