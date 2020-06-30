@@ -30,10 +30,9 @@
   const loadCSS = () => {
     var head  = document.getElementsByTagName('head')[0];
     var link  = document.createElement('link');
-    link.id   = cssId;
     link.rel  = 'stylesheet';
     link.type = 'text/css';
-    link.href = 'https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/css/main-style.css';
+    link.href = 'https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/css/template.css';
     link.media = 'all';
     head.appendChild(link);
   }
