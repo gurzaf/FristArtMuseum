@@ -489,7 +489,7 @@
         }
       });
       // Hide errors onload
-      $('.text-danger').hide();
+      // $('.text-danger').hide();
     }, 500);
   }
   
