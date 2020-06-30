@@ -63,8 +63,6 @@
     var auth = $('[id*="LinkbuttonSignOut"]').length;
 
     if (auth === 0) {
-      $(buttonReference).click();
-      $('[aria-describedby$="UserModalSignedIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
       var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
 
       if (message && message.length > 0) {
