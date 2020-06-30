@@ -81,6 +81,21 @@
   
   const editCurrentLoginPopup = () => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+
+    $('#signindialog').dialog({
+      title: LOGIN_TITLE,
+      position: { my: "top", at: "center", of: ".site-header.row" },
+      draggable: false,
+      modal: true,
+      resizable: false,
+      dialogClass: 'signindialog',
+      open: (event, ui) => { 
+        $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
+          evt.preventDefault();
+          $('#signindialog').dialog('close');
+        });
+      },
+    });
     
     var auth = $('[id*="LinkbuttonSignOut"]').length;
     if (auth === 0) {
@@ -104,20 +119,6 @@
     
     buttonReference.off();
     buttonReference.on('click', () => {
-      $('#signindialog').dialog({
-        title: LOGIN_TITLE,
-        position: { my: "top", at: "center", of: ".site-header.row" },
-        draggable: false,
-        modal: true,
-        resizable: false,
-        dialogClass: 'signindialog',
-        open: (event, ui) => { 
-          $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
-            evt.preventDefault();
-            $('#signindialog').dialog('close');
-          });
-        },
-      });
       $('#signindialog').dialog('open');
     });
     
