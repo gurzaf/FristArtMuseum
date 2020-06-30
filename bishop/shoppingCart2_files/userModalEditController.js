@@ -73,6 +73,7 @@ function BBNCUserModalEditor(editorDlgId, editorBtnLinkId, height, width, Header
         //attach edit dialog open to edit link
         $("#" + me._editorLinkId).click(function () {
             //event.preventDefault();
+            console.log("#" + me._editorId);
             $("#" + me._editorId).dialog("open");
         });
 

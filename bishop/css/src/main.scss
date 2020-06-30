@@ -889,7 +889,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   margin-bottom: 2rem;
 }
 
-.ui-dialog.modal-Dialog {
+.ui-dialog.signindialog {
   width: 100% !important;
   max-width: 500px;
   margin-left: 15px;
@@ -941,11 +941,12 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   }
   .ui-dialog-buttonpane {
     border: 0;
-    margin-top: -10px;
-    padding-top: 0;
+    margin: 0px;
+    padding: 0;
     button {
       @include buttonBlack;
       margin-top: 0;
+      margin-right: 0;
     } 
   }
 }

@@ -1023,29 +1023,29 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   margin-bottom: 2rem;
 }
 
-.ui-dialog.modal-Dialog {
+.ui-dialog.signindialog {
   width: 100% !important;
   max-width: 500px;
   margin-left: 15px;
   margin-right: 15px;
+  border-radius: 0;
 }
 
 @media screen and (min-width: 480px) {
-  .ui-dialog.modal-Dialog {
+  .ui-dialog.signindialog {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-titlebar {
+.ui-dialog.signindialog .ui-dialog-titlebar {
   margin: -.2em;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-radius: 0;
   padding: .8em .3em .3em;
   background-color: #F0F0F0;
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-titlebar .ui-dialog-title {
+.ui-dialog.signindialog .ui-dialog-titlebar .ui-dialog-title {
   font-size: 2.5rem;
   text-align: center;
   float: none;
@@ -1056,7 +1056,7 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   color: #212322;
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+.ui-dialog.signindialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
   background-image: url("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/close.svg") !important;
   -webkit-background-size: cover !important;
           background-size: cover !important;
@@ -1066,27 +1066,27 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   width: 19px;
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-content .form-group label {
+.ui-dialog.signindialog .ui-dialog-content .form-group label {
   font-weight: normal;
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-content .form-group input[type="password"], .ui-dialog.modal-Dialog .ui-dialog-content .form-group input[type="email"] {
+.ui-dialog.signindialog .ui-dialog-content .form-group input[type="password"], .ui-dialog.signindialog .ui-dialog-content .form-group input[type="email"] {
   height: 40px;
   border-radius: 0;
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-content .form-group a {
+.ui-dialog.signindialog .ui-dialog-content .form-group a {
   text-align: right;
   display: block;
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-buttonpane {
+.ui-dialog.signindialog .ui-dialog-buttonpane {
   border: 0;
-  margin-top: -10px;
-  padding-top: 0;
+  margin: 0px;
+  padding: 0;
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-buttonpane button {
+.ui-dialog.signindialog .ui-dialog-buttonpane button {
   background-color: #212322;
   color: #FC4C02;
   font-weight: 700;
@@ -1097,9 +1097,10 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   margin-top: 0;
+  margin-right: 0;
 }
 
-.ui-dialog.modal-Dialog .ui-dialog-buttonpane button:hover, .ui-dialog.modal-Dialog .ui-dialog-buttonpane button:active, .ui-dialog.modal-Dialog .ui-dialog-buttonpane button:focus {
+.ui-dialog.signindialog .ui-dialog-buttonpane button:hover, .ui-dialog.signindialog .ui-dialog-buttonpane button:active, .ui-dialog.signindialog .ui-dialog-buttonpane button:focus {
   color: white;
   background-color: #212322;
 }

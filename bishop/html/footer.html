@@ -43,6 +43,45 @@
     </div>
   </div>
 </div>
+<div style="display: none;">
+  <div id="signindialog">
+    <div id="signindialog_DivSignInContainer" class="BBModalEditFormBody">
+      <p class="new-login-description">If you don’t know what your membership e-mail is, please call our Membership Department at <a href="tel:+18088473511">808.847.3511</a> or email us at <a href="mailto:membeship@bishopmuseum.org">membeship@bishopmuseum.org</a>.</p>
+      <div id="signindialog_DivSignInMessage" class="MS_LoginMessage" style="margin-bottom:10px"></div>
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label for="signindialog_TextboxUserName" class="col-sm-3 control-label" style="padding-right:0">Email:</label>
+          <div class="col-sm-9">
+            <input name="sign-username" id="sign-username" type="email" class="BBFormTextbox LoginFormTextbox form-control" />
+            <a onclick="(function(btn){var bDisableMe=true;if(typeof(Page_ClientValidate)=='function'){bDisableMe=Page_ClientValidate('PC1272');}__doPostBack('PC1272$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','');if(bDisableMe){if(isIE){btn.onclick = '';}else{ btn.setAttribute('onclick','');}}})(this);return true;" id="signindialog_LinkbuttonRegisterDialog" class="LoginLink" href="javascript:__doPostBack('PC1272$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')" aria-label="Click here to register.">Register for new account</a>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="sign-password" class="col-sm-3 control-label" style="padding-right:0">Password:</label>
+          <div class="col-sm-9">
+            <input name="sign-password" id="sign-password" type="password" class="BBFormTextbox LoginFormTextbox form-control" autocomplete="current-password" />
+            <a onclick="(function(btn){var bDisableMe=true;if(typeof(Page_ClientValidate)=='function'){bDisableMe=Page_ClientValidate('PC1272');}__doPostBack('PC1272$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonForgotPassword','');if(bDisableMe){if(isIE){btn.onclick = '';}else{ btn.setAttribute('onclick','');}}})(this);return true;" id="signindialog_LinkbuttonForgotPassword" class="LoginLink" href="#" aria-label="Forgot your password?">Forgot password</a>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-3 col-sm-9">
+            <div class="checkbox">
+              
+              <input id="remember-sign" type="checkbox" name="remember-sign">
+              <label for="signindialog_CheckboxRememberSignIn">Remember me</label>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>                                
+    <div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix modal-footer">
+      <div class="ui-dialog-buttonset">
+        <button id="signinbutton" type="button">Sign in</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- <script type="text/javascript" src="js/src/bishop.js"></script> -->
 <script type="text/javascript" src="https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/js/bishop.js"></script>
 <script id="custom-template" type="text/javascript" src="https://cdn.socialgoodsoftware.com/js/apps/template/main.js?auth=0af8fac1d2fd1d7a51882c13dc16bdd7774cc1b4e5ef3c702afd92d663b6a2c8fd945d6a1ac1a75717e3189f0924cbe2"></script>

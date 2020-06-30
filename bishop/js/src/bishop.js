@@ -19,10 +19,10 @@
   const JOIN = 'Become a Member';
   const GUEST = 'Check Out as Guest';
   const MEMBER_DISCOUNT = 'Please sign in to receive your member discount.';
-  const LOGIN_DESCRIPTION = '<p class="new-login-description">If you don’t know what your membership e-mail is, please call our Membership Department at <a href="tel:+18088473511">808.847.3511</a> or email us at <a href="mailto:membeship@bishopmuseum.org">membeship@bishopmuseum.org</a>.</p>';
-  const REGISTER_NEW_ACCOUNT = 'Register for new account';
+  // const LOGIN_DESCRIPTION = '<p class="new-login-description">If you don’t know what your membership e-mail is, please call our Membership Department at <a href="tel:+18088473511">808.847.3511</a> or email us at <a href="mailto:membeship@bishopmuseum.org">membeship@bishopmuseum.org</a>.</p>';
+  // const REGISTER_NEW_ACCOUNT = 'Register for new account';
   const SIGNIN_AND_CHECKOUT = 'Sign in & Check Out';
-  const FORGOTPASSWORD_DESCRIPTION = 'Forgot password';
+  // const FORGOTPASSWORD_DESCRIPTION = 'Forgot password';
   const FORGOTPASSWORDURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=220&tab=500';
   const REGISTERURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=218';
   const MEMBERSHIP_URL = 'https://www.bishopmuseum.org/membership/';
@@ -34,9 +34,39 @@
     link.rel  = 'stylesheet';
     link.type = 'text/css';
     link.href = 'https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/css/template.css';
+    // link.href = 'css/main.css';
     link.media = 'all';
     head.appendChild(link);
   }
+
+  const passTextValue = (from, to) => {
+    $(from).on('keyup', () => {
+      $(to).val($(from).val());
+    });
+    $(from).on('keydown', (e) => {
+      if (e.keyCode == 13) {
+        newLoginSubmit(e);
+        return false;
+      }
+    })
+  }
+  
+  const passClick = (from, to) => {
+    $(from).on('change', () => {
+      $(to).click();
+    });
+  };
+  
+  const newLoginSubmit = (evt) => {
+    evt.preventDefault();
+    // $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]')
+    //   .find('.ui-dialog-buttonset button:last-child')
+    //   .click();
+    const sign = Object.keys(window).filter(key => key.indexOf('UserModalSignIn') !== -1);
+    if (sign.length === 1) {
+      window[sign[0]].doEditSave();
+    }
+  };
 
   // const readCookie = (name) => {
   //   const nameEQ = name + "=";
@@ -50,47 +80,51 @@
   // };
   
   const editCurrentLoginPopup = () => {
-    // Login button reference
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+
+    var auth = $('[id*="LinkbuttonSignOut"]').length;
+    if (auth === 0) {
+        // Open and close the dialog to fix a bug with two way data bind not working
+        // $('.BBModalEditLink').click();
+        // $('[aria-describedby$="UserModalSignedIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
+
+        // Check if we should open the dialog
+        var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
+        if (message && message.length > 0) {
+          $('#popuplogin').dialog('close');
+            $('#signindialog .message').html(message);
+            $('#signindialog .alert').removeClass('hidden');
+            $('#signindialog').dialog('open');
+        }
+    } else {
+      buttonReference.css('display', 'none');
+    }
+
+    // Login button reference
     
-    // $('.ui-dialog').css('width',  'auto');
-    
+    buttonReference.off();
     buttonReference.on('click', () => {
-      setTimeout(() => {
-        $('.ui-widget-overlay').on('click', (evt) => {
-          evt.preventDefault();
-          $('[id*="UserModalSignIn_UserModalPartDialog1"]').dialog('close');
-        });
-      })
+      $('#signindialog').dialog({
+        title: LOGIN_TITLE,
+        position: { my: "top", at: "center", of: ".site-header.row" },
+        draggable: false,
+        modal: true,
+        resizable: false,
+        dialogClass: 'signindialog',
+        open: (event, ui) => { 
+          $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
+            evt.preventDefault();
+            $('#signindialog').dialog('close');
+          });
+        },
+      });
+      $('#signindialog').dialog('open');
     });
     
-    // getting a login dialog reference
-    const dialog = $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]');
-    // getting a reference of title html
-    const title = $(dialog).find('.ui-dialog-title.modal-title');
-    $(title).html(LOGIN_TITLE);
-    console.log('Changed title');
-    // prepending a text section in dialog
-    const body = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_DivSignInContainer"]');
-    $(body).prepend(LOGIN_DESCRIPTION);
-    console.log('Added description');
-    
-    // move register link
-    const linkRegister = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog"]');
-    $(linkRegister).text(REGISTER_NEW_ACCOUNT);
-    console.log('Register link');
-    const usernameField = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
-    linkRegister.insertAfter(usernameField);
-    
-    // move recover password link
-    const linkPassword = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword"]');
-    $(linkPassword).text(FORGOTPASSWORD_DESCRIPTION);
-    const passwordField = $(dialog).find('[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
-    linkPassword.insertAfter(passwordField);
-    console.log('Forgot password link');
-    // hide close button
-    $(dialog).find('.ui-dialog-buttonset button:first-child').css('display', 'none');
-    console.log('Hide other button');
+    $('#signinbutton').on('click', newLoginSubmit);
+    passTextValue('#sign-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
+    passTextValue('#sign-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
+    passClick('#remember-sign', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
   };
   
   // Function to fix WCAG issues
@@ -328,35 +362,6 @@
   //   });
   // };
   
-  const passTextValue = (from, to) => {
-    $(from).on('keyup', () => {
-      $(to).val($(from).val());
-    });
-    $(from).on('keydown', (e) => {
-      if (e.keyCode == 13) {
-        newLoginSubmit(e);
-        return false;
-      }
-    })
-  }
-  
-  const passClick = (from, to) => {
-    $(from).on('change', () => {
-      $(to).click();
-    });
-  };
-  
-  const newLoginSubmit = (evt) => {
-    evt.preventDefault();
-    // $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]')
-    //   .find('.ui-dialog-buttonset button:last-child')
-    //   .click();
-    const sign = Object.keys(window).filter(key => key.indexOf('UserModalSignIn') !== -1);
-    if (sign.length === 1) {
-      window[sign[0]].doEditSave();
-    }
-  }
-  
   const createPopUp = () => {
     // $('[id*="UserModalSignedIn_UserModalPartEditLink"]').text(
     //   $('[id*="UserModalSignedIn_UserModalPartEditLink"]').text().replace('|', '').trim()
@@ -472,6 +477,7 @@
   // translationOptions();
   setTimeout(createPopUp, 2000);
   // createPopUp();
-  editCurrentLoginPopup();
+  // editCurrentLoginPopup();
+  setTimeout(editCurrentLoginPopup, 3000);
   setFavicon();
 })();
