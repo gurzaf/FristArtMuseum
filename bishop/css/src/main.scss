@@ -295,10 +295,12 @@ div.Programming_Event_DateTime {
         margin: 0;
         font-size: 14px;
         font-weight: bold;
+        background-image: none;
       }
       h2 + span {
         float: none !important;
         font-size: 12px;
+        background-image: none;
         a {
           color: black;
           text-decoration: underline;
@@ -892,14 +894,14 @@ h3 > span.Registration_RegistrantCredentialsHeader {
   max-width: 500px;
   margin-left: 15px;
   margin-right: 15px;
+  border-radius: 0;
   @media screen and (min-width: 480px) {
     margin-left: auto;
     margin-right: auto;
   }
   .ui-dialog-titlebar {
     margin: -.2em;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 0;
     padding: .8em .3em .3em;
     background-color: $dialogTitleBackground;
     .ui-dialog-title {

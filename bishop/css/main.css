@@ -261,11 +261,13 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
   margin: 0;
   font-size: 14px;
   font-weight: bold;
+  background-image: none;
 }
 
 div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span {
   float: none !important;
   font-size: 12px;
+  background-image: none;
 }
 
 div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 + span a {
