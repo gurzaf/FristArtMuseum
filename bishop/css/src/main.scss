@@ -339,6 +339,12 @@ div.Programming_Event_DateTime {
       }
     }
   }
+  #divAlternateTimes {
+    top: 80px;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
 }
 
 .Programming_Event_Description {
