@@ -85,8 +85,7 @@
 
       if (message && message.length > 0) {
         $('#popuplogin').dialog('close');
-        $('#signindialog .message').html(message);
-        $('#signindialog .alert').removeClass('hidden');
+        $('#signindialog_DivSignInMessage').html(message);
         $('#signindialog').dialog('open');
       }
     } else {
@@ -329,11 +328,11 @@
   generalAdmissionBg();
   replaceText();
   organiceItems();
-  editCurrentLoginPopup();
   setFavicon();
   setTimeout(function () {
     autoFill(function () {
       setTimeout(createPopUp, 1000);
+      setTimeout(editCurrentLoginPopup, 2000);
     });
   }, 500);
 })();
