@@ -303,35 +303,37 @@
     head.appendChild(l192);
   };
 
-  var autoFill = function autoFill() {
-    setTimeout(function () {
-      var list = $('#divPriceList .show-grid');
-      $.each(list, function (index, item) {
-        var input = $(item).find('input:text')[0];
+  var autoFill = function autoFill(cb) {
+    var list = $('#divPriceList .show-grid');
+    $.each(list, function (index, item) {
+      var input = $(item).find('input:text')[0];
 
-        if (typeof input !== 'undefined') {
-          var value = $(input).val();
+      if (typeof input !== 'undefined') {
+        var value = $(input).val();
 
-          if (value && value.length > 0 && value.length < 4) {
-            value = parseInt(value);
+        if (value && value.length > 0 && value.length < 4) {
+          value = parseInt(value);
 
-            if (isNaN(value)) {
-              $(input).val('');
-            }
-          } else {
+          if (isNaN(value)) {
             $(input).val('');
           }
+        } else {
+          $(input).val('');
         }
-      });
-    }, 500);
+      }
+    });
+    cb();
   };
 
   loadCSS();
   generalAdmissionBg();
   replaceText();
   organiceItems();
-  setTimeout(createPopUp, 2000);
-  setTimeout(editCurrentLoginPopup, 3000);
+  editCurrentLoginPopup();
   setFavicon();
-  autoFill();
+  setTimeout(function () {
+    autoFill(function () {
+      setTimeout(createPopUp, 1000);
+    });
+  }, 500);
 })();
