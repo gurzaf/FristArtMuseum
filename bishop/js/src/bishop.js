@@ -85,8 +85,8 @@
     var auth = $('[id*="LinkbuttonSignOut"]').length;
     if (auth === 0) {
       // Open and close the dialog to fix a bug with two way data bind not working
-      $(buttonReference).click();
-      $('[aria-describedby$="UserModalSignedIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
+      // $(buttonReference).click();
+      // $('[aria-describedby$="UserModalSignedIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
       
       // Check if we should open the dialog
       var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
