@@ -1,1 +1,340 @@
-"use strict";(function(){var a="Cart item image",b="Invisible link",c=function(a,b){$(a).on("keyup",function(){$(b).val($(a).val())}),$(a).on("keydown",function(a){if(13==a.keyCode)return f(a),!1})},d=function(a,b){$(a).on("change",function(){$(b).click()})},f=function(a){a.preventDefault();var b=Object.keys(window).filter(function(a){return-1!==a.indexOf("UserModalSignIn")});1===b.length&&window[b[0]].doEditSave()},g=function(){$("header.site-header .RS_headerWrapper_inner div[id*=\"_pnlFooterText\"] > p > img").attr("alt","Bishop Museum Logo"),$("img.img-responsive.cartImg").attr("alt",a);var c=$("section")[0];if(c){var d=$("<div/>",{html:c.innerHTML,class:c.className});c.replaceWith(d[0])}$("input[id*=\"_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword\"]").attr("autocomplete","current-password"),$("h3, h2, h1, h4, h5, h6").each(function(c,a){var b=$(a);""===b.text().trim()&&b.remove()}),$("img").each(function(b,c){var d=$(c);d.attr("alt")||d.attr("alt",a)}),$("a").each(function(a,c){var d=$(c);if(!d.attr("aria-label")&&0===d.find("img").length){var e=d.text().trim();if(""!==e)return void d.attr("aria-label",e);var f=d.attr("title");if(f)return f=f.trim().replace(/:/g,"").trim(),void d.attr("aria-label",f);d.text(b),d.attr("aria-label",b)}})},h=function(a){return a.replace(/AM/g,"a.m.").replace(/PM/g,"p.m.")},i=function(){$("h2.Programming_Event_DateContainer + span a").text("Select other dates"),$("h2.Programming_Event_TimeContainer + span a").text("See other times")},j=function(){var a=$(".Programming_Event_Date"),b=a.text().split(" ");if(0<b.length){var d="".concat(b.shift(),",");if(2==b.length)d="".concat(d," ").concat(b.join(" "),", ").concat(new Date().getFullYear());else{var e=b.pop();d="".concat(d," ").concat(b.join(" "),", ").concat(e)}a.text(d)}var c="".concat($(".Programming_Event_StartTime").text().trim(),"\u2013").concat($(".Programming_Event_EndTime").text().trim());c=h(c),$(".Programming_Event_TimeInnerContainer_Custom").text(c)},k=function(){$(".PaymentPart_CartItemDetails > div > span").each(function(a,b){var c=$(b);c.text(h(c.text()))})};(function loadCSS(){var a=document.getElementsByTagName("head")[0],b=document.createElement("link");b.rel="stylesheet",b.type="text/css",b.href="https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/css/template.css",b.media="all",a.appendChild(b)})(),function generalAdmissionBg(){"Timed General Admission"===$("h1 span[id*=\"_labelEventName\"]").text()&&$(".site-container").addClass("admissionBg")}(),function replaceText(){$(".MS_LoginLink a").text("Login"),$("input[id*=\"buttonAddEventToCart\"]").val("CONTINUE"),$("div.cart-type-group.cart-type-Donations.single-cart-item .PaymentPart_CartDescriptionCell").html("<span>".concat("Make a donation","</span>")),j(),i(),k(),g()}(),function organiceItems(){$(".PaymentPart_CartDescriptionCell").each(function(a,b){var c=$(b).find("h4"),d=$(c).find("a").attr("href");if(d){c.after("<a aria-label=\"Edit item in cart\" class=\"edit-item-link\" href=\"".concat(d,"\">").concat("Review or edit item","</a>"));var e="\n        <div id=\"PC1280_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdImageItem_0\">\n        <a href=\"".concat(d,"\" id=\"PC1280_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_hyperlinkItemThumbnail_0\">\n        <img id=\"PC1280_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_imageItemThumbnail_0\" class=\"img-responsive cartImg\" src=\"").concat("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/","bishop-thumbnail.png\" alt=\"Cart item image\">\n        </a>\n        </div>\n        ");$(b).before(e)}}),$("div[id*=\"_divUserSignUp\"]").after($("#divCartSummary .form-group.lead.text-success")),$("#divCartSummary .form-group:first-child").before($("div[id*=\"_divDiscountCodeEntry\"]")),$("span[id*=\"_lblPersonalInfo\"]").text("Billing Information"),$("input[id*=\"_chkUseAsBilling\"]").prop("checked",!0),$("div[id*=\"_registrantBioInfoSection\"] .form-group label").each(function(a,b){var c=$(b).text();$(b).text(c.replace(":",""))}),$("header div[id*=\"_pnlFooterText\"]").after("\n    <div id=\"new-menu\">\n    <a id=\"menu-icon\" aria-label=\"Toggle Menu\" href=\"#\">\n    </a>\n    </div>\n    "),$("#menu-icon").click(function(a){a.preventDefault(),$("#menu-icon").hasClass("open")?($("#menu-icon").removeClass("open"),$(".site-wrapper header.site-header").css("position","absolute"),$(".site-wrapper header.site-header .MS_LoginButtonOuterContainer").css("display","none"),$("#mobile-menu-container").slideToggle("fast")):($("#menu-icon").addClass("open"),$(".site-wrapper header.site-header").css("position","fixed"),$("#mobile-menu-container").slideToggle("fast"),$(".site-wrapper header.site-header .MS_LoginButtonOuterContainer").css("display","table"))})}(),setTimeout(function createPopUp(){if("Login"===$("[id*=\"UserModalSignIn_UserModalPartEditLink\"]").text().trim()&&(0!==$("[id*=\"MembershipExpress\"]").length||0!==$("[id*=\"divPriceList\"]").length)&&"block"!==$("[aria-describedby$=\"UserModalSignIn_UserModalPartDialog1\"]").css("display")){var a="\n    <div style=\"display: none;\">\n    <div id=\"popuplogin\" class=\"container ui-corner-all\">\n    <div class=\"row row-eq-height\">\n    <div id=\"popuploginformcontainer\" class=\"col-xs-12 col-sm-8\">\n    <h3>".concat("Member Sign-In","</h3>\n    <p>").concat("Please sign in to receive your member discount.","</p>\n    <div id=\"popuploginform\">\n    <div class=\"form-horizontal\">\n    <div class=\"form-group\">\n    <label for=\"new-username\" id=\"new-username-label\" class=\"col-sm-12 control-label\" style=\"padding-right:0\">Email:</label>\n    <div class=\"col-sm-12\">\n    <input name=\"new-username\" type=\"text\" id=\"new-username\" class=\"BBFormTextbox LoginFormTextbox form-control\">\n    <a href=\"").concat("https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=218","\" id=\"PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog\" class=\"LoginLink\" href=\"javascript:__doPostBack('PC1953$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')\">Register for new account</a>\n    </div>\n    </div>\n    <div class=\"form-group\">\n    <label for=\"new-password\" id=\"new-password-label\" class=\"col-sm-12 control-label\" style=\"padding-right:0\">Password:</label>\n    <div class=\"col-sm-12\">\n    <input name=\"new-password\" type=\"password\" id=\"new-password\" class=\"BBFormTextbox LoginFormTextbox form-control\">\n    <a href=\"").concat("https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=220&tab=500","\" id=\"PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword\" class=\"LoginLink\" href=\"#\">Forgot your password?</a>\n    </div>\n    </div>\n    <div class=\"form-group\">\n    <div class=\"col-sm-12\">\n    <div class=\"checkbox\">\n    <input id=\"new-checkbox\" type=\"checkbox\" name=\"new-checkbox\">Remember me</label>\n    </div>\n    </div>\n    </div>\n    </div>\n    </div>\n    <div id=\"popupsubmitform\" class=\"ui-dialog-buttonpane\">\n    <button id=\"new-submit\">\n    ").concat("Sign in & Check Out","\n    </button>\n    </div>\n    </div>\n    <div id=\"popuploginregister\" class=\"col-xs-12 col-sm-4 ui-dialog-buttonpane\">\n    <div class=\"join-container\">\n    <p class=\"join-discount\">").concat("Become a member today and get a discount on your order.","</p>\n    <button id=\"join-button\" onClick=\"window.location = '").concat("https://www.bishopmuseum.org/membership/","'\">\n    ").concat("Become a Member","\n    </button>\n    <a id=\"checkoutguest\" href=\"#\">").concat("Check Out as Guest","</a>\n    </div>\n    </div>\n    </div>\n    </div>\n    </div>\n    ");$("[aria-describedby*=\"UserModalSignIn_UserModalPartDialog1\"]").appendTo("form"),$(a).appendTo("form"),$("#new-submit").on("click",f),c("#new-username","[id$=\"UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName\"]"),c("#new-password","[id$=\"UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword\"]"),d("#new-checkbox","[id$=\"UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn\"]"),window.scrollTo(0,0),$("#popuplogin").dialog({title:null,position:{my:"top",at:"center",of:".site-header.row"},draggable:!1,modal:!0,resizable:!1,dialogClass:"newLogin",open:function open(){$(".ui-widget-overlay, #checkoutguest").on("click",function(a){a.preventDefault(),$("#popuplogin").dialog("close")})}})}},2e3),setTimeout(function editCurrentLoginPopup(){var a=$("[id*=\"UserModalSignIn_UserModalPartEditLink\"]"),b=$("[id*=\"LinkbuttonSignOut\"]").length;if(0===b){var e=$(".UserModalPartDialog").find(".MS_LoginMessage").html();e&&0<e.length&&($("#popuplogin").dialog("close"),$("#signindialog .message").html(e),$("#signindialog .alert").removeClass("hidden"),$("#signindialog").dialog("open"))}else a.css("display","none");a.off(),a.on("click",function(){$("#signindialog").dialog({title:"Sign in",position:{my:"top",at:"center",of:".site-header.row"},draggable:!1,modal:!0,resizable:!1,dialogClass:"signindialog",open:function open(){$(".ui-widget-overlay, #checkoutguest").on("click",function(a){a.preventDefault(),$("#signindialog").dialog("close")})}}),$("#signindialog").dialog("open")}),$("#signinbutton").on("click",f),c("#sign-username","[id$=\"UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName\"]"),c("#sign-password","[id$=\"UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword\"]"),d("#remember-sign","[id$=\"UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn\"]")},3e3),function setFavicon(){document.querySelector("link[rel*='ICON']").remove();var a=document.createElement("link");a.type="image/x-icon",a.rel="shortcut icon",a.sizes="32x32",a.href="".concat("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/","favicon-32x32.png");var b=document.getElementsByTagName("head")[0];b.appendChild(a);var c=document.createElement("link");c.type="image/x-icon",c.rel="shortcut icon",c.sizes="180x180",c.href="".concat("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/","favicon-180x180.png"),b.appendChild(c);var d=document.createElement("link");d.type="image/x-icon",d.rel="shortcut icon",d.sizes="192x192",d.href="".concat("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/","favicon-192x192.png"),b.appendChild(d)}()})();
+"use strict";
+
+(function () {
+  var CDNASSETS = 'https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/';
+  var LINK_TITLE = 'Review or edit item';
+  var BILLING_TITLE = 'Billing Information';
+  var ALT_CART_IMAGE = 'Cart item image';
+  var ARIA_DEFAULT = 'Invisible link';
+  var DONATION_TEXT = 'Make a donation';
+  var LOGIN_TITLE = 'Sign in';
+  var MEMBER_SIGNIN = 'Member Sign-In';
+  var JOIN_DISCOUNT = 'Become a member today and get a discount on your order.';
+  var JOIN = 'Become a Member';
+  var GUEST = 'Check Out as Guest';
+  var MEMBER_DISCOUNT = 'Please sign in to receive your member discount.';
+  var SIGNIN_AND_CHECKOUT = 'Sign in & Check Out';
+  var FORGOTPASSWORDURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=220&tab=500';
+  var REGISTERURL = 'https://16806a.blackbaudhosting.com/16806a/page.aspx?pid=218';
+  var MEMBERSHIP_URL = 'https://www.bishopmuseum.org/membership/';
+  var LOGO_ALT = 'Bishop Museum Logo';
+
+  var loadCSS = function loadCSS() {
+    var head = document.getElementsByTagName('head')[0];
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/css/template.css';
+    link.media = 'all';
+    head.appendChild(link);
+  };
+
+  var passTextValue = function passTextValue(from, to) {
+    $(from).on('keyup', function () {
+      $(to).val($(from).val());
+    });
+    $(from).on('keydown', function (e) {
+      if (e.keyCode == 13) {
+        newLoginSubmit(e);
+        return false;
+      }
+    });
+  };
+
+  var passClick = function passClick(from, to) {
+    $(from).on('change', function () {
+      $(to).click();
+    });
+  };
+
+  var newLoginSubmit = function newLoginSubmit(evt) {
+    evt.preventDefault();
+    var sign = Object.keys(window).filter(function (key) {
+      return key.indexOf('UserModalSignIn') !== -1;
+    });
+
+    if (sign.length === 1) {
+      window[sign[0]].doEditSave();
+    }
+  };
+
+  var editCurrentLoginPopup = function editCurrentLoginPopup() {
+    var buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+    var auth = $('[id*="LinkbuttonSignOut"]').length;
+
+    if (auth === 0) {
+      $(buttonReference).click();
+      $('[aria-describedby$="UserModalSignedIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
+      var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
+
+      if (message && message.length > 0) {
+        $('#popuplogin').dialog('close');
+        $('#signindialog .message').html(message);
+        $('#signindialog .alert').removeClass('hidden');
+        $('#signindialog').dialog('open');
+      }
+    } else {
+      buttonReference.css('display', 'none');
+    }
+
+    buttonReference.off();
+    buttonReference.on('click', function () {
+      $('#signindialog').dialog({
+        title: LOGIN_TITLE,
+        position: {
+          my: "top",
+          at: "center",
+          of: ".site-header.row"
+        },
+        draggable: false,
+        modal: true,
+        resizable: false,
+        dialogClass: 'signindialog',
+        open: function open(event, ui) {
+          $('.ui-widget-overlay, #checkoutguest').on('click', function (evt) {
+            evt.preventDefault();
+            $('#signindialog').dialog('close');
+          });
+        }
+      });
+      $('#signindialog').dialog('open');
+    });
+    $('#signinbutton').on('click', newLoginSubmit);
+    passTextValue('#sign-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
+    passTextValue('#sign-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
+    passClick('#remember-sign', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
+  };
+
+  var WCAG = function WCAG() {
+    $('header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p > img').attr('alt', LOGO_ALT);
+    $('img.img-responsive.cartImg').attr('alt', ALT_CART_IMAGE);
+    var element = $('section')[0];
+
+    if (element) {
+      var res = $('<div/>', {
+        html: element.innerHTML,
+        class: element.className
+      });
+      element.replaceWith(res[0]);
+    }
+
+    $('input[id*="_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]').attr('autocomplete', 'current-password');
+    $('h3, h2, h1, h4, h5, h6').each(function (a, b) {
+      var e = $(b);
+
+      if (e.text().trim() === '') {
+        e.remove();
+      }
+    });
+    $('img').each(function (index, item) {
+      var element = $(item);
+
+      if (!element.attr('alt')) {
+        element.attr('alt', ALT_CART_IMAGE);
+      }
+    });
+    $('a').each(function (index, item) {
+      var element = $(item);
+
+      if (!element.attr('aria-label') && element.find('img').length === 0) {
+        var text = element.text().trim();
+
+        if (text !== '') {
+          element.attr('aria-label', text);
+          return;
+        }
+
+        var title = element.attr('title');
+
+        if (title) {
+          title = title.trim().replace(/:/g, '').trim();
+          element.attr('aria-label', title);
+          return;
+        }
+
+        element.text(ARIA_DEFAULT);
+        element.attr('aria-label', ARIA_DEFAULT);
+      }
+    });
+  };
+
+  var replaceText = function replaceText() {
+    $('.MS_LoginLink a').text('Login');
+    $('input[id*="buttonAddEventToCart"]').val('CONTINUE');
+    $('div.cart-type-group.cart-type-Donations.single-cart-item .PaymentPart_CartDescriptionCell').html("<span>".concat(DONATION_TEXT, "</span>"));
+    transformDateAndTime();
+    dateTimeActions();
+    transformCheckoutTime();
+    WCAG();
+  };
+
+  var generalAdmissionBg = function generalAdmissionBg() {
+    if ($('h1 span[id*="_labelEventName"]').text() === 'Timed General Admission') {
+      $('.site-container').addClass('admissionBg');
+    }
+  };
+
+  var changeAMPM = function changeAMPM(val) {
+    return val.replace(/AM/g, 'a.m.').replace(/PM/g, 'p.m.');
+  };
+
+  var dateTimeActions = function dateTimeActions() {
+    $('h2.Programming_Event_DateContainer + span a').text('Select other dates');
+    $('h2.Programming_Event_TimeContainer + span a').text('See other times');
+  };
+
+  var transformDateAndTime = function transformDateAndTime() {
+    var dateElement = $('.Programming_Event_Date');
+    var parts = dateElement.text().split(' ');
+
+    if (parts.length > 0) {
+      var newDate = "".concat(parts.shift(), ",");
+
+      if (parts.length == 2) {
+        newDate = "".concat(newDate, " ").concat(parts.join(' '), ", ").concat(new Date().getFullYear());
+      } else {
+        var year = parts.pop();
+        newDate = "".concat(newDate, " ").concat(parts.join(' '), ", ").concat(year);
+      }
+
+      dateElement.text(newDate);
+    }
+
+    var time = "".concat($('.Programming_Event_StartTime').text().trim(), "\u2013").concat($('.Programming_Event_EndTime').text().trim());
+    time = changeAMPM(time);
+    $('.Programming_Event_TimeInnerContainer_Custom').text(time);
+  };
+
+  var transformCheckoutTime = function transformCheckoutTime() {
+    $('.PaymentPart_CartItemDetails > div > span').each(function (index, item) {
+      var element = $(item);
+      element.text(changeAMPM(element.text()));
+    });
+  };
+
+  var organiceItems = function organiceItems() {
+    $('.PaymentPart_CartDescriptionCell').each(function (index, item) {
+      var titleElement = $(item).find('h4');
+      var link = $(titleElement).find('a').attr('href');
+
+      if (link) {
+        titleElement.after("<a aria-label=\"Edit item in cart\" class=\"edit-item-link\" href=\"".concat(link, "\">").concat(LINK_TITLE, "</a>"));
+        var thumb = "\n        <div id=\"PC1280_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdImageItem_0\">\n        <a href=\"".concat(link, "\" id=\"PC1280_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_hyperlinkItemThumbnail_0\">\n        <img id=\"PC1280_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_imageItemThumbnail_0\" class=\"img-responsive cartImg\" src=\"").concat(CDNASSETS, "bishop-thumbnail.png\" alt=\"Cart item image\">\n        </a>\n        </div>\n        ");
+        $(item).before(thumb);
+      }
+    });
+    $('div[id*="_divUserSignUp"]').after($('#divCartSummary .form-group.lead.text-success'));
+    $('#divCartSummary .form-group:first-child').before($('div[id*="_divDiscountCodeEntry"]'));
+    $('span[id*="_lblPersonalInfo"]').text(BILLING_TITLE);
+    $('input[id*="_chkUseAsBilling"]').prop('checked', true);
+    $('div[id*="_registrantBioInfoSection"] .form-group label').each(function (index, item) {
+      var t = $(item).text();
+      $(item).text(t.replace(':', ''));
+    });
+    $('header div[id*="_pnlFooterText"]').after("\n    <div id=\"new-menu\">\n    <a id=\"menu-icon\" aria-label=\"Toggle Menu\" href=\"#\">\n    </a>\n    </div>\n    ");
+    $('#menu-icon').click(function (evt) {
+      evt.preventDefault();
+
+      if ($('#menu-icon').hasClass('open')) {
+        $('#menu-icon').removeClass('open');
+        $('.site-wrapper header.site-header').css('position', 'absolute');
+        $('.site-wrapper header.site-header .MS_LoginButtonOuterContainer').css('display', 'none');
+        $('#mobile-menu-container').slideToggle('fast');
+      } else {
+        $('#menu-icon').addClass('open');
+        $('.site-wrapper header.site-header').css('position', 'fixed');
+        $('#mobile-menu-container').slideToggle('fast');
+        $('.site-wrapper header.site-header .MS_LoginButtonOuterContainer').css('display', 'table');
+      }
+    });
+  };
+
+  var createPopUp = function createPopUp() {
+    if ($('[id*="UserModalSignIn_UserModalPartEditLink"]').text().trim() !== 'Login' || $('[id*="MembershipExpress"]').length === 0 && $('[id*="divPriceList"]').length === 0 || $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').css('display') === 'block') {
+      return;
+    }
+
+    var basicHtml = "\n    <div style=\"display: none;\">\n    <div id=\"popuplogin\" class=\"container ui-corner-all\">\n    <div class=\"row row-eq-height\">\n    <div id=\"popuploginformcontainer\" class=\"col-xs-12 col-sm-8\">\n    <h3>".concat(MEMBER_SIGNIN, "</h3>\n    <p>").concat(MEMBER_DISCOUNT, "</p>\n    <div id=\"popuploginform\">\n    <div class=\"form-horizontal\">\n    <div class=\"form-group\">\n    <label for=\"new-username\" id=\"new-username-label\" class=\"col-sm-12 control-label\" style=\"padding-right:0\">Email:</label>\n    <div class=\"col-sm-12\">\n    <input name=\"new-username\" type=\"text\" id=\"new-username\" class=\"BBFormTextbox LoginFormTextbox form-control\">\n    <a href=\"").concat(REGISTERURL, "\" id=\"PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog\" class=\"LoginLink\" href=\"javascript:__doPostBack('PC1953$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')\">Register for new account</a>\n    </div>\n    </div>\n    <div class=\"form-group\">\n    <label for=\"new-password\" id=\"new-password-label\" class=\"col-sm-12 control-label\" style=\"padding-right:0\">Password:</label>\n    <div class=\"col-sm-12\">\n    <input name=\"new-password\" type=\"password\" id=\"new-password\" class=\"BBFormTextbox LoginFormTextbox form-control\">\n    <a href=\"").concat(FORGOTPASSWORDURL, "\" id=\"PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword\" class=\"LoginLink\" href=\"#\">Forgot your password?</a>\n    </div>\n    </div>\n    <div class=\"form-group\">\n    <div class=\"col-sm-12\">\n    <div class=\"checkbox\">\n    <input id=\"new-checkbox\" type=\"checkbox\" name=\"new-checkbox\">Remember me</label>\n    </div>\n    </div>\n    </div>\n    </div>\n    </div>\n    <div id=\"popupsubmitform\" class=\"ui-dialog-buttonpane\">\n    <button id=\"new-submit\">\n    ").concat(SIGNIN_AND_CHECKOUT, "\n    </button>\n    </div>\n    </div>\n    <div id=\"popuploginregister\" class=\"col-xs-12 col-sm-4 ui-dialog-buttonpane\">\n    <div class=\"join-container\">\n    <p class=\"join-discount\">").concat(JOIN_DISCOUNT, "</p>\n    <button id=\"join-button\" onClick=\"window.location = '").concat(MEMBERSHIP_URL, "'\">\n    ").concat(JOIN, "\n    </button>\n    <a id=\"checkoutguest\" href=\"#\">").concat(GUEST, "</a>\n    </div>\n    </div>\n    </div>\n    </div>\n    </div>\n    ");
+    $('[aria-describedby*="UserModalSignIn_UserModalPartDialog1"]').appendTo('form');
+    $(basicHtml).appendTo('form');
+    $('#new-submit').on('click', newLoginSubmit);
+    passTextValue('#new-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
+    passTextValue('#new-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
+    passClick('#new-checkbox', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
+    window.scrollTo(0, 0);
+    $('#popuplogin').dialog({
+      title: null,
+      position: {
+        my: "top",
+        at: "center",
+        of: ".site-header.row"
+      },
+      draggable: false,
+      modal: true,
+      resizable: false,
+      dialogClass: 'newLogin',
+      open: function open(event, ui) {
+        $('.ui-widget-overlay, #checkoutguest').on('click', function (evt) {
+          evt.preventDefault();
+          $('#popuplogin').dialog('close');
+        });
+      }
+    });
+  };
+
+  var setFavicon = function setFavicon() {
+    document.querySelector("link[rel*='ICON']").remove();
+    var l32 = document.createElement('link');
+    l32.type = 'image/x-icon';
+    l32.rel = 'shortcut icon';
+    l32.sizes = '32x32';
+    l32.href = "".concat(CDNASSETS, "favicon-32x32.png");
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(l32);
+    var l16 = document.createElement('link');
+    l16.type = 'image/x-icon';
+    l16.rel = 'shortcut icon';
+    l16.sizes = '180x180';
+    l16.href = "".concat(CDNASSETS, "favicon-180x180.png");
+    head.appendChild(l16);
+    var l192 = document.createElement('link');
+    l192.type = 'image/x-icon';
+    l192.rel = 'shortcut icon';
+    l192.sizes = '192x192';
+    l192.href = "".concat(CDNASSETS, "favicon-192x192.png");
+    head.appendChild(l192);
+  };
+
+  var autoFill = function autoFill() {
+    setTimeout(function () {
+      var list = $('#divPriceList .show-grid');
+      $.each(list, function (index, item) {
+        var input = $(item).find('input:text')[0];
+
+        if (typeof input !== 'undefined') {
+          var value = $(input).val();
+
+          if (value && value.length > 0 && value.length < 4) {
+            value = parseInt(value);
+
+            if (isNaN(value)) {
+              $(input).val('');
+            }
+          } else {
+            $(input).val('');
+          }
+        }
+      });
+      $('.text-danger').hide();
+    }, 500);
+  };
+
+  loadCSS();
+  generalAdmissionBg();
+  replaceText();
+  organiceItems();
+  setTimeout(createPopUp, 2000);
+  setTimeout(editCurrentLoginPopup, 3000);
+  setFavicon();
+  autoFill();
+})();

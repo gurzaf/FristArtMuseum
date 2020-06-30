@@ -38,7 +38,7 @@
     link.media = 'all';
     head.appendChild(link);
   }
-
+  
   const passTextValue = (from, to) => {
     $(from).on('keyup', () => {
       $(to).val($(from).val());
@@ -67,7 +67,7 @@
       window[sign[0]].doEditSave();
     }
   };
-
+  
   // const readCookie = (name) => {
   //   const nameEQ = name + "=";
   //   const ca = document.cookie.split(';');
@@ -81,25 +81,25 @@
   
   const editCurrentLoginPopup = () => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
-
+    
     var auth = $('[id*="LinkbuttonSignOut"]').length;
     if (auth === 0) {
-        // Open and close the dialog to fix a bug with two way data bind not working
-        // $('.BBModalEditLink').click();
-        // $('[aria-describedby$="UserModalSignedIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
-
-        // Check if we should open the dialog
-        var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
-        if (message && message.length > 0) {
-          $('#popuplogin').dialog('close');
-            $('#signindialog .message').html(message);
-            $('#signindialog .alert').removeClass('hidden');
-            $('#signindialog').dialog('open');
-        }
+      // Open and close the dialog to fix a bug with two way data bind not working
+      $(buttonReference).click();
+      $('[aria-describedby$="UserModalSignedIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
+      
+      // Check if we should open the dialog
+      var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
+      if (message && message.length > 0) {
+        $('#popuplogin').dialog('close');
+        $('#signindialog .message').html(message);
+        $('#signindialog .alert').removeClass('hidden');
+        $('#signindialog').dialog('open');
+      }
     } else {
       buttonReference.css('display', 'none');
     }
-
+    
     // Login button reference
     
     buttonReference.off();
@@ -469,7 +469,30 @@
     l192.href = `${CDNASSETS}favicon-192x192.png`;
     head.appendChild(l192);
   };
-
+  
+  const autoFill = () => {
+    // Fix input fields being automatically populated by autofill
+    setTimeout(function () {
+      var list = $('#divPriceList .show-grid');
+      $.each(list, function (index, item) {
+        var input = $(item).find('input:text')[0];
+        if (typeof input !== 'undefined') {
+          var value = $(input).val();
+          if (value && value.length > 0 && value.length < 4) {
+            value = parseInt(value);
+            if (isNaN(value)) {
+              $(input).val('');
+            }
+          } else {
+            $(input).val('');
+          }
+        }
+      });
+      // Hide errors onload
+      $('.text-danger').hide();
+    }, 500);
+  }
+  
   loadCSS();
   generalAdmissionBg();
   replaceText();
@@ -480,4 +503,5 @@
   // editCurrentLoginPopup();
   setTimeout(editCurrentLoginPopup, 3000);
   setFavicon();
+  autoFill();
 })();
