@@ -107,8 +107,8 @@
       var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
       if (message && message.length > 0) {
         $('#popuplogin').dialog('close');
-        $('#signindialog .message').html(message);
-        $('#signindialog .alert').removeClass('hidden');
+        $('#signindialog_DivSignInMessage').html(message);
+        // $('#signindialog .alert').removeClass('hidden');
         $('#signindialog').dialog('open');
       }
     } else {
@@ -498,11 +498,11 @@
   organiceItems();
   // translationOptions();
   // createPopUp();
-  editCurrentLoginPopup();
   setFavicon();
   setTimeout(() => {
     autoFill(() => {
       setTimeout(createPopUp, 1000);
+      setTimeout(editCurrentLoginPopup, 2000);
     });
   }, 500);
 })();

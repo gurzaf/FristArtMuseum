@@ -316,6 +316,15 @@ div.Programming_Event_DateTime #divAlternateTimes {
           transform: translateX(-50%);
 }
 
+div.Programming_Event_DateTime #divAlternateTimes ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+div.Programming_Event_DateTime #divAlternateTimes ul li a:focus, div.Programming_Event_DateTime #divAlternateTimes ul li a:active, div.Programming_Event_DateTime #divAlternateTimes ul li a:hover {
+  text-decoration: underline;
+}
+
 .Programming_Event_Description p, .Programming_Event_Description span, .Programming_Event_Description strong {
   font-family: 'Poppins', sans-serif !important;
 }
