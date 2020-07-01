@@ -135,7 +135,9 @@
         $('#signindialog_DivSignInMessage').html("<div class=\"signinmessage\">".concat(message, "</div>"));
         $('#signindialog').dialog('open');
       } else {
-        $('#popuplogin').dialog('open');
+        if ($('div[id$="_panelEvent"]').length > 0) {
+          $('#popuplogin').dialog('open');
+        }
       }
     } else {
       var changeButtonReference = $('[id*="UserModalSignedIn_UserModalPartEditLink"]');
@@ -344,7 +346,7 @@
       return;
     }
 
-    var basicHtml = "\n    <div style=\"display: none;\">\n    <div id=\"popuplogin\" class=\"container ui-corner-all\">\n    <div class=\"row row-eq-height\">\n    <div id=\"popuploginformcontainer\" class=\"col-xs-12 col-sm-8\">\n    <h3>".concat(MEMBER_SIGNIN, "</h3>\n    <p>").concat(MEMBER_DISCOUNT, "</p>\n    <div id=\"popuploginform\">\n    <div class=\"form-horizontal\">\n    <div class=\"form-group\">\n    <label for=\"new-username\" id=\"new-username-label\" class=\"col-sm-12 control-label\" style=\"padding-right:0\">Email:</label>\n    <div class=\"col-sm-12\">\n    <input name=\"new-username\" type=\"text\" id=\"new-username\" class=\"BBFormTextbox LoginFormTextbox form-control\">\n    <a href=\"").concat(REGISTERURL, "\" id=\"PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog\" class=\"LoginLink\" href=\"javascript:__doPostBack('PC1953$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')\">Register for new account</a>\n    </div>\n    </div>\n    <div class=\"form-group\">\n    <label for=\"new-password\" id=\"new-password-label\" class=\"col-sm-12 control-label\" style=\"padding-right:0\">Password:</label>\n    <div class=\"col-sm-12\">\n    <input name=\"new-password\" type=\"password\" id=\"new-password\" class=\"BBFormTextbox LoginFormTextbox form-control\">\n    <a href=\"").concat(FORGOTPASSWORDURL, "\" id=\"PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword\" class=\"LoginLink\" href=\"#\">Forgot your password?</a>\n    </div>\n    </div>\n    <div class=\"form-group\">\n    <div class=\"col-sm-12\">\n    <div class=\"checkbox\">\n    <input id=\"new-checkbox\" type=\"checkbox\" name=\"new-checkbox\">Remember me</label>\n    </div>\n    </div>\n    </div>\n    </div>\n    </div>\n    <div id=\"popupsubmitform\" class=\"ui-dialog-buttonpane\">\n    <button id=\"new-submit\">\n    ").concat(SIGNIN_AND_CHECKOUT, "\n    </button>\n    </div>\n    </div>\n    <div id=\"popuploginregister\" class=\"col-xs-12 col-sm-4 ui-dialog-buttonpane\">\n    <div class=\"join-container\">\n    <p class=\"join-discount\">").concat(JOIN_DISCOUNT, "</p>\n    <button id=\"join-button\" onClick=\"window.location = '").concat(MEMBERSHIP_URL, "'\">\n    ").concat(JOIN, "\n    </button>\n    <a id=\"checkoutguest\" href=\"#\">").concat(GUEST, "</a>\n    </div>\n    </div>\n    </div>\n    </div>\n    </div>\n    ");
+    var basicHtml = "\n    <div style=\"display: none;\">\n    <div id=\"popuplogin\" class=\"container ui-corner-all\">\n    <div class=\"row row-eq-height\">\n    <div id=\"popuploginformcontainer\" class=\"col-xs-12 col-sm-8\">\n    <h3>".concat(MEMBER_SIGNIN, "</h3>\n    <p>").concat(MEMBER_DISCOUNT, "</p>\n    <div id=\"popuploginform\">\n    <div class=\"form-horizontal\">\n    <div class=\"form-group\">\n    <label for=\"new-username\" id=\"new-username-label\" class=\"col-sm-12 control-label\" style=\"padding-right:0\">Email:</label>\n    <div class=\"col-sm-12\">\n    <input name=\"new-username\" type=\"text\" id=\"new-username\" autocomplete=\"new-username\" class=\"BBFormTextbox LoginFormTextbox form-control\">\n    <a href=\"").concat(REGISTERURL, "\" id=\"PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog\" class=\"LoginLink\" href=\"javascript:__doPostBack('PC1953$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')\">Register for new account</a>\n    </div>\n    </div>\n    <div class=\"form-group\">\n    <label for=\"new-password\" id=\"new-password-label\" class=\"col-sm-12 control-label\" style=\"padding-right:0\">Password:</label>\n    <div class=\"col-sm-12\">\n    <input name=\"new-password\" type=\"password\" autocomplete=\"new-password\" id=\"new-password\" class=\"BBFormTextbox LoginFormTextbox form-control\">\n    <a href=\"").concat(FORGOTPASSWORDURL, "\" id=\"PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword\" class=\"LoginLink\" href=\"#\">Forgot your password?</a>\n    </div>\n    </div>\n    <div class=\"form-group\">\n    <div class=\"col-sm-12\">\n    <div class=\"checkbox\">\n    <input id=\"new-checkbox\" type=\"checkbox\" name=\"new-checkbox\">Remember me</label>\n    </div>\n    </div>\n    </div>\n    </div>\n    </div>\n    <div id=\"popupsubmitform\" class=\"ui-dialog-buttonpane\">\n    <button id=\"new-submit\">\n    ").concat(SIGNIN_AND_CHECKOUT, "\n    </button>\n    </div>\n    </div>\n    <div id=\"popuploginregister\" class=\"col-xs-12 col-sm-4 ui-dialog-buttonpane\">\n    <div class=\"join-container\">\n    <p class=\"join-discount\">").concat(JOIN_DISCOUNT, "</p>\n    <button id=\"join-button\" onClick=\"window.location = '").concat(MEMBERSHIP_URL, "'\">\n    ").concat(JOIN, "\n    </button>\n    <a id=\"checkoutguest\" href=\"#\">").concat(GUEST, "</a>\n    </div>\n    </div>\n    </div>\n    </div>\n    </div>\n    ");
     $('[aria-describedby*="UserModalSignIn_UserModalPartDialog1"]').appendTo('form');
     $(basicHtml).appendTo('form');
     $('#new-submit').on('click', newLoginSubmit);
@@ -377,24 +379,12 @@
   };
 
   var autoFill = function autoFill() {
-    var list = $('#divPriceList .show-grid');
-    $.each(list, function (index, item) {
-      var input = $(item).find('input:text')[0];
+    $('form').attr('autocomplete', 'off');
+  };
 
-      if (typeof input !== 'undefined') {
-        var value = $(input).val();
-
-        if (value && value.length > 0 && value.length < 4) {
-          value = parseInt(value);
-
-          if (isNaN(value)) {
-            $(input).val('');
-          }
-        } else {
-          $(input).val('');
-        }
-      }
-    });
+  var alertDismissible = function alertDismissible() {
+    $('.alert.alert-danger').addClass('alert-dismissible');
+    $('.alert.alert-danger').prepend("\n      <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n    ");
   };
 
   loadCSS();
@@ -403,6 +393,7 @@
   organiceItems();
   createPopUp();
   setTimeout(editCurrentLoginPopup, 1000);
-  setTimeout(autoFill, 2000);
+  setTimeout(autoFill, 1);
   setFavicon();
+  alertDismissible();
 })();

@@ -459,14 +459,14 @@
     <div class="form-group">
     <label for="new-username" id="new-username-label" class="col-sm-12 control-label" style="padding-right:0">Email:</label>
     <div class="col-sm-12">
-    <input name="new-username" type="text" id="new-username" class="BBFormTextbox LoginFormTextbox form-control">
+    <input name="new-username" type="text" id="new-username" autocomplete="new-username" class="BBFormTextbox LoginFormTextbox form-control">
     <a href="${REGISTERURL}" id="PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog" class="LoginLink" href="javascript:__doPostBack('PC1953$ctl00$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')">Register for new account</a>
     </div>
     </div>
     <div class="form-group">
     <label for="new-password" id="new-password-label" class="col-sm-12 control-label" style="padding-right:0">Password:</label>
     <div class="col-sm-12">
-    <input name="new-password" type="password" id="new-password" class="BBFormTextbox LoginFormTextbox form-control">
+    <input name="new-password" type="password" autocomplete="new-password" id="new-password" class="BBFormTextbox LoginFormTextbox form-control">
     <a href="${FORGOTPASSWORDURL}" id="PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword" class="LoginLink" href="#">Forgot your password?</a>
     </div>
     </div>
@@ -531,23 +531,24 @@
   };
   
   const autoFill = () => {
-    var list = $('#divPriceList .show-grid');
-    $.each(list, function (index, item) {
-      var input = $(item).find('input:text')[0];
-      if (typeof input !== 'undefined') {
-        var value = $(input).val();
-        if (value && value.length > 0 && value.length < 4) {
-          value = parseInt(value);
-          if (isNaN(value)) {
-            $(input).val('');
-          }
-        } else {
-          $(input).val('');
-        }
-      }
-    });
+    // var list = $('#divPriceList .show-grid');
+    // $.each(list, function (index, item) {
+    //   var input = $(item).find('input:text')[0];
+    //   if (typeof input !== 'undefined') {
+    //     var value = $(input).val();
+    //     if (value && value.length > 0 && value.length < 4) {
+    //       value = parseInt(value);
+    //       if (isNaN(value)) {
+    //         $(input).val('');
+    //       }
+    //     } else {
+    //       $(input).val('');
+    //     }
+    //   }
+    // });
     // Hide errors onload
     // $('.text-danger').hide();
+    $('form').attr('autocomplete', 'off');
   };
   
   const alertDismissible = () => {
@@ -566,7 +567,7 @@
   // translationOptions();
   createPopUp();
   setTimeout(editCurrentLoginPopup, 1000);
-  setTimeout(autoFill, 2000);
+  setTimeout(autoFill, 1);
   setFavicon();
   alertDismissible();
 })();
