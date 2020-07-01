@@ -88,7 +88,7 @@
       $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
       $('.ui-dialog-content').dialog('close');
     } catch(e) {}
-
+    
     $('#popuplogin').dialog({
       title: null,
       position: { my: "top", at: "center", of: ".site-header.row" },
@@ -105,7 +105,7 @@
         });
       },
     });
-
+    
     $('#signindialog').dialog({
       autoOpen: false,
       title: LOGIN_TITLE,
@@ -121,7 +121,7 @@
         });
       },
     });
-
+    
     $('#changepassword').dialog({
       autoOpen: false,
       title: CHANGEPASSWORD_TITLE,
@@ -148,8 +148,10 @@
         // $('#signindialog .alert').removeClass('hidden');
         $('#signindialog').dialog('open');
       } else {
+        if ($('div[id$="_panelEvent"]').length > 0) {
+          $('#popuplogin').dialog('open');
+        }
         // $('#signindialog').dialog('close');
-        $('#popuplogin').dialog('open');
       }
     } else {
       const changeButtonReference = $('[id*="UserModalSignedIn_UserModalPartEditLink"]');
@@ -530,23 +532,32 @@
   
   const autoFill = () => {
     var list = $('#divPriceList .show-grid');
-      $.each(list, function (index, item) {
-        var input = $(item).find('input:text')[0];
-        if (typeof input !== 'undefined') {
-          var value = $(input).val();
-          if (value && value.length > 0 && value.length < 4) {
-            value = parseInt(value);
-            if (isNaN(value)) {
-              $(input).val('');
-            }
-          } else {
+    $.each(list, function (index, item) {
+      var input = $(item).find('input:text')[0];
+      if (typeof input !== 'undefined') {
+        var value = $(input).val();
+        if (value && value.length > 0 && value.length < 4) {
+          value = parseInt(value);
+          if (isNaN(value)) {
             $(input).val('');
           }
+        } else {
+          $(input).val('');
         }
-      });
-      // Hide errors onload
-      // $('.text-danger').hide();
-    };
+      }
+    });
+    // Hide errors onload
+    // $('.text-danger').hide();
+  };
+  
+  const alertDismissible = () => {
+    $('.alert.alert-danger').addClass('alert-dismissible');
+    $('.alert.alert-danger').prepend(`
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    `);
+  };
   
   loadCSS();
   generalAdmissionBg();
@@ -557,4 +568,5 @@
   setTimeout(editCurrentLoginPopup, 1000);
   setTimeout(autoFill, 2000);
   setFavicon();
+  alertDismissible();
 })();

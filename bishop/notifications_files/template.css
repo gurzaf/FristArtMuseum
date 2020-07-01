@@ -68,18 +68,18 @@ aside#content-secondary {
   }
 }
 
-.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] a#main-logo {
+.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > a {
   height: 80px;
   display: table-cell;
   vertical-align: middle;
 }
 
-.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] a#main-logo > img {
+.site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > a > img {
   width: 230px;
 }
 
 @media (min-width: 480px) {
-  .site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] a#main-logo > img {
+  .site-wrapper header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > a > img {
     width: 300px;
   }
 }
@@ -225,16 +225,6 @@ main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:ho
   background-color: #212322;
 }
 
-main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary.disabled, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary[disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary.disabled:hover, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary.disabled:active, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary.disabled:focus, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary[disabled]:hover, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary[disabled]:active, main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary[disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
-}
-
 h1 {
   font-size: 3.1rem;
   font-weight: 700;
@@ -356,25 +346,23 @@ div.Programming_Event_DateTime #divAlternateTimes ul li a:focus, div.Programming
 }
 
 .Programming_Event_PriceList > .show-grid > .row > div.col-sm-12.col-md-6 {
-  width: 100%;
+  width: 33.33333333%;
   float: left;
 }
 
-@media (min-width: 479px) {
+@media (min-width: 992px) {
   .Programming_Event_PriceList > .show-grid > .row > div.col-sm-12.col-md-6 {
     width: 50%;
   }
 }
 
 .Programming_Event_PriceList > .show-grid > .row > div.col-xs-6.col-md-3 {
-  width: 50%;
-  padding-bottom: 10px;
+  width: 33.33333333%;
 }
 
-@media (min-width: 479px) {
+@media (min-width: 992px) {
   .Programming_Event_PriceList > .show-grid > .row > div.col-xs-6.col-md-3 {
     width: 25%;
-    padding-bottom: 5px;
   }
 }
 
@@ -529,12 +517,9 @@ div[id*="_CartGrid_topLinkBar"] {
 div[id*="_CartGrid_topLinkBar"] a {
   position: relative;
   z-index: 1;
-  background-color: #212322;
-  color: #FC4C02;
-  font-weight: 700;
-  font-size: 1.7rem;
-  border: 0;
-  border-radius: 0;
+  background-color: #FFC845;
+  color: #212322;
+  font-weight: bold;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
@@ -545,19 +530,15 @@ div[id*="_CartGrid_topLinkBar"] a {
   width: calc(50% - 7.5px);
 }
 
-div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:active, div[id*="_CartGrid_topLinkBar"] a:focus {
-  color: white;
-  background-color: #212322;
+div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:focus, div[id*="_CartGrid_topLinkBar"] a:active {
+  opacity: 0.8;
 }
 
-div[id*="_CartGrid_topLinkBar"] a.disabled, div[id*="_CartGrid_topLinkBar"] a[disabled] {
-  background-color: #212322;
+div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:focus, div[id*="_CartGrid_topLinkBar"] a:active {
+  background: #FFC845;
+  color: #212322;
+  text-decoration: underline;
   opacity: .8;
-}
-
-div[id*="_CartGrid_topLinkBar"] a.disabled:hover, div[id*="_CartGrid_topLinkBar"] a.disabled:active, div[id*="_CartGrid_topLinkBar"] a.disabled:focus, div[id*="_CartGrid_topLinkBar"] a[disabled]:hover, div[id*="_CartGrid_topLinkBar"] a[disabled]:active, div[id*="_CartGrid_topLinkBar"] a[disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
 }
 
 div[id*="_CartGrid_topLinkBar"] a:last-child {
@@ -691,28 +672,6 @@ div[id*="_CartGrid_CartContainer"] .price-group .PaymentPart_CartItemTotal {
   font-weight: normal;
 }
 
-div[id*="_validationSummary"] {
-  margin-bottom: -30px;
-}
-
-@media (min-width: 479px) {
-  div[id*="_validationSummary"] {
-    margin-bottom: 20px;
-  }
-}
-
-div[id*="_CartGrid_itemExpirationContainer"] {
-  margin-top: 70px;
-}
-
-div[id*="_CartGrid_itemExpirationContainer"] + div[id*="_CartGrid_CartContainer"] {
-  margin-top: 0 !important;
-}
-
-div[id*="_CartGrid_itemExpirationContainer"] + div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
-  margin: 0;
-}
-
 div[id*="_divPersonalInfo"] .BBListingHeading h3 {
   font-size: 30px;
   font-weight: bold;
@@ -798,16 +757,6 @@ div[id*="tdImageItem"] {
   background-color: #212322;
 }
 
-#divCartSummary .col-xs-3.col-sm-2 input.disabled, #divCartSummary .col-xs-3.col-sm-2 input[disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-#divCartSummary .col-xs-3.col-sm-2 input.disabled:hover, #divCartSummary .col-xs-3.col-sm-2 input.disabled:active, #divCartSummary .col-xs-3.col-sm-2 input.disabled:focus, #divCartSummary .col-xs-3.col-sm-2 input[disabled]:hover, #divCartSummary .col-xs-3.col-sm-2 input[disabled]:active, #divCartSummary .col-xs-3.col-sm-2 input[disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
-}
-
 div.cart-type-group.cart-type-Donations.single-cart-item {
   border: 0;
   padding: 0;
@@ -868,16 +817,6 @@ div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary
   background-color: #212322;
 }
 
-div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn.disabled, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn[disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn.disabled:hover, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn.disabled:active, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn.disabled:focus, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn[disabled]:hover, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn[disabled]:active, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn[disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
-}
-
 .PaymentPart_PersonalInfoContainer .col-sm-12.col-md-6.form-sidebyside .form-group {
   margin-bottom: 5px;
 }
@@ -932,16 +871,6 @@ input[id*="_ButtonCheckout"] {
 input[id*="_ButtonCheckout"]:hover, input[id*="_ButtonCheckout"]:active, input[id*="_ButtonCheckout"]:focus {
   color: white;
   background-color: #212322;
-}
-
-input[id*="_ButtonCheckout"].disabled, input[id*="_ButtonCheckout"][disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-input[id*="_ButtonCheckout"].disabled:hover, input[id*="_ButtonCheckout"].disabled:active, input[id*="_ButtonCheckout"].disabled:focus, input[id*="_ButtonCheckout"][disabled]:hover, input[id*="_ButtonCheckout"][disabled]:active, input[id*="_ButtonCheckout"][disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
 }
 
 div#divUseAsBilling {
@@ -1101,16 +1030,6 @@ div[id*="_UserRegistration"] input[id*="_btnRegister"]:hover, div[id*="_UserRegi
   background-color: #212322;
 }
 
-div[id*="_UserRegistration"] input[id*="_btnRegister"].disabled, div[id*="_UserRegistration"] input[id*="_btnRegister"][disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-div[id*="_UserRegistration"] input[id*="_btnRegister"].disabled:hover, div[id*="_UserRegistration"] input[id*="_btnRegister"].disabled:active, div[id*="_UserRegistration"] input[id*="_btnRegister"].disabled:focus, div[id*="_UserRegistration"] input[id*="_btnRegister"][disabled]:hover, div[id*="_UserRegistration"] input[id*="_btnRegister"][disabled]:active, div[id*="_UserRegistration"] input[id*="_btnRegister"][disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
-}
-
 h3 > span.Registration_RegistrantCredentialsHeader {
   font-weight: bold;
 }
@@ -1215,16 +1134,6 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 .ui-dialog.signindialog .ui-dialog-buttonpane button:hover, .ui-dialog.signindialog .ui-dialog-buttonpane button:active, .ui-dialog.signindialog .ui-dialog-buttonpane button:focus, .ui-dialog.changepassword .ui-dialog-buttonpane button:hover, .ui-dialog.changepassword .ui-dialog-buttonpane button:active, .ui-dialog.changepassword .ui-dialog-buttonpane button:focus {
   color: white;
   background-color: #212322;
-}
-
-.ui-dialog.signindialog .ui-dialog-buttonpane button.disabled, .ui-dialog.signindialog .ui-dialog-buttonpane button[disabled], .ui-dialog.changepassword .ui-dialog-buttonpane button.disabled, .ui-dialog.changepassword .ui-dialog-buttonpane button[disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-.ui-dialog.signindialog .ui-dialog-buttonpane button.disabled:hover, .ui-dialog.signindialog .ui-dialog-buttonpane button.disabled:active, .ui-dialog.signindialog .ui-dialog-buttonpane button.disabled:focus, .ui-dialog.signindialog .ui-dialog-buttonpane button[disabled]:hover, .ui-dialog.signindialog .ui-dialog-buttonpane button[disabled]:active, .ui-dialog.signindialog .ui-dialog-buttonpane button[disabled]:focus, .ui-dialog.changepassword .ui-dialog-buttonpane button.disabled:hover, .ui-dialog.changepassword .ui-dialog-buttonpane button.disabled:active, .ui-dialog.changepassword .ui-dialog-buttonpane button.disabled:focus, .ui-dialog.changepassword .ui-dialog-buttonpane button[disabled]:hover, .ui-dialog.changepassword .ui-dialog-buttonpane button[disabled]:active, .ui-dialog.changepassword .ui-dialog-buttonpane button[disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
 }
 
 .ui-dialog.signindialog .ui-dialog-buttonpane button:nth-child(2), .ui-dialog.changepassword .ui-dialog-buttonpane button:nth-child(2) {
@@ -1382,16 +1291,6 @@ div#new-menu-links ul.main-menu li a {
   background-color: #212322;
 }
 
-.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"].disabled, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"][disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"].disabled:hover, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"].disabled:active, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"].disabled:focus, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"][disabled]:hover, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"][disabled]:active, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] input[type="button"][disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
-}
-
 .newLogin.ui-dialog {
   font-family: 'Poppins', sans-serif;
   width: inherit !important;
@@ -1484,16 +1383,6 @@ div#new-menu-links ul.main-menu li a {
   background-color: #212322;
 }
 
-.newLogin.ui-dialog #popuplogin #join-button.disabled, .newLogin.ui-dialog #popuplogin #join-button[disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-.newLogin.ui-dialog #popuplogin #join-button.disabled:hover, .newLogin.ui-dialog #popuplogin #join-button.disabled:active, .newLogin.ui-dialog #popuplogin #join-button.disabled:focus, .newLogin.ui-dialog #popuplogin #join-button[disabled]:hover, .newLogin.ui-dialog #popuplogin #join-button[disabled]:active, .newLogin.ui-dialog #popuplogin #join-button[disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
-}
-
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer {
   padding: 1em;
 }
@@ -1544,7 +1433,6 @@ div#new-menu-links ul.main-menu li a {
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform {
   margin: 1rem 0;
   padding: 0;
-  border: 0;
 }
 
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button {
@@ -1566,16 +1454,6 @@ div#new-menu-links ul.main-menu li a {
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:focus {
   color: white;
   background-color: #212322;
-}
-
-.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button.disabled, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button[disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button.disabled:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button.disabled:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button.disabled:focus, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button[disabled]:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button[disabled]:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button[disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
 }
 
 @media screen and (min-width: 768px) {
@@ -1623,12 +1501,9 @@ div#new-menu-links ul.main-menu li a {
 }
 
 .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton {
-  background-color: #212322;
-  color: #FC4C02;
-  font-weight: 700;
-  font-size: 1.7rem;
-  border: 0;
-  border-radius: 0;
+  background-color: #FFC845;
+  color: #212322;
+  font-weight: bold;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
@@ -1636,101 +1511,12 @@ div#new-menu-links ul.main-menu li a {
   font-size: 1.7rem;
 }
 
-.MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:hover, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:active, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:focus {
-  color: white;
-  background-color: #212322;
-}
-
-.MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton.disabled, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton[disabled] {
-  background-color: #212322;
-  opacity: .8;
-}
-
-.MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton.disabled:hover, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton.disabled:active, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton.disabled:focus, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton[disabled]:hover, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton[disabled]:active, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton[disabled]:focus {
-  background-color: #212322;
-  opacity: .7;
+.MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:hover, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:focus, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:active {
+  opacity: 0.8;
 }
 
 .MembershipExpress_AddtoCartContainer .total-amount.col-xs-6.lead.text-success {
   color: #212322;
   font-weight: 700;
-}
-
-.MembershipExpress_LevelContainer .MembershipExpress_LevelHeader,
-.MembershipExpress_LevelContainer .MembershipExpress_LevelDescriptionText {
-  display: none !important;
-}
-
-.MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
-  width: 15%;
-  margin-right: 15px;
-  padding: 0px;
-}
-
-.MembershipExpress_LevelContainer .MembershipExpress_TermName {
-  width: 100%;
-}
-
-.MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer:nth-of-type(even) {
-  margin-right: 15px;
-  padding: 0px;
-}
-
-.MembershipExpress_TermHelp {
-  margin-bottom: 15px;
-}
-
-.MembershipExpress_LevelContainer .MembershipExpress_TermRadiolTerm,
-.MembershipExpress_LevelContainer .MembershipExpress_TermRadioAmount {
-  color: #212322;
-  display: block;
-  font-size: 20px;
-}
-
-.MembershipExpress_LevelContainer .MembershipExpress_TermName,
-.MembershipExpress_LevelContainer .MembershipExpress_TypeName {
-  background: #FFC845;
-  border: 2px solid white;
-  padding: 6px 10px;
-  cursor: pointer;
-  width: 100%;
-  margin: 0px;
-}
-
-.MembershipExpress_LevelContainer .MembershipExpress_SelectedTermLabel,
-.MembershipExpress_LevelContainer .MembershipExpress_SelectedTypeLabel {
-  background: #FFC845;
-  border: 2px solid #212322;
-}
-
-.MembershipExpress_AutomaticallyRenew {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: inline-block;
-  width: 100%;
-  border: 2px dashed #D8D8D8;
-  padding: 10px;
-}
-
-.MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
-  border: none !important;
-}
-
-#divDetailsAutomaticallyRenew label {
-  padding-left: 0px;
-}
-
-.Programming_Event_DateContainer,
-.Programming_Event_TimeContainer {
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
-}
-
-@media (max-width: 630px) {
-  .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
-    width: 45%;
-    margin-right: 15px;
-    padding: 0px;
-  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -36,6 +36,14 @@ $logoHeight: 60px;
     color: white;
     background-color: $background;
   }
+  &.disabled, &[disabled] {
+    background-color: $background;
+    opacity: .8;
+    &:hover, &:active, &:focus {
+      background-color: $background;
+      opacity: .7;
+    }
+  }
 }
 
 @mixin orangeLink {
@@ -101,7 +109,7 @@ aside#content-secondary {
         @media (min-width: 767px) {
           position: static;
         }
-        > a {
+         a#main-logo {
           height: 80px;
           display: table-cell;
           vertical-align: middle;
@@ -375,17 +383,24 @@ div.Programming_Event_DateTime {
       border-bottom: 1px solid $borderColor;
       > div {
         &.col-sm-12.col-md-6 {
-          width: 33.33333333%;
+          width: 100%;
           float: left;
-          // background-color: blue;
-          @media (min-width: 992px) {
+          @media (min-width: 479px) {
+          //   width: 33.33333333%;
+          // }
+          // @media (min-width: 992px) {
             width: 50%;
           }
         }
         &.col-xs-6.col-md-3 {
-          width: 33.33333333%;
-          @media (min-width: 992px) {
+          width: 50%;
+          padding-bottom: 10px;
+          @media (min-width: 479px) {
+          //   width: 33.33333333%;
+          // }
+          // @media (min-width: 992px) {
             width: 25%;
+            padding-bottom: 5px;
           }
         }
         label, span {
@@ -494,17 +509,17 @@ div[id*="_CartGrid_topLinkBar"] {
   a {
     position: relative;
     z-index: 1;
-    @include buttonHeader;
+    @include buttonBlack;
     margin-top: 80px;
     margin-bottom: -50px;
     font-size: 16px;
     border-radius: 0;
-    &:hover, &:focus, &:active {
-      background: $yellowBackground;
-      color: $background;
-      text-decoration: underline;
-      opacity: .8;
-    }
+    // &:hover, &:focus, &:active {
+    //   background: $yellowBackground;
+    //   color: $background;
+    //   text-decoration: underline;
+    //   opacity: .8;
+    // }
     &:last-child {
       margin-left: 0;
     }
@@ -596,6 +611,24 @@ div[id*="_CartGrid_CartContainer"] {
     }
     .PaymentPart_CartItemTotal {
       font-weight: normal;
+    }
+  }
+}
+div[id*="_validationSummary"] {
+  margin-bottom: -30px;
+  @media(min-width: 479px) {
+    margin-bottom: 20px;
+  }
+}
+div[id*="_CartGrid_itemExpirationContainer"] {
+  margin-top: 70px;
+  & + div[id*="_CartGrid_CartContainer"] {
+    margin-top: 0 !important;
+    h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
+      margin: 0;
+    }
+    @media(min-width: 479px) {
+      
     }
   }
 }
@@ -1255,6 +1288,7 @@ div#new-menu-links {
       #popupsubmitform {
         margin: 1rem 0;
         padding: 0;
+        border: 0;
         button {
           @include buttonBlack;
           margin: 0 auto;
@@ -1314,7 +1348,7 @@ div#new-menu-links {
 
 .MembershipExpress_AddtoCartContainer {
   .BBFormSubmitButton.MembershipExpress_AddToCartButton {
-    @include buttonHeader;
+    @include buttonBlack;
     border-radius: 0;
     font-size: 1.7rem;
   }
@@ -1322,4 +1356,82 @@ div#new-menu-links {
     color: $background;
     font-weight: 700;
   }
+}
+
+.MembershipExpress_LevelContainer .MembershipExpress_LevelHeader,
+.MembershipExpress_LevelContainer .MembershipExpress_LevelDescriptionText {
+    display: none !important;
+}
+
+.MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
+    width: 15%;
+    margin-right: 15px;
+    padding: 0px;
+}
+
+.MembershipExpress_LevelContainer .MembershipExpress_TermName {
+    width: 100%;
+}
+
+.MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer:nth-of-type(even) {
+    margin-right: 15px;
+    padding: 0px;
+}
+
+.MembershipExpress_TermHelp {
+    margin-bottom: 15px;
+}
+
+.MembershipExpress_LevelContainer .MembershipExpress_TermRadiolTerm,
+.MembershipExpress_LevelContainer .MembershipExpress_TermRadioAmount {
+    color: $background;
+    display: block;
+    font-size: 20px;
+}
+
+.MembershipExpress_LevelContainer .MembershipExpress_TermName,
+.MembershipExpress_LevelContainer .MembershipExpress_TypeName {
+    background: $yellowBackground;
+    border: 2px solid white;
+    padding: 6px 10px;
+    cursor: pointer;
+    width: 100%;
+    margin: 0px;
+}
+
+.MembershipExpress_LevelContainer .MembershipExpress_SelectedTermLabel,
+.MembershipExpress_LevelContainer .MembershipExpress_SelectedTypeLabel {
+    background: $yellowBackground;
+    border: 2px solid $background;
+}
+
+.MembershipExpress_AutomaticallyRenew {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    border: 2px dashed $borderColor;
+    padding: 10px;
+}
+
+.MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
+    border: none !important;
+}
+
+#divDetailsAutomaticallyRenew label {
+    padding-left: 0px;
+}
+
+.Programming_Event_DateContainer,
+.Programming_Event_TimeContainer {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 630px) {
+    .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
+        width: 45%;
+        margin-right: 15px;
+        padding: 0px;
+    }
 }
