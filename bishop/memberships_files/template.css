@@ -517,28 +517,24 @@ div[id*="_CartGrid_topLinkBar"] {
 div[id*="_CartGrid_topLinkBar"] a {
   position: relative;
   z-index: 1;
-  background-color: #FFC845;
-  color: #212322;
-  font-weight: bold;
+  background-color: #212322;
+  color: #FC4C02;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 0;
+  border-radius: 0;
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   margin-top: 80px;
   margin-bottom: -50px;
   font-size: 16px;
-  border-radius: 0;
   width: calc(50% - 7.5px);
 }
 
-div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:focus, div[id*="_CartGrid_topLinkBar"] a:active {
-  opacity: 0.8;
-}
-
-div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:focus, div[id*="_CartGrid_topLinkBar"] a:active {
-  background: #FFC845;
-  color: #212322;
-  text-decoration: underline;
-  opacity: .8;
+div[id*="_CartGrid_topLinkBar"] a:hover, div[id*="_CartGrid_topLinkBar"] a:active, div[id*="_CartGrid_topLinkBar"] a:focus {
+  color: white;
+  background-color: #212322;
 }
 
 div[id*="_CartGrid_topLinkBar"] a:last-child {
@@ -1050,7 +1046,7 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
   margin-bottom: 2rem;
 }
 
-.ui-dialog.signindialog, .ui-dialog.changepassword {
+.ui-dialog.signindialog {
   width: 100% !important;
   max-width: 500px;
   margin-left: 15px;
@@ -1059,20 +1055,20 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 }
 
 @media screen and (min-width: 480px) {
-  .ui-dialog.signindialog, .ui-dialog.changepassword {
+  .ui-dialog.signindialog {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-.ui-dialog.signindialog .ui-dialog-titlebar, .ui-dialog.changepassword .ui-dialog-titlebar {
+.ui-dialog.signindialog .ui-dialog-titlebar {
   margin: -.2em;
   border-radius: 0;
   padding: .8em .3em .3em;
   background-color: #F0F0F0;
 }
 
-.ui-dialog.signindialog .ui-dialog-titlebar .ui-dialog-title, .ui-dialog.changepassword .ui-dialog-titlebar .ui-dialog-title {
+.ui-dialog.signindialog .ui-dialog-titlebar .ui-dialog-title {
   font-size: 2.5rem;
   text-align: center;
   float: none;
@@ -1083,7 +1079,7 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
   color: #212322;
 }
 
-.ui-dialog.signindialog .ui-dialog-titlebar .ui-dialog-titlebar-close, .ui-dialog.changepassword .ui-dialog-titlebar .ui-dialog-titlebar-close {
+.ui-dialog.signindialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
   background-image: url("https://cdn.socialgoodsoftware.com/db7a84ab9d026a4edda9bc3219990b60201a0860e9bb839cef6963c5957ca8531245c6a9e3292547c629105ce4e6d747/online-template/assets/close.svg") !important;
   -webkit-background-size: cover !important;
           background-size: cover !important;
@@ -1093,31 +1089,27 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
   width: 19px;
 }
 
-.ui-dialog.signindialog .ui-dialog-content .form-group.spaced-group, .ui-dialog.changepassword .ui-dialog-content .form-group.spaced-group {
-  margin-top: 15px;
-}
-
-.ui-dialog.signindialog .ui-dialog-content .form-group label, .ui-dialog.changepassword .ui-dialog-content .form-group label {
+.ui-dialog.signindialog .ui-dialog-content .form-group label {
   font-weight: normal;
 }
 
-.ui-dialog.signindialog .ui-dialog-content .form-group input[type="password"], .ui-dialog.signindialog .ui-dialog-content .form-group input[type="email"], .ui-dialog.changepassword .ui-dialog-content .form-group input[type="password"], .ui-dialog.changepassword .ui-dialog-content .form-group input[type="email"] {
+.ui-dialog.signindialog .ui-dialog-content .form-group input[type="password"], .ui-dialog.signindialog .ui-dialog-content .form-group input[type="email"] {
   height: 40px;
   border-radius: 0;
 }
 
-.ui-dialog.signindialog .ui-dialog-content .form-group a, .ui-dialog.changepassword .ui-dialog-content .form-group a {
+.ui-dialog.signindialog .ui-dialog-content .form-group a {
   text-align: right;
   display: block;
 }
 
-.ui-dialog.signindialog .ui-dialog-buttonpane, .ui-dialog.changepassword .ui-dialog-buttonpane {
+.ui-dialog.signindialog .ui-dialog-buttonpane {
   border: 0;
   margin: 0px;
   padding: 0;
 }
 
-.ui-dialog.signindialog .ui-dialog-buttonpane button, .ui-dialog.changepassword .ui-dialog-buttonpane button {
+.ui-dialog.signindialog .ui-dialog-buttonpane button {
   background-color: #212322;
   color: #FC4C02;
   font-weight: 700;
@@ -1127,20 +1119,16 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-  margin-top: 15px;
+  margin-top: 0;
   margin-right: 0;
 }
 
-.ui-dialog.signindialog .ui-dialog-buttonpane button:hover, .ui-dialog.signindialog .ui-dialog-buttonpane button:active, .ui-dialog.signindialog .ui-dialog-buttonpane button:focus, .ui-dialog.changepassword .ui-dialog-buttonpane button:hover, .ui-dialog.changepassword .ui-dialog-buttonpane button:active, .ui-dialog.changepassword .ui-dialog-buttonpane button:focus {
+.ui-dialog.signindialog .ui-dialog-buttonpane button:hover, .ui-dialog.signindialog .ui-dialog-buttonpane button:active, .ui-dialog.signindialog .ui-dialog-buttonpane button:focus {
   color: white;
   background-color: #212322;
 }
 
-.ui-dialog.signindialog .ui-dialog-buttonpane button:nth-child(2), .ui-dialog.changepassword .ui-dialog-buttonpane button:nth-child(2) {
-  margin-right: 15px;
-}
-
-.ui-dialog.signindialog .signinmessage, .ui-dialog.changepassword .signinmessage {
+.ui-dialog.signindialog #signinmessage {
   background-color: #FC4C02;
   color: white;
   font-size: 14px;
@@ -1478,45 +1466,5 @@ div#new-menu-links ul.main-menu li a {
     margin-top: 20px;
     font-weight: normal;
   }
-}
-
-[id*='MembershipExpress'] .MembershipExpress_TermName, [id*='MembershipExpress'] .MembershipExpress_TypeName {
-  background: #FFC845;
-  border-color: #212322;
-  color: #212322;
-}
-
-[id*='MembershipExpress'] .MembershipExpress_TermName:hover, [id*='MembershipExpress'] .MembershipExpress_TermName:active, [id*='MembershipExpress'] .MembershipExpress_TermName:focus, [id*='MembershipExpress'] .MembershipExpress_TypeName:hover, [id*='MembershipExpress'] .MembershipExpress_TypeName:active, [id*='MembershipExpress'] .MembershipExpress_TypeName:focus {
-  opacity: 0.8;
-}
-
-[id*='MembershipExpress'] .MembershipExpress_TermRadiolTerm, [id*='MembershipExpress'] .MembershipExpress_TermRadioAmount {
-  color: #212322;
-}
-
-[id*='MembershipExpress'] .MembershipExpress_SelectedTermLabel, [id*='MembershipExpress'] .MembershipExpress_SelectedTypeLabel {
-  background: #212322;
-  color: white;
-  border-color: #212322;
-}
-
-.MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton {
-  background-color: #FFC845;
-  color: #212322;
-  font-weight: bold;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  border-radius: 0;
-  font-size: 1.7rem;
-}
-
-.MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:hover, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:focus, .MembershipExpress_AddtoCartContainer .BBFormSubmitButton.MembershipExpress_AddToCartButton:active {
-  opacity: 0.8;
-}
-
-.MembershipExpress_AddtoCartContainer .total-amount.col-xs-6.lead.text-success {
-  color: #212322;
-  font-weight: 700;
 }
 /*# sourceMappingURL=main.css.map */

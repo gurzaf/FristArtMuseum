@@ -494,10 +494,17 @@ div[id*="_CartGrid_topLinkBar"] {
   a {
     position: relative;
     z-index: 1;
-    @include buttonBlack;
+    @include buttonHeader;
     margin-top: 80px;
     margin-bottom: -50px;
     font-size: 16px;
+    border-radius: 0;
+    &:hover, &:focus, &:active {
+      background: $yellowBackground;
+      color: $background;
+      text-decoration: underline;
+      opacity: .8;
+    }
     &:last-child {
       margin-left: 0;
     }
@@ -906,7 +913,7 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
   margin-bottom: 2rem;
 }
 
-.ui-dialog.signindialog {
+.ui-dialog.signindialog, .ui-dialog.changepassword {
   width: 100% !important;
   max-width: 500px;
   margin-left: 15px;
@@ -943,6 +950,9 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
   }
   .ui-dialog-content {
     .form-group {
+      &.spaced-group {
+        margin-top: 15px;
+      }
       label {
         font-weight: normal;
       }
@@ -962,11 +972,14 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
     padding: 0;
     button {
       @include buttonBlack;
-      margin-top: 0;
+      margin-top: 15px;
       margin-right: 0;
+      &:nth-child(2) {
+        margin-right: 15px;
+      }
     } 
   }
-  #signinmessage {
+  .signinmessage {
     background-color: $orange;
     color: white;
     font-size: 14px;
@@ -1278,5 +1291,35 @@ div#new-menu-links {
     padding: 1rem;
     margin-top: 20px;
     font-weight: normal;
+  }
+}
+
+[id*='MembershipExpress'] .MembershipExpress_TermName, [id*='MembershipExpress'] .MembershipExpress_TypeName {
+  background: $yellowBackground;
+  border-color: $background;
+  color: $background;
+  &:hover, &:active, &:focus {
+    opacity: 0.8;
+  }
+}
+[id*='MembershipExpress'] .MembershipExpress_TermRadiolTerm, [id*='MembershipExpress'] .MembershipExpress_TermRadioAmount {
+  color: $background;
+}
+
+[id*='MembershipExpress'] .MembershipExpress_SelectedTermLabel, [id*='MembershipExpress'] .MembershipExpress_SelectedTypeLabel {
+  background: $background;
+  color: white;
+  border-color: $background;
+}
+
+.MembershipExpress_AddtoCartContainer {
+  .BBFormSubmitButton.MembershipExpress_AddToCartButton {
+    @include buttonHeader;
+    border-radius: 0;
+    font-size: 1.7rem;
+  }
+  .total-amount.col-xs-6.lead.text-success {
+    color: $background;
+    font-weight: 700;
   }
 }
