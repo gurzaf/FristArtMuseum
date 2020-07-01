@@ -58,7 +58,7 @@
     }
   };
 
-  var editCurrentLoginPopup = function editCurrentLoginPopup() {
+  var editCurrentLoginPopup = function editCurrentLoginPopup(cb) {
     var buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
 
     try {
@@ -127,6 +127,7 @@
     passTextValue('#sign-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
     passTextValue('#sign-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
     passClick('#remember-sign', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
+    cb();
   };
 
   var WCAG = function WCAG() {
@@ -310,7 +311,7 @@
     head.appendChild(l192);
   };
 
-  var autoFill = function autoFill(cb) {
+  var autoFill = function autoFill() {
     var list = $('#divPriceList .show-grid');
     $.each(list, function (index, item) {
       var input = $(item).find('input:text')[0];
@@ -336,11 +337,11 @@
   generalAdmissionBg();
   replaceText();
   organiceItems();
-  setFavicon();
+  createPopUp();
   setTimeout(function () {
-    autoFill(function () {
-      setTimeout(createPopUp, 500);
-      setTimeout(editCurrentLoginPopup, 1000);
+    editCurrentLoginPopup(function () {
+      setTimeout(autoFill, 500);
     });
-  }, 500);
+  }, 1000);
+  setFavicon();
 })();

@@ -79,7 +79,7 @@
   //   return null;
   // };
   
-  const editCurrentLoginPopup = () => {
+  const editCurrentLoginPopup = (cb) => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
     try{
       $(".ui-dialog-content").dialog("close");
@@ -146,6 +146,7 @@
     passTextValue('#sign-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
     passTextValue('#sign-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
     passClick('#remember-sign', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
+    cb();
   };
   
   // Function to fix WCAG issues
@@ -476,7 +477,7 @@
     head.appendChild(l192);
   };
   
-  const autoFill = (cb) => {
+  const autoFill = () => {
     var list = $('#divPriceList .show-grid');
       $.each(list, function (index, item) {
         var input = $(item).find('input:text')[0];
@@ -502,12 +503,11 @@
   replaceText();
   organiceItems();
   // translationOptions();
-  // createPopUp();
-  setFavicon();
+  createPopUp();
   setTimeout(() => {
-    autoFill(() => {
-      setTimeout(createPopUp, 500);
-      setTimeout(editCurrentLoginPopup, 1000);
+    editCurrentLoginPopup(() => {
+      setTimeout(autoFill, 500);
     });
-  }, 500);
+  }, 1000);
+  setFavicon();
 })();
