@@ -124,15 +124,13 @@
       var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
       if (message && message.length > 0) {
         // $('#popuplogin').dialog('close');
-        $('#signindialog_DivSignInMessage').html(message);
+        $('#signindialog_DivSignInMessage').html(`<div id="signinmessage">${message}</div>`);
         // $('#signindialog .alert').removeClass('hidden');
         $('#signindialog').dialog('open');
       } else {
         // $('#signindialog').dialog('close');
         $('#popuplogin').dialog('open');
       }
-    } else {
-      buttonReference.css('display', 'none');
     }
     
     // Login button reference
@@ -207,7 +205,10 @@
   };
   
   const replaceText = () => {
-    $('.MS_LoginLink a').text('Login');
+    const lbutton = $('.MS_LoginLink a').text();
+    if (!lbutton.includes('@')) {
+      $('.MS_LoginLink a').text('Login');
+    }
     $('input[id*="buttonAddEventToCart"]').val('CONTINUE');
     $('div.cart-type-group.cart-type-Donations.single-cart-item .PaymentPart_CartDescriptionCell')
     .html(`<span>${DONATION_TEXT}</span>`);
@@ -294,6 +295,11 @@
     //     <img id="checkout-bishop-image" class="img-responsive cartImg" src="${CDNASSETS}bishop-thumbnail.png" alt="Bishop Logo">
     //   </div>
     // `);
+    const logout = $('[id*="LinkbuttonSignOut"]');
+    if(logout.length > 0) {
+      $('.MS_LoginButtonInnerContainer.MS_LoginButtonInnerContainer_ExpandingPadding').append('<div/>');
+      $('.MS_LoginButtonInnerContainer.MS_LoginButtonInnerContainer_ExpandingPadding > div:last-child').append(logout);
+    }
     
     $('div[id*="_registrantBioInfoSection"] .form-group label').each((index, item) => {
       const t = $(item).text();
