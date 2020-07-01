@@ -62,7 +62,9 @@
     var buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
 
     try {
-      $(".ui-dialog-content").dialog("close");
+      buttonReference.click();
+      $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
+      $('.ui-dialog-content').dialog('close');
     } catch (e) {}
 
     $('#popuplogin').dialog({
