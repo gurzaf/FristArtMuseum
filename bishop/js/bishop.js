@@ -62,7 +62,7 @@
     var buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
 
     try {
-      $('div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').dialog('close');
+      $(".ui-dialog-content").dialog("close");
     } catch (e) {}
 
     $('#popuplogin').dialog({
@@ -112,7 +112,9 @@
       if (message && message.length > 0) {
         $('#signindialog_DivSignInMessage').html(message);
         $('#signindialog').dialog('open');
-      } else {}
+      } else {
+        $('#popuplogin').dialog('open');
+      }
     } else {
       buttonReference.css('display', 'none');
     }

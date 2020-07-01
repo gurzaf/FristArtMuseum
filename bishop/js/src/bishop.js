@@ -82,7 +82,7 @@
   const editCurrentLoginPopup = () => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
     try{
-      $('div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').dialog('close');
+      $(".ui-dialog-content").dialog("close");
     } catch(e) {}
 
     $('#popuplogin').dialog({
@@ -129,7 +129,7 @@
         $('#signindialog').dialog('open');
       } else {
         // $('#signindialog').dialog('close');
-        // $('#popuplogin').dialog('open');
+        $('#popuplogin').dialog('open');
       }
     } else {
       buttonReference.css('display', 'none');
