@@ -110,13 +110,11 @@
       var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
 
       if (message && message.length > 0) {
-        $('#signindialog_DivSignInMessage').html(message);
+        $('#signindialog_DivSignInMessage').html("<div id=\"signinmessage\">".concat(message, "</div>"));
         $('#signindialog').dialog('open');
       } else {
         $('#popuplogin').dialog('open');
       }
-    } else {
-      buttonReference.css('display', 'none');
     }
 
     buttonReference.off();
@@ -183,7 +181,12 @@
   };
 
   var replaceText = function replaceText() {
-    $('.MS_LoginLink a').text('Login');
+    var lbutton = $('.MS_LoginLink a').text();
+
+    if (!lbutton.includes('@')) {
+      $('.MS_LoginLink a').text('Login');
+    }
+
     $('input[id*="buttonAddEventToCart"]').val('CONTINUE');
     $('div.cart-type-group.cart-type-Donations.single-cart-item .PaymentPart_CartDescriptionCell').html("<span>".concat(DONATION_TEXT, "</span>"));
     transformDateAndTime();
@@ -251,6 +254,13 @@
     $('#divCartSummary .form-group:first-child').before($('div[id*="_divDiscountCodeEntry"]'));
     $('span[id*="_lblPersonalInfo"]').text(BILLING_TITLE);
     $('input[id*="_chkUseAsBilling"]').prop('checked', true);
+    var logout = $('[id*="LinkbuttonSignOut"]');
+
+    if (logout.length > 0) {
+      $('.MS_LoginButtonInnerContainer.MS_LoginButtonInnerContainer_ExpandingPadding').append('<div/>');
+      $('.MS_LoginButtonInnerContainer.MS_LoginButtonInnerContainer_ExpandingPadding > div:last-child').append(logout);
+    }
+
     $('div[id*="_registrantBioInfoSection"] .form-group label').each(function (index, item) {
       var t = $(item).text();
       $(item).text(t.replace(':', ''));

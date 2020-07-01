@@ -1128,6 +1128,13 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
   background-color: #212322;
 }
 
+.ui-dialog.signindialog #signinmessage {
+  background-color: #FC4C02;
+  color: white;
+  font-size: 14px;
+  padding: 15px;
+}
+
 #new-menu a#menu-icon {
   position: absolute;
   right: 15px;

@@ -966,6 +966,12 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
       margin-right: 0;
     } 
   }
+  #signinmessage {
+    background-color: $orange;
+    color: white;
+    font-size: 14px;
+    padding: 15px;
+  }
 }
 
 // #google_translate_element2, div.skiptranslate {display:none!important;}
