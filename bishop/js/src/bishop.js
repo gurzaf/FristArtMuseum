@@ -79,7 +79,7 @@
   //   return null;
   // };
   
-  const editCurrentLoginPopup = (cb) => {
+  const editCurrentLoginPopup = () => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
     try{
       $(".ui-dialog-content").dialog("close");
@@ -146,7 +146,6 @@
     passTextValue('#sign-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
     passTextValue('#sign-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
     passClick('#remember-sign', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
-    cb();
   };
   
   // Function to fix WCAG issues
@@ -493,7 +492,6 @@
           }
         }
       });
-      cb();
       // Hide errors onload
       // $('.text-danger').hide();
     };
@@ -504,10 +502,7 @@
   organiceItems();
   // translationOptions();
   createPopUp();
-  setTimeout(() => {
-    editCurrentLoginPopup(() => {
-      setTimeout(autoFill, 500);
-    });
-  }, 1000);
+  setTimeout(editCurrentLoginPopup, 1000);
+  setTimeout(autoFill, 2000);
   setFavicon();
 })();
