@@ -60,7 +60,33 @@
 
   var editCurrentLoginPopup = function editCurrentLoginPopup() {
     var buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+
+    try {
+      $('div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').dialog('close');
+    } catch (e) {}
+
+    $('#popuplogin').dialog({
+      title: null,
+      position: {
+        my: "top",
+        at: "center",
+        of: ".site-header.row"
+      },
+      draggable: false,
+      modal: true,
+      resizable: false,
+      dialogClass: 'newLogin',
+      autoOpen: false,
+      open: function open(event, ui) {
+        window.scrollTo(0, 0);
+        $('.ui-widget-overlay, #checkoutguest').on('click', function (evt) {
+          evt.preventDefault();
+          $('#popuplogin').dialog('close');
+        });
+      }
+    });
     $('#signindialog').dialog({
+      autoOpen: false,
       title: LOGIN_TITLE,
       position: {
         my: "top",
@@ -72,7 +98,7 @@
       resizable: false,
       dialogClass: 'signindialog',
       open: function open(event, ui) {
-        $('.ui-widget-overlay, #checkoutguest').on('click', function (evt) {
+        $('.ui-widget-overlay').on('click', function (evt) {
           evt.preventDefault();
           $('#signindialog').dialog('close');
         });
@@ -84,10 +110,9 @@
       var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
 
       if (message && message.length > 0) {
-        $('#popuplogin').dialog('close');
         $('#signindialog_DivSignInMessage').html(message);
         $('#signindialog').dialog('open');
-      }
+      } else {}
     } else {
       buttonReference.css('display', 'none');
     }
@@ -258,25 +283,6 @@
     passTextValue('#new-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
     passTextValue('#new-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
     passClick('#new-checkbox', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
-    window.scrollTo(0, 0);
-    $('#popuplogin').dialog({
-      title: null,
-      position: {
-        my: "top",
-        at: "center",
-        of: ".site-header.row"
-      },
-      draggable: false,
-      modal: true,
-      resizable: false,
-      dialogClass: 'newLogin',
-      open: function open(event, ui) {
-        $('.ui-widget-overlay, #checkoutguest').on('click', function (evt) {
-          evt.preventDefault();
-          $('#popuplogin').dialog('close');
-        });
-      }
-    });
   };
 
   var setFavicon = function setFavicon() {
@@ -331,8 +337,8 @@
   setFavicon();
   setTimeout(function () {
     autoFill(function () {
-      setTimeout(createPopUp, 1000);
-      setTimeout(editCurrentLoginPopup, 2000);
+      setTimeout(createPopUp, 500);
+      setTimeout(editCurrentLoginPopup, 1000);
     });
   }, 500);
 })();

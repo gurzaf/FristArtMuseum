@@ -81,8 +81,29 @@
   
   const editCurrentLoginPopup = () => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+    try{
+      $('div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').dialog('close');
+    } catch(e) {}
+
+    $('#popuplogin').dialog({
+      title: null,
+      position: { my: "top", at: "center", of: ".site-header.row" },
+      draggable: false,
+      modal: true,
+      resizable: false,
+      dialogClass: 'newLogin',
+      autoOpen: false,
+      open: (event, ui) => {
+        window.scrollTo(0, 0);
+        $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
+          evt.preventDefault();
+          $('#popuplogin').dialog('close');
+        });
+      },
+    });
 
     $('#signindialog').dialog({
+      autoOpen: false,
       title: LOGIN_TITLE,
       position: { my: "top", at: "center", of: ".site-header.row" },
       draggable: false,
@@ -90,7 +111,7 @@
       resizable: false,
       dialogClass: 'signindialog',
       open: (event, ui) => { 
-        $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
+        $('.ui-widget-overlay').on('click', (evt) => {
           evt.preventDefault();
           $('#signindialog').dialog('close');
         });
@@ -99,17 +120,16 @@
     
     var auth = $('[id*="LinkbuttonSignOut"]').length;
     if (auth === 0) {
-      // Open and close the dialog to fix a bug with two way data bind not working
-      // $(buttonReference).click();
-      // $('[aria-describedby$="UserModalSignedIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
-      
       // Check if we should open the dialog
       var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
       if (message && message.length > 0) {
-        $('#popuplogin').dialog('close');
+        // $('#popuplogin').dialog('close');
         $('#signindialog_DivSignInMessage').html(message);
         // $('#signindialog .alert').removeClass('hidden');
         $('#signindialog').dialog('open');
+      } else {
+        // $('#signindialog').dialog('close');
+        // $('#popuplogin').dialog('open');
       }
     } else {
       buttonReference.css('display', 'none');
@@ -430,21 +450,6 @@
     passTextValue('#new-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
     passTextValue('#new-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
     passClick('#new-checkbox', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
-    window.scrollTo(0, 0);
-    $('#popuplogin').dialog({
-      title: null,
-      position: { my: "top", at: "center", of: ".site-header.row" },
-      draggable: false,
-      modal: true,
-      resizable: false,
-      dialogClass: 'newLogin',
-      open: (event, ui) => { 
-        $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
-          evt.preventDefault();
-          $('#popuplogin').dialog('close');
-        });
-      },
-    });
   };
   
   // set favicon function
@@ -501,8 +506,8 @@
   setFavicon();
   setTimeout(() => {
     autoFill(() => {
-      setTimeout(createPopUp, 1000);
-      setTimeout(editCurrentLoginPopup, 2000);
+      setTimeout(createPopUp, 500);
+      setTimeout(editCurrentLoginPopup, 1000);
     });
   }, 500);
 })();
