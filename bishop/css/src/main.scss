@@ -887,8 +887,8 @@ h3 > span.Registration_RegistrantCredentialsHeader {
 
 // ================================= DIALOGS ======================
 
-div[id*="UserModalSignIn_UserModalPartDialog1"] {
-  display: none;
+div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
+  display: none !important;
 }
 
 // Show popup overlay
