@@ -58,7 +58,7 @@
     }
   };
 
-  var editCurrentLoginPopup = function editCurrentLoginPopup(cb) {
+  var editCurrentLoginPopup = function editCurrentLoginPopup() {
     var buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
 
     try {
@@ -127,7 +127,6 @@
     passTextValue('#sign-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
     passTextValue('#sign-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
     passClick('#remember-sign', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
-    cb();
   };
 
   var WCAG = function WCAG() {
@@ -330,7 +329,6 @@
         }
       }
     });
-    cb();
   };
 
   loadCSS();
@@ -338,10 +336,7 @@
   replaceText();
   organiceItems();
   createPopUp();
-  setTimeout(function () {
-    editCurrentLoginPopup(function () {
-      setTimeout(autoFill, 500);
-    });
-  }, 1000);
+  setTimeout(editCurrentLoginPopup, 1000);
+  setTimeout(autoFill, 2000);
   setFavicon();
 })();
