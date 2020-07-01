@@ -14,6 +14,7 @@
   const ARIA_DEFAULT = 'Invisible link';
   const DONATION_TEXT = 'Make a donation';
   const LOGIN_TITLE = 'Sign in';
+  const CHANGEPASSWORD_TITLE = 'Change your password';
   const MEMBER_SIGNIN = 'Member Sign-In';
   const JOIN_DISCOUNT = 'Become a member today and get a discount on your order.';
   const JOIN = 'Become a Member';
@@ -81,6 +82,7 @@
   
   const editCurrentLoginPopup = () => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
+    
     try{
       buttonReference.click();
       $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] .ui-dialog-buttonset button:first').click();
@@ -119,6 +121,22 @@
         });
       },
     });
+
+    $('#changepassword').dialog({
+      autoOpen: false,
+      title: CHANGEPASSWORD_TITLE,
+      position: { my: "top", at: "center", of: ".site-header.row" },
+      draggable: false,
+      modal: true,
+      resizable: false,
+      dialogClass: 'changepassword',
+      open: (event, ui) => { 
+        $('.ui-widget-overlay').on('click', (evt) => {
+          evt.preventDefault();
+          $('#changepassword').dialog('close');
+        });
+      },
+    });
     
     var auth = $('[id*="LinkbuttonSignOut"]').length;
     if (auth === 0) {
@@ -126,17 +144,43 @@
       var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
       if (message && message.length > 0) {
         // $('#popuplogin').dialog('close');
-        $('#signindialog_DivSignInMessage').html(`<div id="signinmessage">${message}</div>`);
+        $('#signindialog_DivSignInMessage').html(`<div class="signinmessage">${message}</div>`);
         // $('#signindialog .alert').removeClass('hidden');
         $('#signindialog').dialog('open');
       } else {
         // $('#signindialog').dialog('close');
         $('#popuplogin').dialog('open');
       }
+    } else {
+      const changeButtonReference = $('[id*="UserModalSignedIn_UserModalPartEditLink"]');
+      try{
+        changeButtonReference.click();
+        $('.ui-dialog-content').dialog('close');
+      } catch(e) {}
+      changeButtonReference.off();
+      changeButtonReference.on('click', () => {
+        $('#changepassword').dialog('open');
+      });
+      var message = $('.UserModalPartDialog').find('.MS_LoginMessage').html();
+      if (message && message.length > 0) {
+        // $('#popuplogin').dialog('close');
+        $('#changepasswordMessage').html(`<div class="signinmessage">${message}</div>`);
+        // $('#signindialog .alert').removeClass('hidden');
+        $('#changepassword').dialog('open');
+      }
+      passTextValue('#currentpassword', '[id$="TextboxPasswordChangeOld"]');
+      passTextValue('#newpassword', '[id$="UserModalSignedIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPasswordChange1"]');
+      passTextValue('#confirmpassword', '[id$="UserModalSignedIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPasswordChange2"]');
+      $('#submitchangepassword').on('click', () => {
+        const change = Object.keys(window).filter(key => key.indexOf('UserModalSignedIn') !== -1);
+        if (change.length === 1) {
+          window[change[0]].doEditSave();
+        }
+      });
+      $('#changepasswordcancel').on('click', () => {
+        $('#changepassword').dialog('close');
+      });
     }
-    
-    // Login button reference
-    
     buttonReference.off();
     buttonReference.on('click', () => {
       $('#signindialog').dialog('open');
