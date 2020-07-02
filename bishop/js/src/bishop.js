@@ -531,28 +531,28 @@
   };
   
   const autoFill = () => {
-    // var list = $('#divPriceList .show-grid');
-    // $.each(list, function (index, item) {
-    //   var input = $(item).find('input:text')[0];
-    //   if (typeof input !== 'undefined') {
-    //     var value = $(input).val();
-    //     if (value && value.length > 0 && value.length < 4) {
-    //       value = parseInt(value);
-    //       if (isNaN(value)) {
-    //         $(input).val('');
-    //       }
-    //     } else {
-    //       $(input).val('');
-    //     }
-    //   }
-    // });
+    var list = $('#divPriceList .show-grid');
+    $.each(list, function (index, item) {
+      var input = $(item).find('input:text')[0];
+      if (typeof input !== 'undefined') {
+        var value = $(input).val();
+        if (value && value.length > 0 && value.length < 4) {
+          value = parseInt(value);
+          if (isNaN(value)) {
+            $(input).val('');
+          }
+        } else {
+          $(input).val('');
+        }
+      }
+    });
     // Hide errors onload
     // $('.text-danger').hide();
     $('form').attr('autocomplete', 'off');
-    $('input[type="text"], input[type="password"], input[type="email"]').each((index, item) => {
-      const e = $(item);
-      e.attr('autocomplete', `new-${e.attr('id')}`);
-    });
+    // $('input[type="text"], input[type="password"], input[type="email"]').each((index, item) => {
+    //   const e = $(item);
+    //   e.attr('autocomplete', `new-${e.attr('id')}`);
+    // });
   };
   
   const alertDismissible = () => {
