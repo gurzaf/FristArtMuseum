@@ -571,7 +571,7 @@
   // translationOptions();
   createPopUp();
   setTimeout(editCurrentLoginPopup, 1000);
-  setTimeout(autoFill, 1);
+  setTimeout(autoFill, 3000);
   setFavicon();
   alertDismissible();
 })();
