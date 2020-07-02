@@ -549,6 +549,10 @@
     // Hide errors onload
     // $('.text-danger').hide();
     $('form').attr('autocomplete', 'off');
+    $('input[type="text"], input[type="password"], input[type="email"]').each((index, item) => {
+      const e = $(item);
+      e.attr('autocomplete', `new-${e.attr('id')}`);
+    });
   };
   
   const alertDismissible = () => {

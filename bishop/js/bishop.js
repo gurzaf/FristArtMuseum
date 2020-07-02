@@ -380,6 +380,10 @@
 
   var autoFill = function autoFill() {
     $('form').attr('autocomplete', 'off');
+    $('input[type="text"], input[type="password"], input[type="email"]').each(function (index, item) {
+      var e = $(item);
+      e.attr('autocomplete', "new-".concat(e.attr('id')));
+    });
   };
 
   var alertDismissible = function alertDismissible() {
