@@ -57,6 +57,10 @@
       $(to).click();
     });
   };
+
+  const setDialogTimer = () => {
+    
+  }
   
   const newLoginSubmit = (evt) => {
     evt.preventDefault();
@@ -79,7 +83,17 @@
   //   }
   //   return null;
   // };
-  
+  const MEMBERPOPUP_KEY = 'memberpopup';
+  const showMemberDialog = () => {
+    const difference = 1000 * 3600;
+    var now = new Date().getTime();
+    const lastTime = window.localStorage.getItem(MEMBERPOPUP_KEY);
+    if (lastTime && (now - parseInt(lastTime) < difference)) {
+      return false;
+    }
+    return true;
+  };
+
   const editCurrentLoginPopup = () => {
     const buttonReference = $('[id*="UserModalSignIn_UserModalPartEditLink"]');
     
@@ -148,8 +162,10 @@
         // $('#signindialog .alert').removeClass('hidden');
         $('#signindialog').dialog('open');
       } else {
-        if ($('div[id$="_panelEvent"]').length > 0) {
+        if ($('div[id$="_panelEvent"]').length > 0 && showMemberDialog()) {
           $('#popuplogin').dialog('open');
+          // set timer 
+          window.localStorage.setItem(MEMBERPOPUP_KEY, new Date().getTime());
         }
         // $('#signindialog').dialog('close');
       }
@@ -547,7 +563,7 @@
       }
     });
     // Hide errors onload
-    // $('.text-danger').hide();
+    $('#divPriceList .text-danger').hide();
     $('form').attr('autocomplete', 'off');
     // $('input[type="text"], input[type="password"], input[type="email"]').each((index, item) => {
     //   const e = $(item);
