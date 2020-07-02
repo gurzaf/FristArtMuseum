@@ -379,11 +379,25 @@
   };
 
   var autoFill = function autoFill() {
-    $('form').attr('autocomplete', 'off');
-    $('input[type="text"], input[type="password"], input[type="email"]').each(function (index, item) {
-      var e = $(item);
-      e.attr('autocomplete', "new-".concat(e.attr('id')));
+    var list = $('#divPriceList .show-grid');
+    $.each(list, function (index, item) {
+      var input = $(item).find('input:text')[0];
+
+      if (typeof input !== 'undefined') {
+        var value = $(input).val();
+
+        if (value && value.length > 0 && value.length < 4) {
+          value = parseInt(value);
+
+          if (isNaN(value)) {
+            $(input).val('');
+          }
+        } else {
+          $(input).val('');
+        }
+      }
     });
+    $('form').attr('autocomplete', 'off');
   };
 
   var alertDismissible = function alertDismissible() {
