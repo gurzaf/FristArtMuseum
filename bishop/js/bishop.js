@@ -48,6 +48,8 @@
     });
   };
 
+  var setDialogTimer = function setDialogTimer() {};
+
   var newLoginSubmit = function newLoginSubmit(evt) {
     evt.preventDefault();
     var sign = Object.keys(window).filter(function (key) {
@@ -57,6 +59,20 @@
     if (sign.length === 1) {
       window[sign[0]].doEditSave();
     }
+  };
+
+  var MEMBERPOPUP_KEY = 'memberpopup';
+
+  var showMemberDialog = function showMemberDialog() {
+    var difference = 1000 * 3600;
+    var now = new Date().getTime();
+    var lastTime = window.localStorage.getItem(MEMBERPOPUP_KEY);
+
+    if (lastTime && now - parseInt(lastTime) < difference) {
+      return false;
+    }
+
+    return true;
   };
 
   var editCurrentLoginPopup = function editCurrentLoginPopup() {
@@ -135,8 +151,9 @@
         $('#signindialog_DivSignInMessage').html("<div class=\"signinmessage\">".concat(message, "</div>"));
         $('#signindialog').dialog('open');
       } else {
-        if ($('div[id$="_panelEvent"]').length > 0) {
+        if ($('div[id$="_panelEvent"]').length > 0 && showMemberDialog()) {
           $('#popuplogin').dialog('open');
+          window.localStorage.setItem(MEMBERPOPUP_KEY, new Date().getTime());
         }
       }
     } else {
@@ -397,6 +414,7 @@
         }
       }
     });
+    $('#divPriceList .text-danger').hide();
     $('form').attr('autocomplete', 'off');
   };
 
