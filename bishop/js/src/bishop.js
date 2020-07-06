@@ -220,13 +220,13 @@
     $('img.img-responsive.cartImg').attr('alt', ALT_CART_IMAGE);
     
     // change section to div
-    const element = $('section')[0];
+    const element = $('section');
     if (element) {
       const res = $('<div/>', {
-        html: element.innerHTML,
-        class: element.className,
+        html: element[0].innerHTML,
+        class: element[0].className,
       });
-      element.replaceWith(res[0]);
+      element.replaceWith(res);
     }
     
     //Fix autocomplete
@@ -579,6 +579,17 @@
       </button>
     `);
   };
+
+  const fixRecoverTable = () => {
+    $('tbody[id*="_tbdForgotPWDUserName"] td').each((index, item) => {
+      const element = $(item);
+      const res = $('<div/>', {
+        html: element[0].innerHTML,
+        class: element[0].className,
+      });
+      element.replaceWith(res);
+    });
+  };
   
   loadCSS();
   generalAdmissionBg();
@@ -590,4 +601,5 @@
   setTimeout(autoFill, 3000);
   setFavicon();
   alertDismissible();
+  fixRecoverTable();
 })();
