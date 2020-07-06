@@ -4,6 +4,7 @@ body {
   background-color: #212322;
   height: 100vh;
   top: 0 !important;
+  overflow-x: hidden;
 }
 
 body > .site-container, body > form {
@@ -95,18 +96,17 @@ aside#content-secondary {
 }
 
 .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
-  display: table;
-  height: 80px;
+  display: block;
   width: 100%;
-  padding: 0 10px;
+  padding: 10px 10px 0;
   position: relative;
   top: 80px;
   z-index: 91;
 }
 
 .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
-  display: table-cell;
-  width: 50%;
+  display: inline-block;
+  width: 100%;
   padding: 5px;
   vertical-align: middle;
 }
@@ -131,10 +131,15 @@ aside#content-secondary {
 
 @media (min-width: 767px) {
   .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
+    display: table;
+    height: 80px;
     width: auto;
     position: static;
+    padding: 0 10px;
   }
   .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
+    display: table-cell;
+    width: 50%;
     width: auto;
   }
   .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer div a {
@@ -267,7 +272,6 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
 }
 
 div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 span {
-  margin-left: unset;
   margin: 0;
   font-size: 14px;
   font-weight: bold;
@@ -654,12 +658,15 @@ div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemT
 
 div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
   padding-left: 0;
+}
+
+div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span[id$="_CartGrid_rptCategories_tdType_0"] {
   margin-top: -50px;
   margin-bottom: 50px;
 }
 
 @media (min-width: 480px) {
-  div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span {
+  div[id*="_CartGrid_CartContainer"] h2.PaymentPart_CartRows.PaymentPart_CartItemTypeRow.row-grid-sub-heading span[id$="_CartGrid_rptCategories_tdType_0"] {
     margin: 0;
   }
 }
@@ -819,7 +826,7 @@ div.cart-type-group.cart-type-Donations.single-cart-item h2 {
 }
 
 div.cart-type-group.cart-type-Donations.single-cart-item > div {
-  background-color: unset;
+  background-color: transparent;
 }
 
 div.cart-type-group.cart-type-Donations.single-cart-item > div .PaymentPart_CartDescriptionCell.col-sm-12 {
@@ -1261,7 +1268,7 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 }
 
 div#new-menu-links ul.main-menu {
-  margin-top: 80px;
+  margin-top: 140px;
   list-style: none;
   padding: 0;
   font-size: 25px;
@@ -1302,9 +1309,9 @@ div#new-menu-links ul.main-menu li a {
 
 @media (min-width: 767px) {
   #mobile-menu-container {
-    position: unset;
-    background: unset;
-    display: unset !important;
+    position: static;
+    background: none;
+    display: block !important;
   }
 }
 
@@ -1335,12 +1342,12 @@ div#new-menu-links ul.main-menu li a {
   display: block;
 }
 
-.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable tbody, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable tr, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable td {
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable tbody, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable tr, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable td, .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable div {
   display: block;
   width: 100%;
 }
 
-.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] td[id*="_tdForgotPWDUserNameTitle"] {
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] [id*="_tdForgotPWDUserNameTitle"] {
   display: none !important;
 }
 
@@ -1662,7 +1669,7 @@ div#new-menu-links ul.main-menu li a {
 }
 
 .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
-  width: 15%;
+  width: 45%;
   margin-right: 15px;
   padding: 0px;
 }
@@ -1726,11 +1733,21 @@ div#new-menu-links ul.main-menu li a {
   margin-bottom: 10px !important;
 }
 
-@media (max-width: 630px) {
+@media (min-width: 480px) {
   .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
-    width: 45%;
-    margin-right: 15px;
-    padding: 0px;
+    width: 30%;
+  }
+}
+
+@media (min-width: 767px) {
+  .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
+    width: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
+    width: 15%;
   }
 }
 /*# sourceMappingURL=main.css.map */

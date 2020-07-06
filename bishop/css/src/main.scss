@@ -62,6 +62,7 @@ body {
   background-color: $background;
   height: 100vh;
   top: 0 !important;
+  overflow-x: hidden;
   > .site-container, > form {
     background: white;
   }
@@ -128,16 +129,15 @@ aside#content-secondary {
         display: block !important;
       }
       .MS_LoginButtonInnerContainer {
-        display: table;
-        height: $headerHeight;
+        display: block;
         width: 100%;
-        padding: 0 10px;
+        padding: 10px 10px 0;
         position: relative;
         top: 80px;
         z-index: 91;
         > div {
-          display: table-cell;
-          width: 50%;
+          display: inline-block;
+          width: 100%;
           padding: 5px;
           vertical-align: middle;
         }
@@ -150,9 +150,14 @@ aside#content-secondary {
           font-size: 18px;
         }
         @media (min-width: 767px) {
+          display: table;
+          height: $headerHeight;
           width: auto;
           position: static;
+          padding: 0 10px;
           > div {
+            display: table-cell;
+            width: 50%;
             width: auto;
           }
           div a {
@@ -299,7 +304,7 @@ div.Programming_Event_DateTime {
         font-size: 12px;
       }
       h2, h2 span {
-        margin-left: unset;
+        // margin-left: unset;
         margin: 0;
         font-size: 14px;
         font-weight: bold;
@@ -587,10 +592,12 @@ div[id*="_CartGrid_CartContainer"] {
     font-weight: bold;
     span {
       padding-left: 0;
-      margin-top: -50px;
-      margin-bottom: 50px;
-      @media (min-width: 480px) {
-        margin: 0;
+      &[id$="_CartGrid_rptCategories_tdType_0"] {
+        margin-top: -50px;
+        margin-bottom: 50px;
+        @media (min-width: 480px) {
+          margin: 0;
+        }
       }
     }
   }
@@ -708,7 +715,7 @@ div.cart-type-group.cart-type-Donations.single-cart-item {
     display: none;
   }
   > div {
-    background-color: unset;
+    background-color: transparent;
     .PaymentPart_CartDescriptionCell.col-sm-12 {
       padding-top: 0;
       padding-bottom: 0;
@@ -1081,7 +1088,7 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 
 div#new-menu-links {
   ul.main-menu {
-    margin-top: 80px;
+    margin-top: 140px;
     list-style: none;
     padding: 0;
     font-size: 25px;
@@ -1112,9 +1119,9 @@ div#new-menu-links {
   z-index: 90;
   height: calc(100vh - 80px);
   @media (min-width: 767px) {
-    position: unset;
-    background: unset;
-    display: unset !important;
+    position: static;
+    background: none;
+    display: block !important;
   }
   // &.open {
   //   display: block;
@@ -1143,12 +1150,12 @@ div#new-menu-links {
     }
     table.BBFormTable.LoginFormTable {
       display: block;
-      tbody, tr, td {
+      tbody, tr, td, div {
         display: block;
         width: 100%;
       }
     }
-    td[id*="_tdForgotPWDUserNameTitle"] {
+    [id*="_tdForgotPWDUserNameTitle"] {
       display: none !important;
     }
     label {
@@ -1364,7 +1371,7 @@ div#new-menu-links {
 }
 
 .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
-    width: 15%;
+    width: 45%;
     margin-right: 15px;
     padding: 0px;
 }
@@ -1428,10 +1435,20 @@ div#new-menu-links {
     margin-bottom: 10px !important;
 }
 
-@media (max-width: 630px) {
+@media (min-width: 480px) {
     .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
-        width: 45%;
-        margin-right: 15px;
-        padding: 0px;
+        width: 30%;
     }
+}
+
+@media (min-width: 767px) {
+    .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
+        width: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+  .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
+      width: 15%;
+  }
 }

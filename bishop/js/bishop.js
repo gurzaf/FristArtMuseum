@@ -205,14 +205,14 @@
   var WCAG = function WCAG() {
     $('header.site-header .RS_headerWrapper_inner div[id*="_pnlFooterText"] > p > img').attr('alt', LOGO_ALT);
     $('img.img-responsive.cartImg').attr('alt', ALT_CART_IMAGE);
-    var element = $('section')[0];
+    var element = $('section');
 
     if (element) {
       var res = $('<div/>', {
-        html: element.innerHTML,
-        class: element.className
+        html: element[0].innerHTML,
+        class: element[0].className
       });
-      element.replaceWith(res[0]);
+      element.replaceWith(res);
     }
 
     $('input[id*="_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]').attr('autocomplete', 'current-password');
@@ -423,6 +423,17 @@
     $('.alert.alert-danger').prepend("\n      <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n        <span aria-hidden=\"true\">&times;</span>\n      </button>\n    ");
   };
 
+  var fixRecoverTable = function fixRecoverTable() {
+    $('tbody[id*="_tbdForgotPWDUserName"] td').each(function (index, item) {
+      var element = $(item);
+      var res = $('<div/>', {
+        html: element[0].innerHTML,
+        class: element[0].className
+      });
+      element.replaceWith(res);
+    });
+  };
+
   loadCSS();
   generalAdmissionBg();
   replaceText();
@@ -432,4 +443,5 @@
   setTimeout(autoFill, 3000);
   setFavicon();
   alertDismissible();
+  fixRecoverTable();
 })();
