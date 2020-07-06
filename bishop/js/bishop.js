@@ -48,8 +48,6 @@
     });
   };
 
-  var setDialogTimer = function setDialogTimer() {};
-
   var newLoginSubmit = function newLoginSubmit(evt) {
     evt.preventDefault();
     var sign = Object.keys(window).filter(function (key) {
@@ -258,7 +256,7 @@
   var replaceText = function replaceText() {
     var lbutton = $('.MS_LoginLink a').text();
 
-    if (!lbutton.indexOf('@') !== -1) {
+    if (lbutton.indexOf('@') === -1) {
       $('.MS_LoginLink a').text('Login');
     }
 
@@ -373,7 +371,8 @@
   };
 
   var setFavicon = function setFavicon() {
-    document.querySelector("link[rel*='ICON']").remove();
+    var o = document.querySelector("link[rel*='ICON']");
+    o.parentNode.removeChild(o);
     var l32 = document.createElement('link');
     l32.type = 'image/x-icon';
     l32.rel = 'shortcut icon';
