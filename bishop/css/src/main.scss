@@ -1119,9 +1119,9 @@ div#new-menu-links {
   z-index: 90;
   height: calc(100vh - 80px);
   @media (min-width: 767px) {
-    position: static;
-    background: none;
-    display: block !important;
+    // position: static;
+    // background: none;
+    display: none !important;
   }
   // &.open {
   //   display: block;
@@ -1155,7 +1155,7 @@ div#new-menu-links {
         width: 100%;
       }
     }
-    [id*="_tdForgotPWDUserNameTitle"] {
+    span[id*="_tdForgotPWDUserNameTitle"] {
       display: none !important;
     }
     label {
