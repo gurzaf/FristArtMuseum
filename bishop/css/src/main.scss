@@ -79,7 +79,7 @@ aside#content-secondary {
   form {
     margin-bottom: 0;
   }
-  position: initial;
+  position: static;
   header.site-header {
     position: absolute;
     background-color: $background;
@@ -151,7 +151,7 @@ aside#content-secondary {
         }
         @media (min-width: 767px) {
           width: auto;
-          position: unset;
+          position: static;
           > div {
             width: auto;
           }

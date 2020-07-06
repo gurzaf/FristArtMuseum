@@ -270,7 +270,7 @@
   
   const replaceText = () => {
     const lbutton = $('.MS_LoginLink a').text();
-    if (!lbutton.includes('@')) {
+    if (!lbutton.indexOf('@') !== -1) {
       $('.MS_LoginLink a').text('Login');
     }
     $('input[id*="buttonAddEventToCart"]').val('CONTINUE');
