@@ -57,10 +57,6 @@
       $(to).click();
     });
   };
-
-  const setDialogTimer = () => {
-    
-  }
   
   const newLoginSubmit = (evt) => {
     evt.preventDefault();
@@ -270,7 +266,7 @@
   
   const replaceText = () => {
     const lbutton = $('.MS_LoginLink a').text();
-    if (!lbutton.indexOf('@') !== -1) {
+    if (lbutton.indexOf('@') === -1) {
       $('.MS_LoginLink a').text('Login');
     }
     $('input[id*="buttonAddEventToCart"]').val('CONTINUE');
@@ -524,7 +520,8 @@
   
   // set favicon function
   const setFavicon = () => {
-    document.querySelector("link[rel*='ICON']").remove();
+    const o = document.querySelector("link[rel*='ICON']");
+    o.parentNode.removeChild(o);
     const l32 = document.createElement('link');
     l32.type = 'image/x-icon';
     l32.rel = 'shortcut icon';

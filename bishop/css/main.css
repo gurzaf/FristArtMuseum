@@ -1345,8 +1345,8 @@ div#new-menu-links ul.main-menu li a {
   width: 100%;
 }
 
-.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] span[id*="_tdForgotPWDUserNameTitle"] {
-  display: none !important;
+.MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] table.BBFormTable.LoginFormTable .BBFormTitle.LoginFormTitle {
+  display: none;
 }
 
 .MS_contentWrapper_inner.overflow_margin_helper table[id*="_tbl"] label {

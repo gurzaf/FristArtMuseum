@@ -1154,9 +1154,9 @@ div#new-menu-links {
         display: block;
         width: 100%;
       }
-    }
-    span[id*="_tdForgotPWDUserNameTitle"] {
-      display: none !important;
+      .BBFormTitle.LoginFormTitle {
+        display: none;
+      }
     }
     label {
       margin-top: 30px;
