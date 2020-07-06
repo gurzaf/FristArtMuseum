@@ -258,7 +258,7 @@
   var replaceText = function replaceText() {
     var lbutton = $('.MS_LoginLink a').text();
 
-    if (!lbutton.includes('@')) {
+    if (!lbutton.indexOf('@') !== -1) {
       $('.MS_LoginLink a').text('Login');
     }
 

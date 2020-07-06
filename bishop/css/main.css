@@ -19,7 +19,7 @@ aside#content-secondary {
 }
 
 .site-wrapper {
-  position: initial;
+  position: static;
 }
 
 .site-wrapper form {
@@ -132,7 +132,7 @@ aside#content-secondary {
 @media (min-width: 767px) {
   .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer {
     width: auto;
-    position: unset;
+    position: static;
   }
   .site-wrapper header.site-header .MS_LoginButtonOuterContainer .MS_LoginButtonInnerContainer > div {
     width: auto;
