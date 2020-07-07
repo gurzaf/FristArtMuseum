@@ -11,6 +11,16 @@ body > .site-container, body > form {
   background: white;
 }
 
+a {
+  color: #212322;
+  text-decoration: underline;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  color: #212322;
+}
+
 aside#content-secondary {
   display: none;
 }
@@ -911,6 +921,7 @@ dl[id*="_dlCartSummary"] {
   color: black;
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: -40px;
 }
 
 dl[id*="_dlCartSummary"] dd, dl[id*="_dlCartSummary"] dt {
@@ -931,7 +942,7 @@ input[id*="_ButtonCheckout"] {
   -webkit-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
-  margin-top: -20px;
+  margin-top: 20px;
   min-width: 120px;
   font-size: 18px;
 }
