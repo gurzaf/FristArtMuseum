@@ -27,6 +27,9 @@
       if (adults < 11) {
         addMessage('Minimum of 11 tickets is required for Online Group Sales.');
         e.preventDefault();
+      } else if (adults > 19) {
+        addMessage('No more than 19 adults tickets can be purchased for Online Group Sales.');
+        e.preventDefault();
       } else if ((adults + children + childrenUnder) > 30) {
         addMessage('No more than 30 tickets are available for purchase in an Online Group Sale.');
         e.preventDefault();
