@@ -958,10 +958,18 @@ div#new-menu-links .hours-operation a {
 
 .MembershipExpress_Selectors .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer {
   width: 100%;
+  border: 0;
+}
+
+.MembershipExpress_Selectors .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer .MembershipExpress_LevelHeader {
+  display: none;
 }
 
 .MembershipExpress_Selectors .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer .MembershipExpress_LevelDescriptionText {
   text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  height: 12px;
 }
 
 .MembershipExpress_Selectors .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer .MembershipExpress_TermContainer label {
@@ -1046,7 +1054,8 @@ div#new-menu-links .hours-operation a {
   margin-bottom: 20px;
 }
 
-.BBFormSubmitButton.MembershipExpress_AddToCartButton {
+.BBFormSubmitButton,
+.BBFormSubmitButton {
   border-radius: 0;
   font-size: 18px;
   -webkit-transition: all 0.1s ease-out;
@@ -1056,11 +1065,17 @@ div#new-menu-links .hours-operation a {
   border: 1px solid transparent;
 }
 
-.BBFormSubmitButton.MembershipExpress_AddToCartButton:hover, .BBFormSubmitButton.MembershipExpress_AddToCartButton:active, .BBFormSubmitButton.MembershipExpress_AddToCartButton:focus {
+.BBFormSubmitButton:hover, .BBFormSubmitButton:active, .BBFormSubmitButton:focus,
+.BBFormSubmitButton:hover,
+.BBFormSubmitButton:active,
+.BBFormSubmitButton:focus {
   text-decoration: underline;
 }
 
-.BBFormSubmitButton.MembershipExpress_AddToCartButton:hover, .BBFormSubmitButton.MembershipExpress_AddToCartButton:active, .BBFormSubmitButton.MembershipExpress_AddToCartButton:focus {
+.BBFormSubmitButton:hover, .BBFormSubmitButton:active, .BBFormSubmitButton:focus,
+.BBFormSubmitButton:hover,
+.BBFormSubmitButton:active,
+.BBFormSubmitButton:focus {
   background-color: transparent;
   color: #E00000;
   border-color: #E00000;

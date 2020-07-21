@@ -768,8 +768,14 @@ div#new-menu-links {
 .MembershipExpress_Selectors {
   .MembershipExpress_LevelContainer {
     .MembershipExpress_LevelSelectorContainer {
+      .MembershipExpress_LevelHeader {
+        display: none;
+      }
       .MembershipExpress_LevelDescriptionText {
         text-align: center;
+        font-size: 12px;
+        line-height: 12px;
+        height: 12px;
       }
       .MembershipExpress_TermContainer {
         label {
@@ -803,6 +809,7 @@ div#new-menu-links {
         }
       }
       width: 100%;
+      border: 0;
       @media (min-width: 480px) {
         width: calc(50% - 7.5px);
         &:nth-child(odd) {
@@ -838,7 +845,8 @@ div#new-menu-links {
   margin-bottom: 20px;
 }
 
-.BBFormSubmitButton.MembershipExpress_AddToCartButton {
+.BBFormSubmitButton,
+.BBFormSubmitButton {
   @include orangeButton;
 }
 
