@@ -82,15 +82,20 @@ body {
     ul.header_links {
       list-style: none;
       max-width: 1170px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: -15px;
+      margin-right: 0;
       text-align: right;
-      padding-left: $headerHeight - 5;
+      padding-left: 0;
       padding-right: $headerHeight - 5;
+      @media (min-width: 480px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
       li {
         display: inline-block;
+        vertical-align: top;
         a {
-          padding: 0 20px;
+          padding: 0 10px;
           background-color: $greyButtons;
           color: white;
           height: $headerHeight;
@@ -119,12 +124,14 @@ body {
             select {
               background: transparent;
               border: 0;
-              max-width: 90px;
+              max-width: 100px;
+              margin-right: 10px;
             }
             padding-right: 0;
           }
           @media(min-width: 480px) {
             font-size: $headerHeight - 10;
+            padding: 0 15px;
             &.language {
               span {
                 margin-top: 2.5px;
@@ -136,9 +143,9 @@ body {
             }
           }
         }
-        margin-right: 20px;
+        margin-right: 15px;
         &:last-child {
-          margin-right: 30px;
+          margin-right: 15px;
           @media(min-width: 1200px) {
             margin-right: 0;
           }
@@ -605,21 +612,20 @@ div[id*="_divUserSignUp"] {
   display: none;
 }
 
-.PaymentPart_PersonalInfoContainer {
-  .col-sm-12.col-md-6.form-sidebyside {
-    .form-group {
-      margin-bottom: 5px;
-      label {
-        text-align: left;
-        font-weight: normal;
-        margin-bottom: 2px;
-      }
-      .col-sm-9 {
-        width: 100%;
-        input, select, textarea {
-          border-radius: 0;
-          height: 40px;
-        }
+.PaymentPart_PersonalInfoContainer .col-sm-12.col-md-6.form-sidebyside,
+.MembershipExpress_MemberDetails.form-horizontal {
+  .form-group {
+    margin-bottom: 5px;
+    label {
+      text-align: left;
+      font-weight: normal;
+      margin-bottom: 2px;
+    }
+    .col-sm-9 {
+      width: 100%;
+      input, select, textarea {
+        border-radius: 0;
+        height: 40px;
       }
     }
   }
@@ -756,4 +762,127 @@ div#new-menu-links {
 }
 .goog-te-menu-value:hover {
   text-decoration:none !important;
+}
+
+// Basic membership
+.MembershipExpress_Selectors {
+  .MembershipExpress_LevelContainer {
+    .MembershipExpress_LevelSelectorContainer {
+      .MembershipExpress_LevelDescriptionText {
+        text-align: center;
+      }
+      .MembershipExpress_TermContainer {
+        label {
+          width: 100%;
+          background: white;
+          border: 1px solid $orange;
+          .MembershipExpress_TermRadioLevel {
+            color: $orange;
+          }
+          .MembershipExpress_TermRadiolTerm.level-inner-box-heading,
+          .MembershipExpress_TermRadioAmount.level-amount {
+            color: $footerColor;
+          }
+          &:active, &:focus, &:hover {
+            background: $footerColor;
+            border-color: $footerColor;
+            .MembershipExpress_TermRadiolTerm.level-inner-box-heading,
+            .MembershipExpress_TermRadioAmount.level-amount,
+            .MembershipExpress_TermRadioLevel {
+              color: white;
+            }
+          }
+          &.MembershipExpress_SelectedTermLabel, .MembershipExpress_SelectedTypeLabel {
+            background-color: $orange;
+            .MembershipExpress_TermRadioLevel,
+            .MembershipExpress_TermRadiolTerm.level-inner-box-heading,
+            .MembershipExpress_TermRadioAmount.level-amount {
+              color: white;
+            }
+          }
+        }
+      }
+      width: 100%;
+      @media (min-width: 480px) {
+        width: calc(50% - 7.5px);
+        &:nth-child(odd) {
+          margin-right: 15px;
+        }
+      }
+      @media (min-width: 767px) and (max-width: 991px) {
+        width: calc(33% - 15px);
+        margin-right: 15px;
+        &:nth-child(3n+0) {
+          margin-right: 0px;
+        }
+        &:nth-child(3n+1) {
+          clear: left;
+        }
+      }
+      @media (min-width: 991px) {
+        width: calc(25% - 22.5px);
+        margin-right: 15px;
+        &:nth-child(4n+0) {
+          margin-right: 0px;
+        }
+        &:nth-child(4n+1) {
+          clear: left;
+        }
+      }
+    }
+  }
+}
+
+.MembershipExpress_MemberControl.MembershipExpress_PrimaryMemberControl {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.BBFormSubmitButton.MembershipExpress_AddToCartButton {
+  @include orangeButton;
+}
+
+.total-amount.lead {
+  color: $footerColor !important;
+  font-weight: bold;
+}
+
+// Annual fund
+div[id*="_UpdatePanel"] {
+  .col-md-9.listDonationDisplay.with-radio {
+    width: 100%;
+    > .show-grid {
+      > .row {
+        border-top-color: $borderColor;
+        border-left: 1px solid $borderColor;
+        border-right: 1px solid $borderColor;
+      }
+      &.otherLabel {
+        > .row {
+          border-bottom: 1px solid $borderColor;
+        }
+      }
+    }
+  }
+}
+
+div[id*="_trAdditInformation"] {
+  margin-top: 20px;
+  // margin-bottom: 20px;
+  .col-md-9 {
+    width: 100%;
+    input, select, textarea {
+      border-radius: 0;
+      height: 40px;
+    }
+  }
+}
+
+// Event Description
+
+.Programming_Event_Description {
+  p, ul, li, span {
+    font-family: 'Poppins', sans-serif !important;
+    line-height: 30px;
+  }
 }
