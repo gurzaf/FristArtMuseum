@@ -298,6 +298,10 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
   }
 }
 
+div.Programming_Event_DateTime .Programming_Event_TimeContainer, div.Programming_Event_DateTime .Programming_Event_DateContainer {
+  background-image: none;
+}
+
 .Programming_Event_PriceList {
   border-width: 1px 1px 0px;
   border-style: solid;

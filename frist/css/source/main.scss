@@ -288,6 +288,9 @@ div.Programming_Event_DateTime {
       }
     }
   }
+  .Programming_Event_TimeContainer, .Programming_Event_DateContainer {
+    background-image: none;
+  }
 }
 
 .Programming_Event_PriceList {
