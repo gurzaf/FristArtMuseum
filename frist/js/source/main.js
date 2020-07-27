@@ -1,6 +1,6 @@
 (() => {
   const init = () => {
-    const cdn = 'https://raw.githubusercontent.com/gurzaf/FristArtMuseum/master/frist';
+    const cdn = 'https://gitcdn.link/repo/gurzaf/FristArtMuseum/master/frist';
     $('.MSFootTextDiv').html('');
     $('.MS_LoginButtonOuterWrapperContainer').hide();
     $('.MSFootTextDiv:first').load(`${cdn}/html/header.html`, () => {
