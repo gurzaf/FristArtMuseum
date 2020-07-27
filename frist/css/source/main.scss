@@ -18,6 +18,8 @@ $footerBorder: #777777;
 
 $cellsBackground: #F9F9F9;
 
+$cdn: 'https://raw.githubusercontent.com/gurzaf/FristArtMuseum/master/frist';
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 @mixin button {
@@ -115,7 +117,7 @@ body {
               width: $headerHeight - 10;
               height: $headerHeight - 10;
               display: inline-block;
-              background: url('../assets/globe.png');
+              background: url('#{$cdn}/assets/globe.png');
               background-size: cover;
               margin-top: 5px;
               margin-bottom: -5px;
@@ -205,7 +207,7 @@ main.main-Content {
     width: $menuWidth;
     height: $menuHeight;
     z-index: 1001;
-    background: url('../assets/menu.jpg');
+    background: url('#{$cdn}/assets/menu.jpg');
     background-size: $menuWidth $menuHeight * 2;
     &.open {
       background-position: bottom;
@@ -342,7 +344,7 @@ footer.site-footer {
       padding: 40px 0 30px;
       position: relative;
       &:before, &:after {
-        background-image: url('../assets/waves.png');
+        background-image: url('#{$cdn}/assets/waves.png');
         background-color: $footerColor;
         content: '';
         width: 126px;
