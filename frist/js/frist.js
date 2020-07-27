@@ -7,6 +7,13 @@ function googleTranslateElementInit2() {
   }, 'google_translate_element2');
 }
 
+var dynamicallyLoadScript = function dynamicallyLoadScript(url) {
+  var script = document.createElement('script');
+  script.src = url;
+  document.head.appendChild(script);
+};
+
+dynamicallyLoadScript('https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2');
 eval(function (p, a, c, k, _e, r) {
   _e = function e(c) {
     return (c < a ? '' : _e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36));
@@ -154,14 +161,6 @@ eval(function (p, a, c, k, _e, r) {
   };
 
   loadCSS();
-
-  var dynamicallyLoadScript = function dynamicallyLoadScript(url) {
-    var script = document.createElement('script');
-    script.src = url;
-    document.head.appendChild(script);
-  };
-
-  dynamicallyLoadScript('https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2');
   $('.PaymentPart_CartDescriptionCell').each(function (index, item) {
     var titleElement = $(item).find('h4');
     var link = $(titleElement).find('a').attr('href');
