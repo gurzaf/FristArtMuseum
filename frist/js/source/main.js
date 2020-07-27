@@ -1,7 +1,7 @@
 (() => {
   const init = () => {
-    const cdn = 'https://dev.juliangalvez.xyz/frist';
-    // const cdn = '.';
+    // const cdn = 'https://dev.juliangalvez.xyz/frist';
+    const cdn = '.';
     $('link[rel=stylesheet][href*="Webforms-User-Stylesheet"]').remove();
     $('.MSFootTextDiv').html('');
     $('.MS_LoginButtonOuterWrapperContainer').hide();
