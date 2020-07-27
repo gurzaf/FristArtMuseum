@@ -85,7 +85,7 @@ body > .site-container, body > form {
   width: 20px;
   height: 20px;
   display: inline-block;
-  background: url("https://raw.githubusercontent.com/gurzaf/FristArtMuseum/master/frist/assets/globe.png");
+  background: url("https://gitcdn.link/repo/gurzaf/FristArtMuseum/master/frist/assets/globe.png");
   -webkit-background-size: cover;
           background-size: cover;
   margin-top: 5px;
@@ -200,7 +200,7 @@ main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:ho
   width: 40px;
   height: 42px;
   z-index: 1001;
-  background: url("https://raw.githubusercontent.com/gurzaf/FristArtMuseum/master/frist/assets/menu.jpg");
+  background: url("https://gitcdn.link/repo/gurzaf/FristArtMuseum/master/frist/assets/menu.jpg");
   -webkit-background-size: 40px 84px;
           background-size: 40px 84px;
 }
@@ -367,7 +367,7 @@ footer.site-footer .frits-footer a > img {
     position: relative;
   }
   footer.site-footer .frits-footer:before, footer.site-footer .frits-footer:after {
-    background-image: url("https://raw.githubusercontent.com/gurzaf/FristArtMuseum/master/frist/assets/waves.png");
+    background-image: url("https://gitcdn.link/repo/gurzaf/FristArtMuseum/master/frist/assets/waves.png");
     background-color: #212121;
     content: '';
     width: 126px;
