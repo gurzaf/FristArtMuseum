@@ -287,16 +287,16 @@
       REGISTER_URL = '#',
       MEMBERSHIP_URL = '#',
       FORGOTPASSWORD_URL = '#',
-      ALTHRU_PREFIX = 'PC1953_ctl00_') => {
+      ALTHRU_PREFIX = 'PC1335_ctl00_') => {
         // $('[id*="UserModalSignedIn_UserModalPartEditLink"]').text(
         //   $('[id*="UserModalSignedIn_UserModalPartEditLink"]').text().replace('|', '').trim()
         // );
         // console.log($('[id*="UserModalSignedIn_UserModalPartEditLink"]').text());
-        if ($('[id*="UserModalSignIn_UserModalPartEditLink"]').text().trim() !== 'Login'
-        || ($('[id*="MembershipExpress"]').length === 0 && $('[id*="divPriceList"]').length === 0)
-        || $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').css('display') === 'block') {
-          return;
-        }
+        // if ($('[id*="UserModalSignIn_UserModalPartEditLink"]').text().trim() !== 'Login'
+        // || ($('[id*="MembershipExpress"]').length === 0 && $('[id*="divPriceList"]').length === 0)
+        // || $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').css('display') === 'block') {
+        //   return;
+        // }
         const basicHtml = `
         <div style="display: none;">
         <div id="popuplogin" class="container ui-corner-all">
@@ -317,7 +317,7 @@
         <label for="new-password" id="new-password-label" class="col-sm-12 control-label" style="padding-right:0">Password:</label>
         <div class="col-sm-12">
         <input name="new-password" type="password" autocomplete="new-password" id="new-password" class="BBFormTextbox LoginFormTextbox form-control">
-        <a href="${FORGOTPASSWORD_URL}" id="PC1953_ctl00_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword" class="LoginLink" href="#">Forgot your password?</a>
+        <a href="${FORGOTPASSWORD_URL}" id="${ALTHRU_PREFIX}_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword" class="LoginLink" href="#">Forgot your password?</a>
         </div>
         </div>
         <div class="form-group">
