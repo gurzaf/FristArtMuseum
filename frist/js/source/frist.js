@@ -30,12 +30,12 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     $('img.img-responsive.cartImg').attr('alt', ALT_CART_IMAGE);
 
     // change section to div
-    const element = $('section')[0];
-    const res = $('<div/>', {
-      html: element.innerHTML,
-      class: element.className,
-    });
-    element.replaceWith(res[0]);
+    // const element = $('section')[0];
+    // const res = $('<div/>', {
+    //   html: element.innerHTML,
+    //   class: element.className,
+    // });
+    // element.replaceWith(res[0]);
 
     //Fix autocomplete
     $('input[id*="_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]').attr('autocomplete', 'current-password');
