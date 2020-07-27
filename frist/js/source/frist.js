@@ -11,7 +11,7 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   const DELIVERY_TEXT = 'How do you want us to deliver your tickets?';
   const ALT_CART_IMAGE = 'Cart item image';
   const ARIA_DEFAULT = 'Invisible link';
-  const CDN = 'https://gitcdn.link/repo/gurzaf/FristArtMuseum/master/frist';
+  const CDN = 'https://dev.juliangalvez.xyz/frist';
 
   const loadCSS = () => {
     var head  = document.getElementsByTagName('head')[0];
