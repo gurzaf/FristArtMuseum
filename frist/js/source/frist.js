@@ -11,6 +11,18 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
   const DELIVERY_TEXT = 'How do you want us to deliver your tickets?';
   const ALT_CART_IMAGE = 'Cart item image';
   const ARIA_DEFAULT = 'Invisible link';
+  const CDN = 'https://raw.githubusercontent.com/gurzaf/FristArtMuseum/master/frist';
+
+  const loadCSS = () => {
+    var head  = document.getElementsByTagName('head')[0];
+    var link  = document.createElement('link');
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = `${CDN}/css/main.css`;
+    // link.href = 'css/main.css';
+    link.media = 'all';
+    head.appendChild(link);
+  }
 
   // Function to fix WCAG issues
   const WCAG = () => {
@@ -80,14 +92,14 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
     l32.type = 'image/x-icon';
     l32.rel = 'shortcut icon';
     l32.sizes= '32x32'
-    l32.href = 'assets/favicon-32x32.png';
+    l32.href = `${CDN}/assets/favicon-32x32.png`;
     const head = document.getElementsByTagName('head')[0];
     head.appendChild(l32);
     const l16 = document.createElement('link');
     l16.type = 'image/x-icon';
     l16.rel = 'shortcut icon';
     l16.sizes= '16x16'
-    l16.href = 'assets/favicon-16x16.png';
+    l16.href = `${CDN}/assets/favicon-16x16.png`;
     head.appendChild(l16);
   };
 
@@ -117,6 +129,9 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
       element.text(changeAMPM(element.text()));
     });
   };
+
+  // Load external CSS
+  loadCSS();
 
   // Loading Google Translation
   const dynamicallyLoadScript = (url) => {
