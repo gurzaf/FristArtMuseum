@@ -288,98 +288,92 @@
       MEMBERSHIP_URL = '#',
       FORGOTPASSWORD_URL = '#',
       ALTHRU_PREFIX = 'PC1335_ctl00_') => {
-        // $('[id*="UserModalSignedIn_UserModalPartEditLink"]').text(
-        //   $('[id*="UserModalSignedIn_UserModalPartEditLink"]').text().replace('|', '').trim()
-        // );
-        // console.log($('[id*="UserModalSignedIn_UserModalPartEditLink"]').text());
-        // if ($('[id*="UserModalSignIn_UserModalPartEditLink"]').text().trim() !== 'Login'
-        // || ($('[id*="MembershipExpress"]').length === 0 && $('[id*="divPriceList"]').length === 0)
-        // || $('[aria-describedby$="UserModalSignIn_UserModalPartDialog1"]').css('display') === 'block') {
-        //   return;
-        // }
-        const basicHtml = `
-        <div style="display: none;">
-        <div id="popuplogin" class="container ui-corner-all">
-        <div class="row row-eq-height">
-        <div id="popuploginformcontainer" class="col-xs-12 col-sm-8">
-        <h3>${MEMBER_SIGNIN}</h3>
-        <p>${MEMBER_DISCOUNT}</p>
-        <div id="popuploginform">
-        <div class="form-horizontal">
-        <div class="form-group">
-        <label for="new-username" id="new-username-label" class="col-sm-12 control-label" style="padding-right:0">Email:</label>
-        <div class="col-sm-12">
-        <input name="new-username" type="text" id="new-username" autocomplete="new-username" class="BBFormTextbox LoginFormTextbox form-control">
-        <a href="${REGISTER_URL}" id="${ALTHRU_PREFIX}UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog" class="LoginLink" href="javascript:__doPostBack('${ALTHRU_PREFIX.replace('_', '$')}$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')">Register for new account</a>
-        </div>
-        </div>
-        <div class="form-group">
-        <label for="new-password" id="new-password-label" class="col-sm-12 control-label" style="padding-right:0">Password:</label>
-        <div class="col-sm-12">
-        <input name="new-password" type="password" autocomplete="new-password" id="new-password" class="BBFormTextbox LoginFormTextbox form-control">
-        <a href="${FORGOTPASSWORD_URL}" id="${ALTHRU_PREFIX}_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword" class="LoginLink" href="#">Forgot your password?</a>
-        </div>
-        </div>
-        <div class="form-group">
-        <div class="col-sm-12">
-        <div class="checkbox">
-        <input id="new-checkbox" type="checkbox" name="new-checkbox">Remember me</label>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        <div id="popupsubmitform" class="ui-dialog-buttonpane">
-        <button id="new-submit">
-        ${SIGNIN_AND_CHECKOUT}
-        </button>
-        </div>
-        </div>
-        <div id="popuploginregister" class="col-xs-12 col-sm-4 ui-dialog-buttonpane">
-        <div class="join-container">
-        <p class="join-discount">${JOIN_DISCOUNT}</p>
-        <button id="join-button" onClick="window.location = '${MEMBERSHIP_URL}'">
-        ${JOIN}
-        </button>
-        <a id="checkoutguest" href="#">${GUEST}</a>
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-        `;
-        $('[aria-describedby*="UserModalSignIn_UserModalPartDialog1"]').appendTo('form');
-        $(basicHtml).appendTo('form');
-        $('#new-submit').on('click', newLoginSubmit);
-        passTextValue('#new-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
-        passTextValue('#new-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
-        passClick('#new-checkbox', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
-        
-        $('#popuplogin').dialog({
-          title: null,
-          position: { my: "top", at: "center", of: ".site-header.row" },
-          draggable: false,
-          modal: true,
-          resizable: false,
-          dialogClass: 'newLogin',
-          autoOpen: false,
-          open: () => {
-            window.scrollTo(0, 0);
-            $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
-              evt.preventDefault();
-              $('#popuplogin').dialog('close');
-            });
-          },
-        });
-        
-        if (!isAuthenticated() && !getLoginMessage()) {
-          if ($('div[id$="_panelEvent"]').length > 0 && showMemberDialog()) {
-            $('#popuplogin').dialog('open');
-            // set timer
-            window.localStorage.setItem(MEMBERPOPUP_KEY, `${new Date().getTime()}`);
+        const actions = () => {
+          const basicHtml = `
+          <div style="display: none;">
+          <div id="popuplogin" class="container ui-corner-all">
+          <div class="row row-eq-height">
+          <div id="popuploginformcontainer" class="col-xs-12 col-sm-8">
+          <h3>${MEMBER_SIGNIN}</h3>
+          <p>${MEMBER_DISCOUNT}</p>
+          <div id="popuploginform">
+          <div class="form-horizontal">
+          <div class="form-group">
+          <label for="new-username" id="new-username-label" class="col-sm-12 control-label" style="padding-right:0">Email:</label>
+          <div class="col-sm-12">
+          <input name="new-username" type="text" id="new-username" autocomplete="new-username" class="BBFormTextbox LoginFormTextbox form-control">
+          <a href="${REGISTER_URL}" id="${ALTHRU_PREFIX}UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonRegisterDialog" class="LoginLink" href="javascript:__doPostBack('${ALTHRU_PREFIX.replace('_', '$')}$UserModalSignIn$UserModalPartDialog1$UserModalPartDialogBody$LinkbuttonRegisterDialog','')">Register for new account</a>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="new-password" id="new-password-label" class="col-sm-12 control-label" style="padding-right:0">Password:</label>
+          <div class="col-sm-12">
+          <input name="new-password" type="password" autocomplete="new-password" id="new-password" class="BBFormTextbox LoginFormTextbox form-control">
+          <a href="${FORGOTPASSWORD_URL}" id="${ALTHRU_PREFIX}_UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_LinkbuttonForgotPassword" class="LoginLink" href="#">Forgot your password?</a>
+          </div>
+          </div>
+          <div class="form-group">
+          <div class="col-sm-12">
+          <div class="checkbox">
+          <input id="new-checkbox" type="checkbox" name="new-checkbox">Remember me</label>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div id="popupsubmitform" class="ui-dialog-buttonpane">
+          <button id="new-submit">
+          ${SIGNIN_AND_CHECKOUT}
+          </button>
+          </div>
+          </div>
+          <div id="popuploginregister" class="col-xs-12 col-sm-4 ui-dialog-buttonpane">
+          <div class="join-container">
+          <p class="join-discount">${JOIN_DISCOUNT}</p>
+          <button id="join-button" onClick="window.location = '${MEMBERSHIP_URL}'">
+          ${JOIN}
+          </button>
+          <a id="checkoutguest" href="#">${GUEST}</a>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          `;
+          $('[aria-describedby*="UserModalSignIn_UserModalPartDialog1"]').appendTo('form');
+          $(basicHtml).appendTo('form');
+          $('#new-submit').on('click', newLoginSubmit);
+          passTextValue('#new-username', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxUserName"]');
+          passTextValue('#new-password', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_TextboxPassword"]');
+          passClick('#new-checkbox', '[id$="UserModalSignIn_UserModalPartDialog1_UserModalPartDialogBody_CheckboxRememberSignIn"]');
+          
+          $('#popuplogin').dialog({
+            title: null,
+            position: { my: "top", at: "center", of: ".site-header.row" },
+            draggable: false,
+            modal: true,
+            resizable: false,
+            dialogClass: 'newLogin',
+            autoOpen: false,
+            open: () => {
+              window.scrollTo(0, 0);
+              $('.ui-widget-overlay, #checkoutguest').on('click', (evt) => {
+                evt.preventDefault();
+                $('#popuplogin').dialog('close');
+              });
+            },
+          });
+          
+          if (!isAuthenticated() && !getLoginMessage()) {
+            if ($('div[id$="_panelEvent"]').length > 0 && showMemberDialog()) {
+              $('#popuplogin').dialog('open');
+              // set timer
+              window.localStorage.setItem(MEMBERPOPUP_KEY, `${new Date().getTime()}`);
+            }
+            // $('#signindialog').dialog('close');
           }
-          // $('#signindialog').dialog('close');
         }
+        setTimeout(actions, 3000);
       };
       
       /**
@@ -566,8 +560,8 @@
               
               // Fix WCAG issues
               WCAG();
-
+              
               popups();
-
+              
             })();
             
