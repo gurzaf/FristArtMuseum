@@ -64,8 +64,6 @@ body > .site-container, body > form {
   line-height: 30px;
   font-size: 15px;
   text-decoration: none;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
@@ -86,8 +84,7 @@ body > .site-container, body > form {
   height: 20px;
   display: inline-block;
   background: url("https://dev.juliangalvez.xyz/frist/assets/globe.png");
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
   margin-top: 5px;
   margin-bottom: -5px;
   margin-right: 5px;
@@ -154,8 +151,6 @@ main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary {
   float: right;
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: #E00000;
   border: 1px solid transparent;
@@ -201,8 +196,7 @@ main.main-Content .BBFormButtonCell.form-group.clearfix input.btn.btn-primary:ho
   height: 42px;
   z-index: 1001;
   background: url("https://dev.juliangalvez.xyz/frist/assets/menu.jpg");
-  -webkit-background-size: 40px 84px;
-          background-size: 40px 84px;
+  background-size: 40px 84px;
 }
 
 #new-menu a#menu-icon.open {
@@ -247,7 +241,6 @@ div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6
 }
 
 div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2, div.Programming_Event_DateTime .TicketDateTimeInnerContainer .col-xs-12.col-md-6.col-lg-6 h2 span {
-  margin-left: unset;
   margin: 0;
   font-size: 14px;
   font-weight: bold;
@@ -376,8 +369,7 @@ footer.site-footer .frits-footer a > img {
     content: '';
     width: 126px;
     height: 13px;
-    -webkit-background-size: 110px 13px;
-            background-size: 110px 13px;
+    background-size: 110px 13px;
     background-repeat: no-repeat;
     background-position: center;
     display: block;
@@ -400,8 +392,6 @@ footer.site-footer .frits-footer .footer-buttons {
 footer.site-footer .frits-footer .footer-buttons .btn {
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: #E00000;
   border: 1px solid transparent;
@@ -497,7 +487,7 @@ div[id*="_CartGrid_topLinkBar"] {
 
 @media (min-width: 767px) {
   div[id*="_CartGrid_topLinkBar"] {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -506,8 +496,6 @@ div[id*="_CartGrid_topLinkBar"] a {
   z-index: 1;
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: transparent;
   border: 1px solid #E00000;
@@ -689,8 +677,6 @@ div[id*="tdImageItem"] {
   width: 100%;
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: transparent;
   border: 1px solid #E00000;
@@ -750,15 +736,13 @@ div.cart-type-group.cart-type-Donations.single-cart-item > div .payment-part-sub
 div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn {
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: transparent;
   border: 1px solid #E00000;
   color: #E00000;
   width: 120px;
   margin-top: 0;
-  margin-right: 20;
+  margin-right: 20px;
 }
 
 div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:hover, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:active, div.cart-type-group.cart-type-Donations.single-cart-item > div a.btn.btn-primary.pull-right.add-don-btn:focus {
@@ -820,8 +804,6 @@ dl[id*="_dlCartSummary"] dt {
 input[id*="_ButtonCheckout"] {
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: #E00000;
   border: 1px solid transparent;
@@ -1033,7 +1015,7 @@ div#new-menu-links .hours-operation a {
     margin-right: 15px;
   }
   .MembershipExpress_Selectors .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer:nth-child(3n+0) {
-    margin-right: 0px;
+    margin-right: 0;
   }
   .MembershipExpress_Selectors .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer:nth-child(3n+1) {
     clear: left;
@@ -1046,7 +1028,7 @@ div#new-menu-links .hours-operation a {
     margin-right: 15px;
   }
   .MembershipExpress_Selectors .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer:nth-child(4n+0) {
-    margin-right: 0px;
+    margin-right: 0;
   }
   .MembershipExpress_Selectors .MembershipExpress_LevelContainer .MembershipExpress_LevelSelectorContainer:nth-child(4n+1) {
     clear: left;
@@ -1062,8 +1044,6 @@ div#new-menu-links .hours-operation a {
 .BBFormSubmitButton {
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: #E00000;
   border: 1px solid transparent;
@@ -1173,8 +1153,7 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 
 .ui-dialog.signindialog .ui-dialog-titlebar .ui-dialog-titlebar-close, .ui-dialog.changepassword .ui-dialog-titlebar .ui-dialog-titlebar-close {
   background-image: url("https://dev.juliangalvez.xyz/frist/assets/close.svg") !important;
-  -webkit-background-size: cover !important;
-          background-size: cover !important;
+  background-size: cover !important;
   right: 1em;
   top: 1.8em;
   height: 19px;
@@ -1201,15 +1180,13 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 
 .ui-dialog.signindialog .ui-dialog-buttonpane, .ui-dialog.changepassword .ui-dialog-buttonpane {
   border: 0;
-  margin: 0px;
+  margin: 0;
   padding: 0;
 }
 
 .ui-dialog.signindialog .ui-dialog-buttonpane button, .ui-dialog.changepassword .ui-dialog-buttonpane button {
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: #E00000;
   border: 1px solid transparent;
@@ -1241,8 +1218,7 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 .newLogin.ui-dialog {
   font-family: 'Poppins', sans-serif;
   width: inherit !important;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 700px;
   margin-left: 15px;
   margin-right: 15px;
@@ -1274,8 +1250,7 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
   z-index: 1;
   top: 2rem;
   right: 1rem;
-  -webkit-background-size: cover;
-          background-size: cover;
+  background-size: cover;
 }
 
 .newLogin.ui-dialog #popuplogin {
@@ -1308,8 +1283,6 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 .newLogin.ui-dialog #popuplogin #join-button {
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: #E00000;
   border: 1px solid transparent;
@@ -1389,8 +1362,6 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
 .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button {
   border-radius: 0;
   font-size: 18px;
-  -webkit-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
   background-color: #E00000;
   border: 1px solid transparent;
@@ -1433,4 +1404,3 @@ div[aria-describedby$="UserModalSignIn_UserModalPartDialog1"] {
     font-weight: normal;
   }
 }
-/*# sourceMappingURL=template.css.map */
