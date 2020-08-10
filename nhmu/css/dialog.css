@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'UtahReykjavikOne';
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagauge-webfont.eot");
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagauge-webfont.eot?#iefix") format("embedded-opentype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagauge-webfont.woff") format("woff"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagauge-webfont.ttf") format("truetype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagauge-webfont.svg#reykjavikone_ot_agaugeagauge") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UtahReykjavikOne';
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagaugeitalic-webfont.eot");
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagaugeitalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagaugeitalic-webfont.woff") format("woff"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagaugeitalic-webfont.ttf") format("truetype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikoneagaugeitalic-webfont.svg#reykjavikone_ot_agaugagaugeIt") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'UtahReykjavikOne';
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgauge-webfont.eot");
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgauge-webfont.eot?#iefix") format("embedded-opentype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgauge-webfont.woff") format("woff"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgauge-webfont.ttf") format("truetype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgauge-webfont.svg#reykjavikone_ot_bgaugebgauge") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UtahReykjavikOne';
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgaugeitalic-webfont.eot");
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgaugeitalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgaugeitalic-webfont.woff") format("woff"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgaugeitalic-webfont.ttf") format("truetype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonebgaugeitalic-webfont.svg#reykjavikone_ot_bgaugbgaugeIt") format("svg");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'UtahReykjavikOne';
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgauge-webfont.eot");
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgauge-webfont.eot?#iefix") format("embedded-opentype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgauge-webfont.woff") format("woff"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgauge-webfont.ttf") format("truetype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgauge-webfont.svg#reykjavikone_ot_cgaugecgauge") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UtahReykjavikOne';
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgaugeitalic-webfont.eot");
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgaugeitalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgaugeitalic-webfont.woff") format("woff"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgaugeitalic-webfont.ttf") format("truetype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonecgaugeitalic-webfont.svg#reykjavikone_ot_cgaugcgaugeIt") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'UtahReykjavikOne';
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgauge-webfont.eot");
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgauge-webfont.eot?#iefix") format("embedded-opentype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgauge-webfont.woff") format("woff"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgauge-webfont.ttf") format("truetype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgauge-webfont.svg#reykjavikone_ot_dgaugedgauge") format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UtahReykjavikOne';
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgaugeitalic-webfont.eot");
+  src: url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgaugeitalic-webfont.eot?#iefix") format("embedded-opentype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgaugeitalic-webfont.woff") format("woff"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgaugeitalic-webfont.ttf") format("truetype"), url("https://dev.juliangalvez.xyz/nhmu/fonts/reykjavikonedgaugeitalic-webfont.svg#reykjavikone_ot_dgaugdgaugeIt") format("svg");
+  font-weight: 900;
+  font-style: italic;
+}
+
+body {
+  font-family: UtahReykjavikOne, sans-serif;
+}
