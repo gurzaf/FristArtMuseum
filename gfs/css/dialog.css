@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+.ui-widget-overlay.ui-front {
+  display: block !important;
+  background: #000 !important;
+  opacity: .8 !important;
+}
+
+.newLogin.ui-dialog {
+  font-family: "Poppins", sans-serif;
+  width: 100% !important;
+  box-sizing: border-box;
+  max-width: 400px;
+  border: 0;
+  border-radius: 0;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .newLogin.ui-dialog {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    max-width: 700px;
+  }
+}
+
+.newLogin.ui-dialog .ui-dialog-titlebar {
+  padding: 0;
+  height: 0;
+  min-height: 0;
+  margin: 0;
+  border: 0;
+}
+
+.newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+  display: none;
+}
+
+.newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  background-image: url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="UTF-8"%3F%3E%3Csvg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"%3E%3C!-- Generator: Sketch 61.2 (89653) - https://sketch.com --%3E%3Ctitle%3Eclose%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"%3E%3Cg id="close" transform="translate(1.000000, 1.000000)" stroke="%23212322" stroke-width="4"%3E%3Cline x1="-2.87323913" y1="10.9295773" x2="24.8732398" y2="10.9295773" id="Line" transform="translate(11.000000, 10.929577) rotate(45.000000) translate(-11.000000, -10.929577) "%3E%3C/line%3E%3Cline x1="-2.87323977" y1="10.9295773" x2="24.8732391" y2="10.9295773" id="Line" transform="translate(11.000000, 10.929577) scale(-1, 1) rotate(45.000000) translate(-11.000000, -10.929577) "%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/svg%3E') !important;
+  z-index: 1;
+  top: 2rem;
+  right: 1rem;
+  background-size: cover;
+  background-color: transparent;
+  border: 0;
+}
+
+.newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close span {
+  display: none;
+}
+
+.newLogin.ui-dialog #popuplogin {
+  padding: 0;
+  color: #4f4f4f;
+  margin: -.3em -.2em;
+  font-size: 1.3rem;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginregister {
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 2em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginregister a {
+  color: white;
+  text-decoration: underline;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginregister a:hover, .newLogin.ui-dialog #popuplogin #popuploginregister a:focus, .newLogin.ui-dialog #popuplogin #popuploginregister a:active {
+  text-decoration: none;
+}
+
+.newLogin.ui-dialog #popuplogin #join-button {
+  background-color: transparent;
+  color: black;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 2px solid #B6D840;
+  border-radius: 0;
+  transition: all 0.1s ease-out;
+  width: calc(100% - 30px);
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: .5em 1.2em;
+  text-transform: inherit;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .newLogin.ui-dialog #popuplogin #join-button {
+    width: 100%;
+  }
+}
+
+.newLogin.ui-dialog #popuplogin #join-button:hover, .newLogin.ui-dialog #popuplogin #join-button:active, .newLogin.ui-dialog #popuplogin #join-button:focus {
+  color: #B6D840;
+  background-color: black;
+  border-color: black;
+}
+
+.newLogin.ui-dialog #popuplogin #join-button.disabled, .newLogin.ui-dialog #popuplogin #join-button[disabled] {
+  background-color: white;
+  opacity: .8;
+  color: white;
+}
+
+.newLogin.ui-dialog #popuplogin #join-button.disabled:hover, .newLogin.ui-dialog #popuplogin #join-button.disabled:active, .newLogin.ui-dialog #popuplogin #join-button.disabled:focus, .newLogin.ui-dialog #popuplogin #join-button[disabled]:hover, .newLogin.ui-dialog #popuplogin #join-button[disabled]:active, .newLogin.ui-dialog #popuplogin #join-button[disabled]:focus {
+  background-color: #212322;
+  opacity: .7;
+}
+
+.newLogin.ui-dialog #popuplogin #join-button:hover, .newLogin.ui-dialog #popuplogin #join-button:active, .newLogin.ui-dialog #popuplogin #join-button:focus {
+  color: black;
+  border-color: white;
+  background-color: white;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer {
+  padding: 1em;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer h3 {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #212322;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer p {
+  text-align: center;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer .form-horizontal {
+  margin: 0 15px;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer .form-horizontal .control-label {
+  text-align: left;
+  font-weight: normal;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer .form-horizontal input.LoginFormTextbox {
+  height: 45px;
+  border-radius: 0;
+  border-color: #212322;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer a.LoginLink {
+  float: right;
+  text-decoration: underline;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer a.LoginLink:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer a.LoginLink:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer a.LoginLink:focus {
+  text-decoration: none;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer .checkbox {
+  padding-left: 15px;
+  padding-top: 0;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer .checkbox input {
+  margin-left: -15px;
+  margin-top: 2px;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform {
+  margin: 1rem 0;
+  padding: 0;
+  border: 0;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button {
+  background-color: transparent;
+  color: black;
+  font-weight: 700;
+  font-size: 1.7rem;
+  border: 2px solid #B6D840;
+  border-radius: 0;
+  transition: all 0.1s ease-out;
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  display: block;
+  float: none;
+  padding: 10px 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button {
+    width: 100%;
+  }
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button:focus {
+  color: #B6D840;
+  background-color: black;
+  border-color: black;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button.disabled, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button[disabled] {
+  background-color: white;
+  opacity: .8;
+  color: white;
+}
+
+.newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button.disabled:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button.disabled:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button.disabled:focus, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button[disabled]:hover, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button[disabled]:active, .newLogin.ui-dialog #popuplogin #popuploginformcontainer #popupsubmitform button[disabled]:focus {
+  background-color: #212322;
+  opacity: .7;
+}
+
+@media screen and (min-width: 768px) {
+  .newLogin.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    background-image: url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="UTF-8"%3F%3E%3Csvg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"%3E%3C!-- Generator: Sketch 61.2 (89653) - https://sketch.com --%3E%3Ctitle%3Eclose%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"%3E%3Cg id="close" transform="translate(1.000000, 1.000000)" stroke="%23fff" stroke-width="4"%3E%3Cline x1="-2.87323913" y1="10.9295773" x2="24.8732398" y2="10.9295773" id="Line" transform="translate(11.000000, 10.929577) rotate(45.000000) translate(-11.000000, -10.929577) "%3E%3C/line%3E%3Cline x1="-2.87323977" y1="10.9295773" x2="24.8732391" y2="10.9295773" id="Line" transform="translate(11.000000, 10.929577) scale(-1, 1) rotate(45.000000) translate(-11.000000, -10.929577) "%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/svg%3E') !important;
+  }
+  .newLogin.ui-dialog #popuplogin > .row {
+    margin: 0;
+  }
+  .newLogin.ui-dialog #popuplogin > .row.row-eq-height {
+    display: table;
+  }
+  .newLogin.ui-dialog #popuplogin > .row.row-eq-height > div {
+    display: table-cell;
+    float: none;
+  }
+  .newLogin.ui-dialog #popuplogin #popuploginformcontainer .form-horizontal {
+    margin: 0;
+  }
+  .newLogin.ui-dialog #popuplogin #popuploginformcontainer h3 {
+    font-size: 3rem;
+    color: #4f4f4f;
+    padding: 1rem;
+    margin-top: 20px;
+    font-weight: normal;
+  }
+  .newLogin.ui-dialog #popuplogin #join-button {
+    min-width: 220px;
+  }
+}

@@ -1,0 +1,80 @@
+.ui-widget-overlay.ui-front {
+  display: block !important;
+  background: #000 !important;
+  opacity: .8 !important;
+}
+
+.popupDialog.ui-dialog {
+  width: calc(100% - 30px) !important;
+  box-sizing: border-box;
+  max-width: 450px;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+@media screen and (min-width: 768px) {
+  .popupDialog.ui-dialog {
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+  }
+}
+
+.popupDialog.ui-dialog .ui-dialog-titlebar {
+  padding: 0;
+  height: 0;
+  min-height: 0;
+  margin: 0;
+  border: 0;
+}
+
+.popupDialog.ui-dialog .ui-dialog-titlebar .ui-dialog-title {
+  display: none;
+}
+
+.popupDialog.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  background-image: url('data:image/svg+xml,%3C%3Fxml version="1.0" encoding="UTF-8"%3F%3E%3Csvg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"%3E%3C!-- Generator: Sketch 61.2 (89653) - https://sketch.com --%3E%3Ctitle%3Eclose%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"%3E%3Cg id="close" transform="translate(1.000000, 1.000000)" stroke="%23212322" stroke-width="4"%3E%3Cline x1="-2.87323913" y1="10.9295773" x2="24.8732398" y2="10.9295773" id="Line" transform="translate(11.000000, 10.929577) rotate(45.000000) translate(-11.000000, -10.929577) "%3E%3C/line%3E%3Cline x1="-2.87323977" y1="10.9295773" x2="24.8732391" y2="10.9295773" id="Line" transform="translate(11.000000, 10.929577) scale(-1, 1) rotate(45.000000) translate(-11.000000, -10.929577) "%3E%3C/line%3E%3C/g%3E%3C/g%3E%3C/svg%3E') !important;
+  z-index: 1;
+  top: 2rem;
+  right: 1rem;
+  background-size: cover;
+  background-color: transparent;
+  border: 0;
+}
+
+.popupDialog.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close span {
+  display: none;
+}
+
+.popupDialog.ui-dialog h3 {
+  text-align: center;
+  font-weight: 700;
+}
+
+.popupDialog.ui-dialog img {
+  width: 100%;
+  height: auto;
+}
+
+.popupDialog.ui-dialog a.maplink {
+  margin: 15px 0;
+  display: block;
+}
+
+.popupDialog.ui-dialog a.buyticket {
+  background-color: #a3a70f;
+  color: white;
+  float: right;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  font-size: 1.5rem;
+}
+
+.popupDialog.ui-dialog a.buyticket:hover, .popupDialog.ui-dialog a.buyticket:focus, .popupDialog.ui-dialog a.buyticket:active {
+  text-decoration: none;
+  background-color: #75780b;
+}
